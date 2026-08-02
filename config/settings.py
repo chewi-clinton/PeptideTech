@@ -63,9 +63,12 @@ WSGI_APPLICATION = "config.wsgi.application"
 # Database — DATABASE_URL drives everything (real Postgres via docker-compose
 # locally, the user's VPS Postgres URL in prod). Falls back to sqlite only if
 # DATABASE_URL isn't set at all, so `manage.py` works before docker-compose is up.
+# Read via decouple.config() (not dj_database_url.config(), which only checks
+# real process env vars) so a local .env file is honored the same way it is
+# for every other setting below.
 DATABASES = {
-    "default": dj_database_url.config(
-        default=f"sqlite:///{BASE_DIR / 'db.sqlite3'}",
+    "default": dj_database_url.parse(
+        config("DATABASE_URL", default=f"sqlite:///{BASE_DIR / 'db.sqlite3'}"),
         conn_max_age=600,
     )
 }
@@ -121,12 +124,21 @@ MINIO_ACCESS_KEY = config("MINIO_ACCESS_KEY", default="")
 MINIO_SECRET_KEY = config("MINIO_SECRET_KEY", default="")
 MINIO_BUCKET_NAME = config("MINIO_BUCKET_NAME", default="peptidetech")
 MINIO_USE_SSL = config("MINIO_USE_SSL", default=False, cast=bool)
+# Host:port the *browser* can reach (e.g. "localhost:13002" in dev, the VPS's
+# public MinIO host:port in prod) — distinct from MINIO_ENDPOINT, which is
+# the internal address Django/boto3 uses to talk to MinIO directly (e.g. the
+# "minio:9000" Docker-network hostname, unreachable from outside the network).
+# Without this split, image URLs returned by the API embed the internal
+# hostname and 404 for every real client.
+MINIO_PUBLIC_ENDPOINT = config("MINIO_PUBLIC_ENDPOINT", default="localhost:13002")
 
 if MINIO_ENDPOINT and MINIO_ACCESS_KEY and MINIO_SECRET_KEY:
     AWS_ACCESS_KEY_ID = MINIO_ACCESS_KEY
     AWS_SECRET_ACCESS_KEY = MINIO_SECRET_KEY
     AWS_STORAGE_BUCKET_NAME = MINIO_BUCKET_NAME
     AWS_S3_ENDPOINT_URL = MINIO_ENDPOINT
+    AWS_S3_CUSTOM_DOMAIN = f"{MINIO_PUBLIC_ENDPOINT}/{MINIO_BUCKET_NAME}"
+    AWS_S3_URL_PROTOCOL = "https:" if MINIO_USE_SSL else "http:"
     AWS_S3_USE_SSL = MINIO_USE_SSL
     AWS_S3_VERIFY = MINIO_USE_SSL
     AWS_S3_ADDRESSING_STYLE = "path"
