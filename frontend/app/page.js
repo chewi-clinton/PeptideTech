@@ -1,86 +1,91 @@
 import Link from "next/link";
 import { api } from "@/lib/api";
 import ProductCard from "@/components/ProductCard";
+import Eyebrow from "@/components/Eyebrow";
+import { IconArrowRight } from "@/components/icons";
+import HeroSection from "@/components/home/HeroSection";
+import PriceMatchSection from "@/components/home/PriceMatchSection";
+import CategoryGrid from "@/components/home/CategoryGrid";
+import SixReasonsSection from "@/components/home/SixReasonsSection";
+import BuildKitSection from "@/components/home/BuildKitSection";
+import FiveTestsSection from "@/components/home/FiveTestsSection";
+import HeroesSection from "@/components/home/HeroesSection";
+import InsightsSection from "@/components/home/InsightsSection";
+import NewsletterSection from "@/components/home/NewsletterSection";
+
+// Short homepage-card blurbs (real copy from the live site's category grid,
+// distinct from — and shorter than — each category's full page description).
+const HOMEPAGE_CATEGORY_BLURBS = {
+  peptides: "Single research peptides — BPC-157, TB-500, GHK-Cu & more.",
+  bioregulators: "Short peptide bioregulators for targeted research.",
+  "cases-accessories": "Storage cases, vials & lab supplies.",
+  "peptide-blends": "Pre-combined research stacks in a single vial.",
+  capsules: "Capsule-format research compounds.",
+  "liquids-aminos-solvents": "Sterile lab diluents, aminos & research solvents.",
+  "glp-peptides": "GLP-1 / GIP metabolic peptides — semaglutide, tirzepatide, retatrutide.",
+};
 
 export default async function Home() {
   const [categories, products] = await Promise.all([
     api.categories.list().catch(() => []),
     api.products.list().catch(() => []),
   ]);
+
+  const categoriesWithMeta = categories.map((c) => {
+    const inCategory = products.filter((p) => p.category?.slug === c.slug);
+    return {
+      ...c,
+      count: inCategory.length,
+      image: inCategory[0]?.primary_image || null,
+      description: HOMEPAGE_CATEGORY_BLURBS[c.slug] || c.description,
+    };
+  });
+
   const featured = products.slice(0, 8);
+  const readyToShip = products.slice(8, 16);
 
   return (
     <div>
-      <section style={{ padding: "56px 0 40px" }}>
-        <div className="container" style={{ textAlign: "center", maxWidth: 720 }}>
-          <h1>
-            Peptides for sale,
-            <br />
-            <span className="font-serif-italic">verified to the molecule.</span>
-          </h1>
-          <p style={{ marginTop: 16, color: "var(--ink-3)", fontSize: 16 }}>
-            HPLC-verified 98%+ purity with a third-party Certificate of Analysis on every batch.
-            Cold-chain shipping and lot traceability included.
-          </p>
-          <div style={{ marginTop: 24, display: "flex", gap: 12, justifyContent: "center" }}>
-            <Link href="/shop" className="btn-primary" style={{ textDecoration: "none" }}>
-              Shop catalog
-            </Link>
+      <HeroSection />
+      <PriceMatchSection />
+      <CategoryGrid categories={categoriesWithMeta} />
+      <SixReasonsSection />
+
+      <section style={{ padding: "72px 0 40px" }}>
+        <div className="container">
+          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", flexWrap: "wrap", gap: 12 }}>
+            <div>
+              <Eyebrow>Shop the catalog</Eyebrow>
+              <h2 style={{ fontSize: 32, marginTop: 8 }}>Featured peptides</h2>
+              <p style={{ marginTop: 6, color: "var(--ink-3)", fontSize: 14.5, maxWidth: 520 }}>
+                Researcher-favorite single peptides and blends — each HPLC-verified with a public
+                Certificate of Analysis on every batch.
+              </p>
+            </div>
             <Link
-              href="/coa"
+              href="/shop"
               style={{
-                padding: "12px 20px",
+                display: "inline-flex",
+                alignItems: "center",
+                gap: 8,
+                padding: "10px 16px",
                 border: "1px solid var(--line)",
                 borderRadius: "var(--radius-md)",
-                textDecoration: "none",
-                color: "var(--ink-2)",
+                fontSize: 13.5,
                 fontWeight: 600,
+                color: "var(--ink)",
+                textDecoration: "none",
               }}
             >
-              Verify a batch
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      <section style={{ background: "var(--bg-tint)", padding: "48px 0" }}>
-        <div className="container">
-          <h2 style={{ textAlign: "center", fontSize: 28 }}>Shop by category</h2>
-          <div
-            style={{
-              marginTop: 28,
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(140px, 1fr))",
-              gap: 16,
-            }}
-          >
-            {categories.map((c) => (
-              <Link
-                key={c.slug}
-                href={`/c/${c.slug}`}
-                className="card"
-                style={{ padding: 20, textDecoration: "none", textAlign: "center" }}
-              >
-                <div style={{ fontSize: 14, fontWeight: 600, color: "var(--ink)" }}>{c.name}</div>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section style={{ padding: "56px 0" }}>
-        <div className="container">
-          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline" }}>
-            <h2 style={{ fontSize: 28 }}>Featured peptides</h2>
-            <Link href="/shop" style={{ fontSize: 13, color: "var(--brand-2)", textDecoration: "none" }}>
-              View all products →
+              View all peptides
+              <IconArrowRight size={13} />
             </Link>
           </div>
           <div
             style={{
               marginTop: 24,
               display: "grid",
-              gridTemplateColumns: "repeat(auto-fill, minmax(220px, 1fr))",
+              gridTemplateColumns: "repeat(auto-fill, minmax(240px, 1fr))",
               gap: 18,
             }}
           >
@@ -90,6 +95,54 @@ export default async function Home() {
           </div>
         </div>
       </section>
+
+      <BuildKitSection />
+      <FiveTestsSection />
+
+      <section style={{ padding: "72px 0 40px" }}>
+        <div className="container">
+          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", flexWrap: "wrap", gap: 12 }}>
+            <div>
+              <Eyebrow>Featured this month</Eyebrow>
+              <h2 style={{ fontSize: 32, marginTop: 8 }}>Research peptides, ready to ship</h2>
+            </div>
+            <Link
+              href="/shop"
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                gap: 8,
+                padding: "10px 16px",
+                border: "1px solid var(--line)",
+                borderRadius: "var(--radius-md)",
+                fontSize: 13.5,
+                fontWeight: 600,
+                color: "var(--ink)",
+                textDecoration: "none",
+              }}
+            >
+              View all
+              <IconArrowRight size={13} />
+            </Link>
+          </div>
+          <div
+            style={{
+              marginTop: 24,
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fill, minmax(240px, 1fr))",
+              gap: 18,
+            }}
+          >
+            {readyToShip.map((p) => (
+              <ProductCard key={p.slug} product={p} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <HeroesSection />
+      <InsightsSection />
+      <NewsletterSection />
     </div>
   );
 }

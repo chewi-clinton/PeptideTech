@@ -159,3 +159,25 @@ button {
   color: var(--ink-3);
   font-size: 14px;
 }
+
+@media (max-width: 900px) {
+  .pep-2col,
+  .pep-home-hero-grid,
+  .pep-pm-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .pep-footer-grid {
+    grid-template-columns: 1fr 1fr !important;
+  }
+}
+
+@media (max-width: 560px) {
+  .pep-footer-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  h1 {
+    font-size: 36px !important;
+  }
+}
