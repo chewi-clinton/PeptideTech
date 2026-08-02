@@ -1,0 +1,87 @@
+from rest_framework import serializers
+
+from .models import COA, Category, Product, ProductImage, ProductVariant
+
+
+class CategorySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Category
+        fields = ["id", "name", "slug", "description", "position"]
+
+
+class ProductImageSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ProductImage
+        fields = ["id", "image", "alt_text", "position", "is_primary"]
+
+
+class ProductVariantSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ProductVariant
+        fields = [
+            "id",
+            "label",
+            "sku",
+            "price",
+            "compare_at_price",
+            "in_stock",
+            "is_default",
+            "position",
+        ]
+
+
+class COASerializer(serializers.ModelSerializer):
+    class Meta:
+        model = COA
+        fields = ["id", "lot_number", "purity_percent", "test_date", "issuing_lab", "file"]
+
+
+class ProductListSerializer(serializers.ModelSerializer):
+    category = CategorySerializer(read_only=True)
+    primary_image = serializers.SerializerMethodField()
+    variants = ProductVariantSerializer(many=True, read_only=True)
+
+    class Meta:
+        model = Product
+        fields = [
+            "id",
+            "title",
+            "slug",
+            "short_description",
+            "purity",
+            "category",
+            "primary_image",
+            "variants",
+        ]
+
+    def get_primary_image(self, obj):
+        image = obj.images.filter(is_primary=True).first() or obj.images.first()
+        if not image:
+            return None
+        request = self.context.get("request")
+        url = image.image.url
+        return request.build_absolute_uri(url) if request else url
+
+
+class ProductDetailSerializer(serializers.ModelSerializer):
+    category = CategorySerializer(read_only=True)
+    images = ProductImageSerializer(many=True, read_only=True)
+    variants = ProductVariantSerializer(many=True, read_only=True)
+    coas = COASerializer(many=True, read_only=True)
+
+    class Meta:
+        model = Product
+        fields = [
+            "id",
+            "title",
+            "slug",
+            "short_description",
+            "description_html",
+            "purity",
+            "disclaimer_html",
+            "faq_html",
+            "category",
+            "images",
+            "variants",
+            "coas",
+        ]

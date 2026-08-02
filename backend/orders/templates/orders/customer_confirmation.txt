@@ -1,0 +1,19 @@
+Hi {{ order.customer_name }},
+
+We've received your order {{ order.order_number }} — thank you.
+
+We have NOT charged you yet. Payment instructions for your selected method
+({{ order.get_payment_method_display }}) will follow separately.
+
+Order summary:
+{% for item in order.items.all %}- {{ item.quantity }} x {{ item.product_title }} — ${{ item.price }}
+{% endfor %}
+Total: ${{ order.total }}
+
+Shipping to:
+{{ order.address_line1 }}
+{% if order.address_line2 %}{{ order.address_line2 }}
+{% endif %}{{ order.city }}, {{ order.state }} {{ order.postal_code }}
+{{ order.country }}
+
+You can check your order status any time using your order number and email.
