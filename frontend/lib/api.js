@@ -1,4 +1,11 @@
-const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8001/api";
+// Server-side (RSC/route handlers, running inside the frontend container)
+// must reach the backend over the Docker network; the browser must reach it
+// via the host-mapped port. API_URL_INTERNAL covers the former, falling back
+// to the public URL for plain `npm run dev` (no Docker network involved).
+const API_URL =
+  typeof window === "undefined"
+    ? process.env.API_URL_INTERNAL || process.env.NEXT_PUBLIC_API_URL || "http://localhost:8001/api"
+    : process.env.NEXT_PUBLIC_API_URL || "http://localhost:8001/api";
 
 async function request(path, options = {}) {
   const res = await fetch(`${API_URL}${path}`, {
@@ -45,8 +52,26 @@ export const api = {
       request(
         `/orders/lookup/?order_number=${encodeURIComponent(orderNumber)}&email=${encodeURIComponent(email)}`
       ),
+    list: (token) => request(`/orders/`, { headers: authHeader(token) }),
+    updateStatus: (id, status, token) =>
+      request(`/orders/${id}/`, {
+        method: "PATCH",
+        body: JSON.stringify({ status }),
+        headers: authHeader(token),
+      }),
+  },
+  auth: {
+    login: (username, password) =>
+      request(`/auth/token/`, {
+        method: "POST",
+        body: JSON.stringify({ username, password }),
+      }),
   },
 };
+
+function authHeader(token) {
+  return token ? { Authorization: `Token ${token}` } : {};
+}
 
 export function generateOrderNumber() {
   const stamp = Date.now().toString(36).toUpperCase();
