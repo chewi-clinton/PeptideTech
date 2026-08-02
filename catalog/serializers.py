@@ -36,6 +36,24 @@ class COASerializer(serializers.ModelSerializer):
         fields = ["id", "lot_number", "purity_percent", "test_date", "issuing_lab", "file"]
 
 
+class COALibrarySerializer(serializers.ModelSerializer):
+    product_title = serializers.CharField(source="product.title", read_only=True)
+    product_slug = serializers.CharField(source="product.slug", read_only=True)
+
+    class Meta:
+        model = COA
+        fields = [
+            "id",
+            "lot_number",
+            "purity_percent",
+            "test_date",
+            "issuing_lab",
+            "file",
+            "product_title",
+            "product_slug",
+        ]
+
+
 class ProductListSerializer(serializers.ModelSerializer):
     category = CategorySerializer(read_only=True)
     primary_image = serializers.SerializerMethodField()

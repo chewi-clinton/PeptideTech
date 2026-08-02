@@ -1,7 +1,12 @@
 from rest_framework import permissions, viewsets
 
-from .models import Category, Product
-from .serializers import CategorySerializer, ProductDetailSerializer, ProductListSerializer
+from .models import COA, Category, Product
+from .serializers import (
+    CategorySerializer,
+    COALibrarySerializer,
+    ProductDetailSerializer,
+    ProductListSerializer,
+)
 
 
 class CategoryViewSet(viewsets.ReadOnlyModelViewSet):
@@ -23,3 +28,10 @@ class ProductViewSet(viewsets.ReadOnlyModelViewSet):
         if self.action == "list":
             return ProductListSerializer
         return ProductDetailSerializer
+
+
+class COALibraryViewSet(viewsets.ReadOnlyModelViewSet):
+    queryset = COA.objects.select_related("product").order_by("-test_date")
+    serializer_class = COALibrarySerializer
+    permission_classes = [permissions.AllowAny]
+    filterset_fields = ["product__slug"]
