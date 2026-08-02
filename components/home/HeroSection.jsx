@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import Eyebrow from "@/components/Eyebrow";
 import WaveBackground from "@/components/WaveBackground";
+import QrCodePattern from "@/components/QrCodePattern";
 import { IconArrowRight, IconCheck, IconClockSimple, IconShield } from "@/components/icons";
 
 export default function HeroSection() {
@@ -58,12 +59,26 @@ export default function HeroSection() {
                 <Image src="/apa-logo.png" width={80} height={20} alt="American Peptide Association" style={{ objectFit: "contain", height: 16, width: "auto" }} />
               </a>
               <Link href="/about" style={trustPillStyle}>
-                <IconClockSimple size={13} />
+                <span
+                  style={{
+                    width: 17,
+                    height: 17,
+                    flexShrink: 0,
+                    display: "inline-flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    background: "var(--brand)",
+                    color: "#fff",
+                    borderRadius: "50%",
+                  }}
+                >
+                  <IconClockSimple size={11} />
+                </span>
                 2+ years in business
                 <IconArrowRight size={11} style={{ opacity: 0.6 }} />
               </Link>
               <a href="https://peptidebase.io/research-vendors/peptidetech" target="_blank" rel="noopener noreferrer" style={trustPillStyle}>
-                <IconShield size={13} />
+                <IconShield size={13} style={{ color: "var(--brand-2)" }} />
                 A Rated on Peptidebase.io
                 <IconArrowRight size={11} style={{ opacity: 0.6 }} />
               </a>
@@ -121,11 +136,23 @@ export default function HeroSection() {
                 <span>Lot BPC-A2614</span>
               </div>
               <svg viewBox="0 0 400 90" width="100%" height="80" style={{ marginTop: 8 }}>
+                <defs>
+                  <linearGradient id="heroTraceFill" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stopColor="var(--brand)" stopOpacity="0.35" />
+                    <stop offset="100%" stopColor="var(--brand)" stopOpacity="0" />
+                  </linearGradient>
+                </defs>
                 <polyline
-                  points="0,80 60,80 90,78 110,72 120,20 130,72 150,78 220,78 240,74 250,66 260,74 300,78 340,77 360,73 370,68 380,74 400,78"
+                  points="0,80 60,80 72,76 84,68 96,74 108,80 118,80 122,44 126,14 130,44 134,80 144,80 220,80 235,77 245,68 255,77 270,80 300,80 312,76 320,80 350,80 358,77 366,80 400,80 400,90 0,90"
+                  fill="url(#heroTraceFill)"
+                  stroke="none"
+                />
+                <polyline
+                  points="0,80 60,80 72,76 84,68 96,74 108,80 118,80 122,44 126,14 130,44 134,80 144,80 220,80 235,77 245,68 255,77 270,80 300,80 312,76 320,80 350,80 358,77 366,80 400,80"
                   fill="none"
                   stroke="var(--brand-2)"
-                  strokeWidth="1.6"
+                  strokeWidth="1.4"
+                  strokeLinejoin="round"
                 />
               </svg>
             </div>
@@ -155,7 +182,9 @@ export default function HeroSection() {
                 gap: 12,
               }}
             >
-              <div style={{ width: 48, height: 48, background: "#fff", borderRadius: 6, flexShrink: 0 }} aria-hidden="true" />
+              <div style={{ width: 48, height: 48, borderRadius: 6, flexShrink: 0, overflow: "hidden", border: "1px solid var(--line)" }}>
+                <QrCodePattern size={48} />
+              </div>
               <div>
                 <div style={{ fontWeight: 700, fontSize: 13.5, color: "var(--ink)" }}>Scan the vial QR</div>
                 <div style={{ fontSize: 12, color: "var(--ink-3)" }}>Pulls this exact lot&apos;s live COA</div>
