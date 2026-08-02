@@ -1,3 +1,6 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import Eyebrow from "@/components/Eyebrow";
 import WaveBackground from "@/components/WaveBackground";
 import {
@@ -58,6 +61,18 @@ const TESTS = [
 const LABS = ["Janoshik Analytical", "ILS Laboratories", "Ethos Analytical", "Freedom Diagnostics", "Vanguard Laboratory", "MZBiolabs", "ISO 17025"];
 
 export default function FiveTestsSection() {
+  const [mau, setMau] = useState(982);
+
+  useEffect(() => {
+    const id = setInterval(() => {
+      setMau((v) => {
+        const next = v + (Math.random() > 0.5 ? 1 : -1) * (1 + Math.floor(Math.random() * 3));
+        return Math.min(999, Math.max(970, next));
+      });
+    }, 1800);
+    return () => clearInterval(id);
+  }, []);
+
   return (
     <section style={{ position: "relative", overflow: "hidden", background: "var(--bg-tint)", padding: "72px 0" }}>
       <WaveBackground opacity={0.06} />
@@ -100,7 +115,7 @@ export default function FiveTestsSection() {
             ))}
           </div>
 
-          <div className="card" style={{ padding: 20 }}>
+          <div className="card" style={{ padding: 20, position: "relative", overflow: "hidden" }}>
             <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
               <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
                 <span
@@ -140,18 +155,65 @@ export default function FiveTestsSection() {
               </span>
             </div>
 
-            <div className="card" style={{ marginTop: 14, padding: 14, background: "var(--bg-tint)", border: "none" }}>
-              <div style={{ display: "flex", justifyContent: "flex-end", fontSize: 11, fontFamily: "var(--font-mono-stack)", color: "var(--ink-3)" }}>
-                982 mAU · 220 nm
+            <div className="card" style={{ marginTop: 14, padding: 14, background: "var(--bg-tint)", border: "none", position: "relative", overflow: "hidden" }}>
+              <div style={{ display: "flex", justifyContent: "flex-end" }}>
+                <span
+                  style={{
+                    display: "inline-flex",
+                    alignItems: "center",
+                    gap: 6,
+                    background: "var(--bg)",
+                    border: "1px solid var(--line)",
+                    borderRadius: 999,
+                    padding: "3px 10px",
+                    fontSize: 11,
+                    fontFamily: "var(--font-mono-stack)",
+                    color: "var(--ink-3)",
+                  }}
+                >
+                  <span
+                    aria-hidden="true"
+                    style={{
+                      width: 7,
+                      height: 7,
+                      borderRadius: "50%",
+                      background: "#16a34a",
+                      animation: "pep-pulse-dot 1.8s ease-in-out infinite",
+                    }}
+                  />
+                  {mau} mAU · 220 nm
+                </span>
               </div>
-              <svg viewBox="0 0 400 100" width="100%" height="90">
-                <polyline
-                  points="0,90 40,90 70,88 90,84 100,20 110,84 130,88 180,88 200,80 210,64 220,80 260,88 300,86 315,78 325,60 335,78 360,88 400,88"
-                  fill="none"
-                  stroke="var(--brand-2)"
-                  strokeWidth="1.6"
+              <div style={{ position: "relative", overflow: "hidden" }}>
+                <svg viewBox="0 0 400 100" width="100%" height="90">
+                  <defs>
+                    <linearGradient id="fiveTestsFade" x1="0" y1="0" x2="1" y2="0">
+                      <stop offset="0%" stopColor="var(--brand-2)" stopOpacity="0" />
+                      <stop offset="12%" stopColor="var(--brand-2)" stopOpacity="1" />
+                      <stop offset="88%" stopColor="var(--brand-2)" stopOpacity="1" />
+                      <stop offset="100%" stopColor="var(--brand-2)" stopOpacity="0" />
+                    </linearGradient>
+                  </defs>
+                  <polyline
+                    points="0,90 40,90 70,88 90,84 100,20 110,84 130,88 180,88 200,80 210,64 220,80 260,88 300,86 315,78 325,60 335,78 360,88 400,88"
+                    fill="none"
+                    stroke="url(#fiveTestsFade)"
+                    strokeWidth="1.6"
+                  />
+                </svg>
+                <span
+                  aria-hidden="true"
+                  style={{
+                    position: "absolute",
+                    top: 0,
+                    bottom: 0,
+                    left: 0,
+                    width: "35%",
+                    background: "linear-gradient(90deg, transparent, rgba(13,148,136,0.16), transparent)",
+                    animation: "pep-scan-x 3.2s linear infinite",
+                  }}
                 />
-              </svg>
+              </div>
             </div>
 
             <div style={{ marginTop: 14, display: "flex", flexWrap: "wrap", gap: 8 }}>
