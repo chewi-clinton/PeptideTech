@@ -52,6 +52,7 @@ services:
       ALLOWED_HOSTS: localhost,127.0.0.1,backend
       DATABASE_URL: postgres://peptidetech:peptidetech@postgres:5432/peptidetech
       MINIO_ENDPOINT: http://minio:9000
+      MINIO_PUBLIC_ENDPOINT: localhost:13002
       MINIO_ACCESS_KEY: peptidetech
       MINIO_SECRET_KEY: peptidetech123
       MINIO_BUCKET_NAME: peptidetech
