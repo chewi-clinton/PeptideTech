@@ -8,6 +8,7 @@ const STORAGE_KEY = "peptidetech_cart";
 export function CartProvider({ children }) {
   const [items, setItems] = useState([]);
   const [hydrated, setHydrated] = useState(false);
+  const [isDrawerOpen, setDrawerOpen] = useState(false);
 
   useEffect(() => {
     try {
@@ -24,7 +25,7 @@ export function CartProvider({ children }) {
     window.localStorage.setItem(STORAGE_KEY, JSON.stringify(items));
   }, [items, hydrated]);
 
-  function addItem({ variantId, productTitle, variantLabel, price, quantity = 1 }) {
+  function addItem({ variantId, productTitle, variantLabel, price, quantity = 1, image, openDrawer = false }) {
     setItems((prev) => {
       const existing = prev.find((i) => i.variantId === variantId);
       if (existing) {
@@ -32,8 +33,9 @@ export function CartProvider({ children }) {
           i.variantId === variantId ? { ...i, quantity: i.quantity + quantity } : i
         );
       }
-      return [...prev, { variantId, productTitle, variantLabel, price, quantity }];
+      return [...prev, { variantId, productTitle, variantLabel, price, quantity, image }];
     });
+    if (openDrawer) setDrawerOpen(true);
   }
 
   function removeItem(variantId) {
@@ -54,7 +56,19 @@ export function CartProvider({ children }) {
 
   return (
     <CartContext.Provider
-      value={{ items, addItem, removeItem, updateQuantity, clearCart, total, count, hydrated }}
+      value={{
+        items,
+        addItem,
+        removeItem,
+        updateQuantity,
+        clearCart,
+        total,
+        count,
+        hydrated,
+        isDrawerOpen,
+        openDrawer: () => setDrawerOpen(true),
+        closeDrawer: () => setDrawerOpen(false),
+      }}
     >
       {children}
     </CartContext.Provider>
