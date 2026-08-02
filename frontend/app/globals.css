@@ -1,5 +1,19 @@
 @import "tailwindcss";
 
+/* Scraped page content (legal pages, membership, price-match, etc.) was
+   authored against shadcn/ui's CSS-variable naming convention
+   (bg-background, text-foreground, bg-accent, ...). Alias those theme keys
+   to this app's own design tokens so Tailwind generates real utilities that
+   resolve to our actual palette instead of undefined variables. */
+@theme {
+  --color-background: var(--bg);
+  --color-foreground: var(--ink);
+  --color-muted-foreground: var(--ink-3);
+  --color-accent: var(--brand-tint);
+  --color-accent-foreground: var(--brand-2);
+  --font-display: var(--font-sans-stack);
+}
+
 /* Design tokens extracted via getComputedStyle from the live site's :root
    (see scraper/visual/reference/design-tokens.json) — real values, not
    eyeballed. */
@@ -170,6 +184,16 @@ button {
   .pep-footer-grid {
     grid-template-columns: 1fr 1fr !important;
   }
+
+  .pep-category-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media (min-width: 901px) and (max-width: 1100px) {
+  .pep-category-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
 }
 
 @media (max-width: 560px) {
@@ -202,10 +226,108 @@ button {
   margin-top: 40px;
 }
 
-/* Scraped accordions (FAQ, etc.) collapse their real answer text via
-   grid-template-rows:0fr, toggled by React state we don't reproduce for
-   static injected HTML. Force them open so the real content stays
-   visible/readable rather than hidden and inaccessible. */
-.pep-pdp-prose [style*="grid-template-rows:0fr"] {
-  grid-template-rows: 1fr !important;
+/* The live site's own typography wrapper class for plain legal/info pages
+   (terms, privacy, shipping, returns, purity-guarantee-terms). These pages'
+   scraped body_html nests real content one level inside a `.prose-store`
+   div, so the `.pep-pdp-prose > h1` etc. direct-child rules above never
+   reach it — style it directly, regardless of nesting depth. */
+.prose-store h1 {
+  font-size: 34px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  margin: 0 0 6px;
+}
+
+.prose-store h2 {
+  font-size: 21px;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 32px 0 12px;
+}
+
+.prose-store h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 22px 0 8px;
+}
+
+.prose-store p {
+  font-size: 14.5px;
+  line-height: 1.75;
+  color: var(--ink-2);
+  margin: 0 0 14px;
+}
+
+.prose-store ul,
+.prose-store ol {
+  margin: 0 0 14px;
+  padding-left: 22px;
+  font-size: 14.5px;
+  line-height: 1.75;
+  color: var(--ink-2);
+}
+
+.prose-store li {
+  margin-bottom: 6px;
+}
+
+.prose-store a {
+  color: var(--brand-2);
+  text-decoration: underline;
+}
+
+.prose-store strong {
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.prose-store hr {
+  border: none;
+  border-top: 1px solid var(--line);
+  margin: 24px 0;
+}
+
+/* Base reset for scraped lucide-icon SVGs (bare `class="lucide ..."`
+   markers with no accompanying stylesheet) so they render as intended
+   outline icons instead of solid/default-styled shapes. */
+.lucide {
+  stroke: currentColor;
+  fill: none;
+}
+
+@keyframes pep-progress-fill {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.pep-progress-bar {
+  width: 0%;
+  animation: pep-progress-fill 4.5s linear forwards;
+}
+
+@keyframes pep-scan-x {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes pep-pulse-dot {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.45;
+    transform: scale(0.85);
+  }
 }
