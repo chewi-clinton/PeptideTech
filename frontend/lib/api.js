@@ -70,6 +70,41 @@ export const api = {
         body: JSON.stringify({ username, password }),
       }),
   },
+  adminProducts: {
+    list: (token) => request(`/admin/products/`, { headers: authHeader(token) }),
+    get: (id, token) => request(`/admin/products/${id}/`, { headers: authHeader(token) }),
+    create: (payload, token) =>
+      request(`/admin/products/`, {
+        method: "POST",
+        body: JSON.stringify(payload),
+        headers: authHeader(token),
+      }),
+    update: (id, payload, token) =>
+      request(`/admin/products/${id}/`, {
+        method: "PATCH",
+        body: JSON.stringify(payload),
+        headers: authHeader(token),
+      }),
+    remove: (id, token) =>
+      request(`/admin/products/${id}/`, { method: "DELETE", headers: authHeader(token) }),
+    uploadImage: async (id, file, token, { isPrimary = false } = {}) => {
+      const form = new FormData();
+      form.append("image", file);
+      form.append("is_primary", isPrimary ? "true" : "false");
+      const res = await fetch(`${API_URL}/admin/products/${id}/images/`, {
+        method: "POST",
+        body: form,
+        headers: authHeader(token),
+      });
+      if (!res.ok) throw new Error(`Upload failed: ${res.status}`);
+      return res.json();
+    },
+    deleteImage: (id, imageId, token) =>
+      request(`/admin/products/${id}/images/${imageId}/`, {
+        method: "DELETE",
+        headers: authHeader(token),
+      }),
+  },
 };
 
 function authHeader(token) {
