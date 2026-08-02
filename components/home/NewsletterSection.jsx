@@ -12,7 +12,7 @@ export default function NewsletterSection() {
   }
 
   return (
-    <section style={{ padding: "0 0 72px" }}>
+    <section style={{ padding: "72px 0" }}>
       <div className="container">
         <div
           className="card"
@@ -57,6 +57,8 @@ export default function NewsletterSection() {
                 borderRadius: "var(--radius-md)",
                 fontSize: 14,
                 width: 260,
+                background: "var(--bg)",
+                color: "var(--ink)",
               }}
             />
             <button type="submit" className="btn-primary" style={{ border: "none", cursor: "pointer" }}>
@@ -64,7 +66,7 @@ export default function NewsletterSection() {
             </button>
           </form>
           <p style={{ marginTop: 10, fontSize: 11.5, fontFamily: "var(--font-mono-stack)", color: "var(--ink-4)", letterSpacing: "0.04em" }}>
-            RESEARCH PROFESSIONALS ONLY · 21+
+            Research professionals only · 21+
           </p>
         </div>
       </div>
