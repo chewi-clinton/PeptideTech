@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import { api } from "@/lib/api";
+import StaticInteractivity from "@/components/StaticInteractivity";
 
 export async function generateMetadata({ params }) {
   const { slug } = await params;
@@ -31,10 +32,12 @@ export default async function StaticContentPage({ params }) {
   // their hero backgrounds. Plain-text legal pages get a readable line
   // length via the .pep-pdp-prose > p rule in globals.css instead.
   return (
-    <article
-      className="pep-pdp-prose"
-      style={{ fontSize: 14.5, lineHeight: 1.75, color: "var(--ink-2)" }}
-      dangerouslySetInnerHTML={{ __html: page.body_html }}
-    />
+    <StaticInteractivity>
+      <article
+        className="pep-pdp-prose"
+        style={{ fontSize: 14.5, lineHeight: 1.75, color: "var(--ink-2)" }}
+        dangerouslySetInnerHTML={{ __html: page.body_html }}
+      />
+    </StaticInteractivity>
   );
 }
