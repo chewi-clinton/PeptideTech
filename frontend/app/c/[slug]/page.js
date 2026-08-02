@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { api } from "@/lib/api";
 import ProductCard from "@/components/ProductCard";
@@ -24,6 +25,17 @@ export default async function CategoryPage({ params }) {
 
   return (
     <div className="container" style={{ padding: "40px 24px" }}>
+      <nav style={{ fontSize: 12, color: "var(--ink-4)", marginBottom: 16 }}>
+        <Link href="/" style={{ textDecoration: "none", color: "inherit" }}>
+          Home
+        </Link>
+        {" / "}
+        <Link href="/shop" style={{ textDecoration: "none", color: "inherit" }}>
+          Shop
+        </Link>
+        {" / "}
+        {category.name}
+      </nav>
       <h1 style={{ fontSize: 34 }}>{category.name}</h1>
       {category.description && (
         <p style={{ color: "var(--ink-3)", marginTop: 10, maxWidth: 720 }}>{category.description}</p>
