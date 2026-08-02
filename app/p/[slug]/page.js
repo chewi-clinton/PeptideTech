@@ -110,6 +110,16 @@ export default async function ProductPage({ params }) {
                 {coa.purity_percent && <span>HPLC purity {coa.purity_percent}</span>}
                 {coa.test_date && <span>Tested {coa.test_date}</span>}
                 {coa.issuing_lab && <span>{coa.issuing_lab}</span>}
+                {coa.file && (
+                  <a
+                    href={coa.file}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ marginLeft: "auto", color: "var(--brand-2)", fontWeight: 600, textDecoration: "none" }}
+                  >
+                    View PDF →
+                  </a>
+                )}
               </div>
             ))}
           </div>
