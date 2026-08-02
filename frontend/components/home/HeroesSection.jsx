@@ -88,35 +88,38 @@ export default function HeroesSection() {
         </div>
 
         <div>
-          <div
-            style={{
-              width: 200,
-              height: 200,
-              margin: "0 auto",
-              borderRadius: "50%",
-              border: "2px dashed var(--brand)",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              position: "relative",
-            }}
-          >
-            <div
-              style={{
-                width: 150,
-                height: 150,
-                borderRadius: "50%",
-                border: "1px solid var(--line)",
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                justifyContent: "center",
-                background: "var(--bg)",
-              }}
-            >
-              <div style={{ fontSize: 42, fontWeight: 800, color: "var(--brand-2)" }}>10%</div>
-              <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.05em", color: "var(--ink-3)" }}>OFF · ALWAYS</div>
-            </div>
+          <div style={{ display: "flex", justifyContent: "center" }}>
+            <svg width="196" height="196" viewBox="0 0 120 120" role="img" aria-label="Verified — 10% off for those who serve">
+              <defs>
+                <path id="sealTop" d="M 13 60 A 47 47 0 0 1 107 60" />
+                <path id="sealBot" d="M 107 60 A 47 47 0 0 1 13 60" />
+              </defs>
+              <circle cx="60" cy="60" r="58" fill="none" stroke="var(--brand)" strokeWidth="4.2" strokeLinecap="round" strokeDasharray="0 10.1228" opacity="0.35" />
+              <circle cx="60" cy="60" r="54" fill="var(--bg)" stroke="var(--brand)" strokeWidth="1.5" />
+              <circle cx="60" cy="60" r="49" fill="none" stroke="var(--brand)" strokeWidth="0.75" opacity="0.4" />
+              <g fontFamily="var(--font-mono-stack)" fontSize="6.6" fontWeight="600" letterSpacing="0.16em" fill="var(--brand-2)">
+                <text>
+                  <textPath href="#sealTop" startOffset="50%" textAnchor="middle">
+                    VERIFIED · THOSE WHO SERVE
+                  </textPath>
+                </text>
+                <text>
+                  <textPath href="#sealBot" startOffset="50%" textAnchor="middle">
+                    PEPTECH · EST. 2024
+                  </textPath>
+                </text>
+              </g>
+              <text x="14" y="62.4" textAnchor="middle" fontSize="7" fill="var(--brand)" opacity="0.7">★</text>
+              <text x="106" y="62.4" textAnchor="middle" fontSize="7" fill="var(--brand)" opacity="0.7">★</text>
+              <circle cx="60" cy="60" r="34" fill="var(--brand-tint)" />
+              <text x="60" y="57" textAnchor="middle" fontFamily="var(--font-sans-stack)" fontSize="30" fontWeight="700" letterSpacing="-0.03em" fill="var(--brand-2)">
+                10%
+              </text>
+              <text x="60" y="73" textAnchor="middle" fontFamily="var(--font-mono-stack)" fontSize="6" fontWeight="600" letterSpacing="0.14em" fill="var(--ink-3)">
+                OFF · ALWAYS
+              </text>
+              <line x1="42" y1="64" x2="78" y2="64" stroke="var(--brand)" strokeWidth="0.75" opacity="0.4" />
+            </svg>
           </div>
 
           <div style={{ marginTop: 24, display: "grid", gap: 10 }}>
@@ -133,15 +136,15 @@ export default function HeroesSection() {
                     justifyContent: "center",
                     background: "var(--brand-tint)",
                     color: "var(--brand-2)",
-                    borderRadius: "50%",
+                    borderRadius: "var(--radius-sm)",
                   }}
                 >
                   <Icon size={14} />
                   <span
                     style={{
                       position: "absolute",
-                      bottom: -4,
-                      right: -4,
+                      top: -6,
+                      left: -6,
                       width: 16,
                       height: 16,
                       borderRadius: "50%",
