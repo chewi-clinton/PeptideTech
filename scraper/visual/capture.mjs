@@ -89,7 +89,8 @@ async function main() {
     for (const bp of BREAKPOINTS) {
       const page = await browser.newPage();
       await page.setViewport({ width: bp.width, height: bp.height });
-      await page.goto(`${BASE}${pageDef.path}`, { waitUntil: "networkidle0", timeout: 60000 });
+      await page.goto(`${BASE}${pageDef.path}`, { waitUntil: "domcontentloaded", timeout: 60000 });
+      await new Promise((r) => setTimeout(r, 2000)); // let fonts/images/analytics settle
       const screenshotPath = path.join(OUT_DIR, `${pageDef.name}-${bp.name}-${bp.width}.png`);
       await page.screenshot({ path: screenshotPath, fullPage: true });
       console.log(`captured ${screenshotPath}`);
