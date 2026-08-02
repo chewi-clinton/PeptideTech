@@ -131,6 +131,11 @@ MINIO_USE_SSL = config("MINIO_USE_SSL", default=False, cast=bool)
 # Without this split, image URLs returned by the API embed the internal
 # hostname and 404 for every real client.
 MINIO_PUBLIC_ENDPOINT = config("MINIO_PUBLIC_ENDPOINT", default="localhost:13002")
+# The browser-facing URL is usually terminated by a reverse proxy (Traefik +
+# Let's Encrypt) in front of plain-HTTP MinIO, so its scheme is independent
+# of MINIO_USE_SSL (which governs the internal boto3->MinIO connection).
+# Defaults to MINIO_USE_SSL so local dev (no proxy in front) keeps working.
+MINIO_PUBLIC_SSL = config("MINIO_PUBLIC_SSL", default=MINIO_USE_SSL, cast=bool)
 
 if MINIO_ENDPOINT and MINIO_ACCESS_KEY and MINIO_SECRET_KEY:
     AWS_ACCESS_KEY_ID = MINIO_ACCESS_KEY
@@ -138,7 +143,7 @@ if MINIO_ENDPOINT and MINIO_ACCESS_KEY and MINIO_SECRET_KEY:
     AWS_STORAGE_BUCKET_NAME = MINIO_BUCKET_NAME
     AWS_S3_ENDPOINT_URL = MINIO_ENDPOINT
     AWS_S3_CUSTOM_DOMAIN = f"{MINIO_PUBLIC_ENDPOINT}/{MINIO_BUCKET_NAME}"
-    AWS_S3_URL_PROTOCOL = "https:" if MINIO_USE_SSL else "http:"
+    AWS_S3_URL_PROTOCOL = "https:" if MINIO_PUBLIC_SSL else "http:"
     AWS_S3_USE_SSL = MINIO_USE_SSL
     AWS_S3_VERIFY = MINIO_USE_SSL
     AWS_S3_ADDRESSING_STYLE = "path"
