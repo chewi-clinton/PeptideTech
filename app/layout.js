@@ -4,6 +4,7 @@ import { CartProvider } from "@/context/CartProvider";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import TopBanner from "@/components/TopBanner";
+import CartDrawer from "@/components/CartDrawer";
 
 const fontSans = Geist({
   variable: "--font-sans",
@@ -46,6 +47,7 @@ export default function RootLayout({ children }) {
             {children}
           </main>
           <SiteFooter />
+          <CartDrawer />
         </CartProvider>
       </body>
     </html>
