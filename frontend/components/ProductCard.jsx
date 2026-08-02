@@ -1,16 +1,33 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { useCart } from "@/context/CartProvider";
 import { IconCheck, IconClockSimple, IconFileText, IconIdentity, IconPlus } from "@/components/icons";
 
-export default function ProductCard({ product }) {
+export default function ProductCard({ product, mode = "add" }) {
   const defaultVariant = product.variants?.find((v) => v.is_default) || product.variants?.[0];
   const hasCoa = product.purity;
   const backordered = defaultVariant && !defaultVariant.in_stock;
   const onSale = defaultVariant?.compare_at_price;
+  const { addItem } = useCart();
+
+  function handleAdd(e) {
+    e.preventDefault();
+    if (!defaultVariant) return;
+    addItem({
+      variantId: defaultVariant.id,
+      productTitle: product.title,
+      variantLabel: defaultVariant.label,
+      price: defaultVariant.price,
+      image: product.primary_image,
+      openDrawer: true,
+    });
+  }
 
   return (
     <div className="card" style={{ overflow: "hidden" }}>
-      <Link href={`/p/${product.slug}`} style={{ display: "block", position: "relative", aspectRatio: "1", background: "var(--bg-tint)" }}>
+      <Link href={`/p/${product.slug}`} style={{ display: "block", position: "relative", aspectRatio: "1", background: "var(--bg)" }}>
         {product.primary_image && (
           <Image
             src={product.primary_image}
@@ -32,7 +49,7 @@ export default function ProductCard({ product }) {
             <span />
           )}
           {hasCoa && (
-            <span style={badgeStyle("var(--bg)", "var(--ink-3)")}>
+            <span style={badgeStyle("var(--brand-tint)", "var(--brand-2)")}>
               <IconIdentity size={11} />
               COA
             </span>
@@ -47,6 +64,22 @@ export default function ProductCard({ product }) {
         <Link href={`/p/${product.slug}`} style={{ display: "block", textDecoration: "none" }}>
           <div style={{ marginTop: 2, fontSize: 15, fontWeight: 700, color: "var(--ink)" }}>{product.title}</div>
         </Link>
+        {product.short_description && (
+          <p
+            style={{
+              marginTop: 4,
+              fontSize: 12.5,
+              color: "var(--ink-3)",
+              lineHeight: 1.5,
+              display: "-webkit-box",
+              WebkitLineClamp: 2,
+              WebkitBoxOrient: "vertical",
+              overflow: "hidden",
+            }}
+          >
+            {product.short_description}
+          </p>
+        )}
 
         <div style={{ marginTop: 10, display: "flex", alignItems: "center", justifyContent: "space-between", gap: 8 }}>
           <div>
@@ -60,17 +93,27 @@ export default function ProductCard({ product }) {
               )}
             </div>
           </div>
-          <Link
-            href={`/p/${product.slug}`}
-            className="btn-primary"
-            style={{ display: "inline-flex", alignItems: "center", gap: 4, padding: "9px 14px", fontSize: 13, textDecoration: "none" }}
-          >
-            <IconPlus size={14} />
-            Add
-          </Link>
+          {mode === "view" ? (
+            <Link
+              href={`/p/${product.slug}`}
+              className="btn-primary"
+              style={{ display: "inline-flex", alignItems: "center", gap: 4, padding: "9px 14px", fontSize: 13, textDecoration: "none" }}
+            >
+              View
+            </Link>
+          ) : (
+            <button
+              onClick={handleAdd}
+              className="btn-primary"
+              style={{ display: "inline-flex", alignItems: "center", gap: 4, padding: "9px 14px", fontSize: 13, border: "none", cursor: "pointer" }}
+            >
+              <IconPlus size={14} />
+              Add
+            </button>
+          )}
         </div>
 
-        <div style={{ marginTop: 10, paddingTop: 10, borderTop: "1px solid var(--line)", display: "flex", alignItems: "center", justifyContent: "space-between", paddingBottom: 12 }}>
+        <div style={{ marginTop: 10, display: "flex", alignItems: "center", justifyContent: "space-between", paddingBottom: 12 }}>
           <Link href={`/p/${product.slug}#coa`} style={{ display: "inline-flex", alignItems: "center", gap: 5, fontSize: 12.5, fontWeight: 600, color: "var(--brand-2)", textDecoration: "none" }}>
             <IconFileText size={13} />
             View COA
