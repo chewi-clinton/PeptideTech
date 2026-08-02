@@ -4,6 +4,7 @@ import {
   IconArrowRight,
   IconCheck,
   IconChevronDown,
+  IconClockSimple,
   IconFlag,
   IconGlobe,
   IconLightning,
@@ -206,6 +207,7 @@ export default function PriceMatchSection() {
               ))}
 
               <div style={{ marginTop: 10, display: "flex", alignItems: "center", gap: 6, fontSize: 11.5, color: "var(--ink-4)" }}>
+                <IconClockSimple size={12} style={{ flexShrink: 0 }} />
                 Re-checked daily — this exact comparison appears on every product page.
               </div>
             </div>
