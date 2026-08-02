@@ -1,0 +1,47 @@
+[
+  {
+    "key": "top-banner",
+    "label": "Top banner strip",
+    "body_html": "<p>For laboratory research use only \u00b7 Not for human or veterinary use \u00b7 21+</p>"
+  },
+  {
+    "key": "footer-intro",
+    "label": "Footer disclaimer \u2014 intro",
+    "body_html": "<p>All products offered by Peptide Tech LLC through peptidetech.is are supplied exclusively as research chemicals intended for laboratory research use only. They are not intended for human consumption or for medical, veterinary, agricultural, diagnostic, therapeutic, or any other non-research purposes. By purchasing or using any product, you affirm you are a qualified professional acquiring research chemicals solely for lawful laboratory research, and you are at least 21 years of age.</p>"
+  },
+  {
+    "key": "research-use-only-ruo-labeling",
+    "label": "Research Use Only (RUO) labeling",
+    "body_html": "<h4>Research Use Only (RUO) labeling</h4><p>The RUO label states intended laboratory research use only. It does not itself create a regulatory exemption, and product status depends on objective intended use and all applicable federal, state, local, and institutional law.</p>"
+  },
+  {
+    "key": "not-a-compounding-pharmacy-or-outsourcing-facility",
+    "label": "Not a compounding pharmacy or outsourcing facility",
+    "body_html": "<h4>Not a compounding pharmacy or outsourcing facility</h4><p>These products fall outside Sections 503A and 503B of the FD&C Act. Peptide Tech LLC is not a 503A compounding pharmacy or a 503B outsourcing facility, and products are not compounded medications.</p>"
+  },
+  {
+    "key": "not-drugs-supplements-or-food",
+    "label": "Not drugs, supplements, or food",
+    "body_html": "<h4>Not drugs, supplements, or food</h4><p>Products are not drugs, dietary supplements (DSHEA), food, food additives, cosmetics, or medical devices. All site information is educational only, has not been evaluated by the FDA, and is not intended to diagnose, treat, cure, or prevent any disease.</p>"
+  },
+  {
+    "key": "controlled-substances-doping",
+    "label": "Controlled substances & doping",
+    "body_html": "<h4>Controlled substances & doping</h4><p>Products are not intended to be controlled substances under the CSA (21 U.S.C. \u00a7 801 et seq.). The purchaser is responsible for compliance with the CSA, DEA requirements, and any anti-doping rules. Resale or distribution for non-research use is prohibited.</p>"
+  },
+  {
+    "key": "jurisdiction-import-export",
+    "label": "Jurisdiction, import & export",
+    "body_html": "<h4>Jurisdiction, import & export</h4><p>Certain compounds are restricted in some states and countries. Restricted jurisdictions may be declined or flagged at checkout. The purchaser is responsible for compliance with all applicable laws, including import/export regulations.</p>"
+  },
+  {
+    "key": "california-proposition-65",
+    "label": "California Proposition 65",
+    "body_html": "<h4>California Proposition 65</h4><p>WARNING: These products can expose you to chemicals known to the State of California to cause cancer or reproductive harm. For more information, visit www.P65Warnings.ca.gov.</p>"
+  },
+  {
+    "key": "limitation-of-liability",
+    "label": "Limitation of liability",
+    "body_html": "<h4>Limitation of liability</h4><p>Products are provided \u201cas is,\u201d without warranty beyond the analytical specifications stated on each Certificate of Analysis. To the fullest extent permitted by law, Peptide Tech LLC is not liable for damages arising from misuse or any use outside qualified laboratory research.</p>"
+  }
+]

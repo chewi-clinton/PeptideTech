@@ -1,0 +1,37 @@
+[
+  {
+    "slug": "peptides",
+    "name": "Peptides",
+    "description": "Shop research peptides for sale from Peptide Technologies \u2014 one of the deepest research peptide catalogs available, spanning single-compound reference materials such as BPC-157, TB-500, GHK-Cu, and the secretagogue and metabolic families. Each product is a research-grade reference standard characterized by HPLC and backed by a public, batch-specific Certificate of Analysis. Whether you are sourcing a well-characterized compound for a laboratory model or comparing purity across suppliers, every listing below documents identity, purity, and lot traceability so your procurement decisions rest on evidence, not marketing."
+  },
+  {
+    "slug": "peptide-blends",
+    "name": "Peptide Blends",
+    "description": "Shop research peptide blends for sale \u2014 pre-combined, multi-compound reference materials supplied in a single vial for comparative laboratory research. Each blend documents the identity and characterized purity of every component and ships with a batch-specific Certificate of Analysis. Peptide blends let a laboratory source a defined multi-peptide reference standard from one documented lot; all materials are for laboratory research use only."
+  },
+  {
+    "slug": "cases-accessories",
+    "name": "Cases & Accessories",
+    "description": "Shop peptide storage cases and lab accessories for sale \u2014 vial organizers, storage cases, and research supplies that keep a peptide reference-material collection organized, protected, and lot-traceable. From single-vial carriers to deluxe multi-vial cases, these accessories are built for researchers who need durable, well-labeled storage for their catalog."
+  },
+  {
+    "slug": "liquids-aminos-solvents",
+    "name": "Liquids / Aminos / Solvents",
+    "description": "Shop laboratory liquids, aminos, and solvents for sale \u2014 including bacteriostatic water, sterile diluents, amino acid reference materials, and research solvents used to reconstitute and prepare lyophilized peptides. These are the laboratory reconstitution and assay supplies that support the rest of the catalog; each is quality-verified and supplied for laboratory research use only."
+  },
+  {
+    "slug": "capsules",
+    "name": "Capsules",
+    "description": "Shop research peptide capsules for sale \u2014 encapsulated, orally-formatted reference materials characterized for identity and purity and documented with a batch-specific Certificate of Analysis. Capsules provide a convenient pre-portioned research format for laboratory workflows that call for a solid-format reference standard. All capsule products are supplied strictly for laboratory research use only."
+  },
+  {
+    "slug": "bioregulators",
+    "name": "Bioregulators",
+    "description": "Shop peptide bioregulators for sale \u2014 the short peptide reference materials studied as geroprotectors and tissue-signaling models in longevity and gerontology research. Peptide Technologies stocks characterized bioregulator reference standards, each HPLC-tested and documented with a batch-specific Certificate of Analysis. This is a well-defined research niche with limited documented supply; every material below is supplied for laboratory research use only."
+  },
+  {
+    "slug": "glp-peptides",
+    "name": "GLP Peptides",
+    "description": "Browse GLP research peptides for sale \u2014 the incretin-family reference materials used in receptor-signaling and metabolic-pathway laboratory research, including GLP-1 and GIP receptor-agonist research compounds. Every GLP-family reference standard in this category is HPLC-characterized and ships with a batch-specific Certificate of Analysis so you can document identity and purity for your research records. These materials are supplied for laboratory research use only."
+  }
+]

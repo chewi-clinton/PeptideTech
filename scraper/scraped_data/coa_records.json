@@ -1,0 +1,194 @@
+[
+  {
+    "product_name": "Selank 5mg",
+    "product_slug": "selank-5mg",
+    "lot_number": "SEL-5050",
+    "purity_percent": "99.80%",
+    "test_date": "Jun 5, 2026",
+    "issuing_lab": "Freedom Diagnostics"
+  },
+  {
+    "product_name": "KLOW Blend 80mg",
+    "product_slug": "klow-blend-80mg",
+    "lot_number": "KLW70-4280",
+    "purity_percent": "99.62%",
+    "test_date": "Jun 5, 2026",
+    "issuing_lab": "Freedom Diagnostics"
+  },
+  {
+    "product_name": "Tesamorelin + Ipamorelin Blend",
+    "product_slug": "tesa-ipamorelin-blend",
+    "lot_number": "TSIP-3340",
+    "purity_percent": "99.93%",
+    "test_date": "Jun 5, 2026",
+    "issuing_lab": "Freedom Diagnostics"
+  },
+  {
+    "product_name": "Semax 5mg",
+    "product_slug": "semax-5mg",
+    "lot_number": "SEM5-2235",
+    "purity_percent": "99.58%",
+    "test_date": "Jun 5, 2026",
+    "issuing_lab": "Freedom Diagnostics"
+  },
+  {
+    "product_name": "GLP-5 RC Blend",
+    "product_slug": "glp-5-rc-10mg-2-5mg-blend",
+    "lot_number": "GLP5RC-1530",
+    "purity_percent": "99.92%",
+    "test_date": "Jun 5, 2026",
+    "issuing_lab": "Freedom Diagnostics"
+  },
+  {
+    "product_name": "TB-500",
+    "product_slug": "tb-500",
+    "lot_number": "TB10-8810",
+    "purity_percent": "99.16%",
+    "test_date": "Jun 5, 2026",
+    "issuing_lab": "Freedom Diagnostics"
+  },
+  {
+    "product_name": "Thymosin Alpha-1 5mg",
+    "product_slug": "thymosin-alpha-1-5mg",
+    "lot_number": "THY5-4970",
+    "purity_percent": "99.55%",
+    "test_date": "Jun 5, 2026",
+    "issuing_lab": "Freedom Diagnostics"
+  },
+  {
+    "product_name": "GLP-3",
+    "product_slug": "glp-3",
+    "lot_number": "GLP60-6115",
+    "purity_percent": "99.87%",
+    "test_date": "May 17, 2026",
+    "issuing_lab": "Freedom Diagnostics"
+  },
+  {
+    "product_name": "GLP-3",
+    "product_slug": "glp-3",
+    "lot_number": "GLP5-7605",
+    "purity_percent": "99.91%",
+    "test_date": "May 17, 2026",
+    "issuing_lab": "Freedom Diagnostics"
+  },
+  {
+    "product_name": "GLP-3",
+    "product_slug": "glp-3",
+    "lot_number": "GLP60-6115",
+    "purity_percent": "99.87%",
+    "test_date": "May 17, 2026",
+    "issuing_lab": "Freedom Diagnostics"
+  },
+  {
+    "product_name": "GLP-3",
+    "product_slug": "glp-3",
+    "lot_number": "GLP30-2280",
+    "purity_percent": "99.92%",
+    "test_date": "May 17, 2026",
+    "issuing_lab": "Freedom Diagnostics"
+  },
+  {
+    "product_name": "IGF-1 LR3 1mg",
+    "product_slug": "igf-1-lr3-1mg",
+    "lot_number": "IGF-6450",
+    "purity_percent": "99.85%",
+    "test_date": "May 17, 2026",
+    "issuing_lab": "Freedom Diagnostics"
+  },
+  {
+    "product_name": "NAD+",
+    "product_slug": "nad",
+    "lot_number": "NAD-515",
+    "purity_percent": "99.67%",
+    "test_date": "May 9, 2026",
+    "issuing_lab": "Freedom Diagnostics"
+  },
+  {
+    "product_name": "GLP-3",
+    "product_slug": "glp-3",
+    "lot_number": "GLP10-5955",
+    "purity_percent": "99.80%",
+    "test_date": "May 4, 2026",
+    "issuing_lab": "Freedom Diagnostics"
+  },
+  {
+    "product_name": "GLP-3",
+    "product_slug": "glp-3",
+    "lot_number": "GLP20-6040",
+    "purity_percent": "99.91%",
+    "test_date": "May 4, 2026",
+    "issuing_lab": "Freedom Diagnostics"
+  },
+  {
+    "product_name": "GLP-3",
+    "product_slug": "glp-3",
+    "lot_number": "GLP20-6040",
+    "purity_percent": "99.91%",
+    "test_date": "May 4, 2026",
+    "issuing_lab": "Freedom Diagnostics"
+  },
+  {
+    "product_name": "PT-141 10mg",
+    "product_slug": "pt-141-10mg",
+    "lot_number": "PTM10-1115",
+    "purity_percent": "99.94%",
+    "test_date": "May 4, 2026",
+    "issuing_lab": "Freedom Diagnostics"
+  },
+  {
+    "product_name": "Ipamorelin",
+    "product_slug": "ipamorelin",
+    "lot_number": "IPA1-2720",
+    "purity_percent": "99.95%",
+    "test_date": "Apr 27, 2026",
+    "issuing_lab": "Freedom Diagnostics"
+  },
+  {
+    "product_name": "Ipamorelin",
+    "product_slug": "ipamorelin",
+    "lot_number": "IPA10-1385",
+    "purity_percent": "99.81%",
+    "test_date": "Apr 27, 2026",
+    "issuing_lab": "Freedom Diagnostics"
+  },
+  {
+    "product_name": "MT1 10mg",
+    "product_slug": null,
+    "lot_number": "MT1-4325",
+    "purity_percent": "99.61%",
+    "test_date": "Apr 27, 2026",
+    "issuing_lab": "Freedom Diagnostics"
+  },
+  {
+    "product_name": "AOD-9604 5mg",
+    "product_slug": "aod-9604-5mg",
+    "lot_number": "AOD-1190",
+    "purity_percent": "99.88%",
+    "test_date": "Apr 27, 2026",
+    "issuing_lab": "Freedom Diagnostics"
+  },
+  {
+    "product_name": "Pinealon 20mg",
+    "product_slug": "pinealon-20mg",
+    "lot_number": "PNL-6280",
+    "purity_percent": "99.78%",
+    "test_date": "Apr 27, 2026",
+    "issuing_lab": "Freedom Diagnostics"
+  },
+  {
+    "product_name": "Sermorelin 5mg",
+    "product_slug": "sermorelin-5mg",
+    "lot_number": "SER5-9905",
+    "purity_percent": "99.53%",
+    "test_date": "Apr 27, 2026",
+    "issuing_lab": "Freedom Diagnostics"
+  },
+  {
+    "product_name": "Bronchogen 20mg",
+    "product_slug": null,
+    "lot_number": "BRON-6905",
+    "purity_percent": "99.16%",
+    "test_date": "Apr 27, 2026",
+    "issuing_lab": "Freedom Diagnostics"
+  }
+]
