@@ -4,7 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useCart } from "@/context/CartProvider";
-import { IconCheck, IconGift, IconIdentity, IconPurity, IconShield } from "@/components/icons";
+import { IconCheck, IconGift, IconIdentity, IconLightning, IconPurity, IconShield } from "@/components/icons";
 
 export default function ProductBuyBox({ product }) {
   const variants = product.variants || [];
@@ -26,6 +26,8 @@ export default function ProductBuyBox({ product }) {
       variantLabel: variant.label,
       price: variant.price,
       quantity,
+      image: product.primary_image,
+      openDrawer: true,
     });
     setAdded(true);
     setTimeout(() => setAdded(false), 2000);
@@ -40,7 +42,7 @@ export default function ProductBuyBox({ product }) {
         </div>
       )}
 
-      {variants.length > 1 && (
+      {variants.length >= 1 && (
         <div style={{ marginBottom: 16 }}>
           <div style={{ display: "flex", justifyContent: "space-between", fontSize: 11.5, color: "var(--ink-4)", marginBottom: 6 }}>
             <span style={{ textTransform: "uppercase", letterSpacing: "0.04em" }}>Strength</span>
@@ -74,17 +76,29 @@ export default function ProductBuyBox({ product }) {
         </div>
       )}
 
-      <div className="card" style={{ padding: 20 }}>
-        <div style={{ display: "flex", alignItems: "baseline", gap: 10 }}>
-          <span style={{ fontSize: 30, fontWeight: 700, color: "var(--ink)" }}>${variant.price}</span>
-          {variant.compare_at_price && (
-            <span style={{ fontSize: 15, color: "var(--ink-4)", textDecoration: "line-through" }}>
-              ${variant.compare_at_price}
-            </span>
-          )}
-        </div>
-        <div style={{ marginTop: 4, fontSize: 12.5, color: variant.in_stock ? "var(--brand-2)" : "var(--ink-4)" }}>
-          {variant.in_stock ? "In stock · fast shipping" : "Backordered — ships once restocked"}
+      <div className="card" style={{ padding: 20, background: "var(--brand-tint)", border: "1px solid var(--brand)" }}>
+        <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: 8 }}>
+          <div style={{ display: "flex", alignItems: "baseline", gap: 10 }}>
+            <span style={{ fontSize: 30, fontWeight: 700, color: "var(--ink)" }}>${variant.price}</span>
+            {variant.compare_at_price && (
+              <span style={{ fontSize: 15, color: "var(--ink-4)", textDecoration: "line-through" }}>
+                ${variant.compare_at_price}
+              </span>
+            )}
+          </div>
+          <span
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              gap: 5,
+              fontSize: 12.5,
+              fontWeight: 600,
+              color: variant.in_stock ? "var(--brand-2)" : "var(--ink-4)",
+            }}
+          >
+            <IconLightning size={13} />
+            {variant.in_stock ? "Fast shipping · in stock" : "Backordered — ships once restocked"}
+          </span>
         </div>
 
         <div style={{ marginTop: 16, display: "flex", gap: 10 }}>
