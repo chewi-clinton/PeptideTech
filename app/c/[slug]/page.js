@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { api } from "@/lib/api";
 import ProductCard from "@/components/ProductCard";
+import ProductFaqAccordion from "@/components/ProductFaqAccordion";
 
 export async function generateMetadata({ params }) {
   const { slug } = await params;
@@ -49,9 +50,19 @@ export default async function CategoryPage({ params }) {
         }}
       >
         {products.map((p) => (
-          <ProductCard key={p.slug} product={p} />
+          <ProductCard key={p.slug} product={p} mode="view" />
         ))}
       </div>
+
+      {category.extra_html && (
+        <div
+          className="pep-pdp-prose"
+          style={{ marginTop: 48, maxWidth: 780, fontSize: 14.5, lineHeight: 1.75, color: "var(--ink-2)" }}
+          dangerouslySetInnerHTML={{ __html: category.extra_html }}
+        />
+      )}
+
+      <ProductFaqAccordion faqHtml={category.faq_html} title={category.name} />
     </div>
   );
 }

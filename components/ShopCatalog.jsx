@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import Link from "next/link";
 import ProductCard from "@/components/ProductCard";
 import Eyebrow from "@/components/Eyebrow";
 import HexBackground from "@/components/HexBackground";
@@ -30,7 +31,6 @@ function defaultVariant(p) {
 
 export default function ShopCatalog({ products, categories }) {
   const [query, setQuery] = useState("");
-  const [category, setCategory] = useState("all");
   const [sort, setSort] = useState("featured");
   const [price, setPrice] = useState("all");
   const [activeFilters, setActiveFilters] = useState([]);
@@ -45,10 +45,6 @@ export default function ShopCatalog({ products, categories }) {
     if (query.trim()) {
       const q = query.trim().toLowerCase();
       list = list.filter((p) => p.title.toLowerCase().includes(q));
-    }
-
-    if (category !== "all") {
-      list = list.filter((p) => p.category?.slug === category);
     }
 
     for (const filter of activeFilters) {
@@ -74,7 +70,7 @@ export default function ShopCatalog({ products, categories }) {
     if (sort === "az") list.sort((a, b) => a.title.localeCompare(b.title));
 
     return list;
-  }, [products, query, category, sort, price, activeFilters]);
+  }, [products, query, sort, price, activeFilters]);
 
   return (
     <div>
@@ -116,13 +112,13 @@ export default function ShopCatalog({ products, categories }) {
       <div className="container" style={{ marginTop: 40, padding: "0 24px" }}>
         <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: 12 }}>
           <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
-            <PillButton active={category === "all"} onClick={() => setCategory("all")}>
+            <PillLink href="/shop" active>
               All products
-            </PillButton>
+            </PillLink>
             {categories.map((c) => (
-              <PillButton key={c.slug} active={category === c.slug} onClick={() => setCategory(c.slug)}>
+              <PillLink key={c.slug} href={`/c/${c.slug}`}>
                 {c.name}
-              </PillButton>
+              </PillLink>
             ))}
           </div>
           <SelectDropdown value={sort} onChange={setSort} options={SORT_OPTIONS} />
@@ -186,6 +182,31 @@ export default function ShopCatalog({ products, categories }) {
         {filtered.length === 0 && <p style={{ color: "var(--ink-4)", marginTop: 20 }}>No products match your filters.</p>}
       </div>
     </div>
+  );
+}
+
+function PillLink({ href, active, children }) {
+  return (
+    <Link
+      href={href}
+      style={{
+        display: "inline-flex",
+        alignItems: "center",
+        gap: 6,
+        height: 38,
+        padding: "0 16px",
+        borderRadius: 999,
+        fontSize: 13.5,
+        fontWeight: 500,
+        textDecoration: "none",
+        background: active ? "var(--brand)" : "var(--bg)",
+        color: active ? "#fff" : "var(--ink-2)",
+        border: `1px solid ${active ? "var(--brand)" : "var(--line-2)"}`,
+        transition: "160ms",
+      }}
+    >
+      {children}
+    </Link>
   );
 }
 
