@@ -53,31 +53,64 @@ export default function BuildKitSection() {
             <div style={{ display: "flex", flexDirection: "column", alignItems: "center", padding: "40px 0 24px" }}>
               <div
                 style={{
-                  width: 220,
-                  height: 60,
-                  background: COLORS[lid],
-                  borderRadius: "10px 10px 4px 4px",
+                  position: "relative",
+                  zIndex: 1,
+                  width: 260,
+                  height: 64,
+                  background: `linear-gradient(180deg, ${COLORS[lid]}e6, ${COLORS[lid]})`,
+                  borderRadius: 32,
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
-                  color: "#fff",
+                  color: "rgba(255,255,255,0.92)",
                   fontWeight: 700,
-                  letterSpacing: "0.05em",
+                  letterSpacing: "0.08em",
                   fontFamily: "var(--font-mono-stack)",
+                  boxShadow: "0 6px 14px -6px rgba(10,24,40,0.35)",
                 }}
               >
-                {text || "YOUR LAB"}
+                {(text || "YOUR LAB").toUpperCase()}
               </div>
               <div
                 style={{
-                  width: 220,
-                  height: 70,
+                  position: "relative",
+                  width: 230,
+                  height: 82,
                   background: COLORS[body],
-                  borderRadius: "4px 4px 10px 10px",
-                  marginTop: -2,
+                  borderRadius: 18,
+                  marginTop: -14,
                 }}
-              />
-              <div style={{ width: 240, height: 10, background: "var(--line)", borderRadius: "50%", marginTop: 6, opacity: 0.5 }} />
+              >
+                <span
+                  aria-hidden="true"
+                  style={{
+                    position: "absolute",
+                    top: -3,
+                    right: 10,
+                    width: 8,
+                    height: 8,
+                    borderRadius: "50%",
+                    background: "var(--ink)",
+                  }}
+                />
+                {[0.32, 0.68].map((pos) => (
+                  <span
+                    key={pos}
+                    aria-hidden="true"
+                    style={{
+                      position: "absolute",
+                      top: -4,
+                      left: `${pos * 100}%`,
+                      transform: "translateX(-50%)",
+                      width: 16,
+                      height: 8,
+                      borderRadius: 3,
+                      background: "rgba(10,24,40,0.25)",
+                    }}
+                  />
+                ))}
+              </div>
+              <div style={{ width: 190, height: 12, background: "var(--ink)", opacity: 0.08, borderRadius: "50%", marginTop: 10, filter: "blur(2px)" }} />
             </div>
 
             <div style={{ display: "grid", gap: 10 }}>
@@ -126,8 +159,20 @@ export default function BuildKitSection() {
                 [IconCube, "Real 3D preview of the actual print files — open it, spin it"],
                 [IconGift, "PETG, fine-finish, and heavy-duty print options"],
               ].map(([Icon, label]) => (
-                <li key={label} style={{ display: "flex", gap: 10, fontSize: 14, color: "var(--ink-2)" }}>
-                  <span style={{ color: "var(--brand-2)", flexShrink: 0 }}>
+                <li key={label} style={{ display: "flex", alignItems: "center", gap: 12, fontSize: 14, color: "var(--ink-2)" }}>
+                  <span
+                    style={{
+                      width: 30,
+                      height: 30,
+                      flexShrink: 0,
+                      display: "inline-flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      background: "var(--brand-tint)",
+                      color: "var(--brand-2)",
+                      borderRadius: "var(--radius-sm)",
+                    }}
+                  >
                     <Icon size={14} />
                   </span>
                   {label}
@@ -139,7 +184,16 @@ export default function BuildKitSection() {
                 Start building
                 <IconArrowRight size={16} style={{ color: "#fff" }} />
               </Link>
-              <span style={{ fontFamily: "var(--font-mono-stack)", fontSize: 12, color: "var(--ink-3)" }}>
+              <span
+                style={{
+                  fontFamily: "var(--font-mono-stack)",
+                  fontSize: 12,
+                  fontWeight: 700,
+                  letterSpacing: "0.06em",
+                  textTransform: "uppercase",
+                  color: "var(--brand-2)",
+                }}
+              >
                 from $79.99 · ships in days
               </span>
             </div>
