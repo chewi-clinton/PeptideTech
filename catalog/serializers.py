@@ -6,7 +6,7 @@ from .models import COA, Category, Product, ProductImage, ProductVariant
 class CategorySerializer(serializers.ModelSerializer):
     class Meta:
         model = Category
-        fields = ["id", "name", "slug", "description", "position"]
+        fields = ["id", "name", "slug", "description", "extra_html", "faq_html", "position"]
 
 
 class ProductImageSerializer(serializers.ModelSerializer):

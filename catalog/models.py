@@ -5,6 +5,8 @@ class Category(models.Model):
     name = models.CharField(max_length=200)
     slug = models.SlugField(max_length=200, unique=True)
     description = models.TextField(blank=True)
+    extra_html = models.TextField(blank=True)
+    faq_html = models.TextField(blank=True)
     position = models.PositiveIntegerField(default=0)
 
     class Meta:
