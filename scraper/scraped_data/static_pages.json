@@ -99,9 +99,9 @@
   },
   {
     "slug": "build-a-kit",
-    "title": "Build A Kit",
-    "meta_description": "Design a made-to-order 3D-printed vial storage case: choose the size, pick filament colors, engrave or emboss text, and add your lab's logo. Live 3D preview with a confirmed price and lead time.",
-    "body_html": "<script type=\"application/ld+json\">{\"@context\":\"https://schema.org/\",\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://peptidetech.is/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Build a Kit\",\"item\":\"https://peptidetech.is/build-a-kit\"}]}</script><div class=\"container\" style=\"padding:64px 24px;text-align:center;color:var(--ink-3);font-size:14px\">Loading the configurator\u2026</div><!--$--><!--/$-->",
+    "title": "Deluxe Vial Case",
+    "meta_description": "Our real two-part deluxe storage case \u2014 hinged lid, latching front, molded bays for 9 vials plus accessory and supply compartments. Printed to order in your col",
+    "body_html": "<p>Our real two-part deluxe storage case \u2014 hinged lid, latching front, molded bays for 9 vials plus accessory and supply compartments. Printed to order in your colors, with optional engraved or embossed text and logo on the lid.</p>\n<h3>Pricing</h3>\n<table style=\"width:100%;border-collapse:collapse;margin-top:8px\">\n<tbody>\n<tr><td style=\"padding:8px 0;color:var(--ink-3)\">Base price</td><td style=\"padding:8px 0;font-weight:600\">$39.99</td></tr>\n<tr><td style=\"padding:8px 0;color:var(--ink-3)\">Add engraved/embossed text</td><td style=\"padding:8px 0;font-weight:600\">+$5.00</td></tr>\n<tr><td style=\"padding:8px 0;color:var(--ink-3)\">Add logo</td><td style=\"padding:8px 0;font-weight:600\">+$15.00</td></tr>\n<tr><td style=\"padding:8px 0;color:var(--ink-3)\">Materials available</td><td style=\"padding:8px 0;font-weight:600\">PLA, PETG</td></tr>\n</tbody>\n</table>\n<p style=\"margin-top:16px;font-size:13px;color:var(--ink-4)\">The live 3D color/engraving configurator itself isn't reproduced in this clone \u2014 contact us to build a custom kit from these options.</p>",
     "cover_image": null
   },
   {

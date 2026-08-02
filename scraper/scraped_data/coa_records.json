@@ -1,194 +1,2378 @@
 [
   {
-    "product_name": "Selank 5mg",
-    "product_slug": "selank-5mg",
-    "lot_number": "SEL-5050",
-    "purity_percent": "99.80%",
-    "test_date": "Jun 5, 2026",
-    "issuing_lab": "Freedom Diagnostics"
-  },
-  {
-    "product_name": "KLOW Blend 80mg",
-    "product_slug": "klow-blend-80mg",
-    "lot_number": "KLW70-4280",
-    "purity_percent": "99.62%",
-    "test_date": "Jun 5, 2026",
-    "issuing_lab": "Freedom Diagnostics"
-  },
-  {
-    "product_name": "Tesamorelin + Ipamorelin Blend",
-    "product_slug": "tesa-ipamorelin-blend",
-    "lot_number": "TSIP-3340",
-    "purity_percent": "99.93%",
-    "test_date": "Jun 5, 2026",
-    "issuing_lab": "Freedom Diagnostics"
+    "product_name": "GLP-5 RC Blend",
+    "product_slug": "glp-5-rc-10mg-2-5mg-blend",
+    "lot_number": "GLP5RC-1530",
+    "purity_percent": "99.92%",
+    "test_date_iso": "2026-06-05",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/GLP5RC-1530.pdf"
   },
   {
     "product_name": "Semax 5mg",
     "product_slug": "semax-5mg",
     "lot_number": "SEM5-2235",
     "purity_percent": "99.58%",
-    "test_date": "Jun 5, 2026",
-    "issuing_lab": "Freedom Diagnostics"
+    "test_date_iso": "2026-06-05",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/SEM5-2235.pdf"
   },
   {
-    "product_name": "GLP-5 RC Blend",
-    "product_slug": "glp-5-rc-10mg-2-5mg-blend",
-    "lot_number": "GLP5RC-1530",
-    "purity_percent": "99.92%",
-    "test_date": "Jun 5, 2026",
-    "issuing_lab": "Freedom Diagnostics"
+    "product_name": "Selank 5mg",
+    "product_slug": "selank-5mg",
+    "lot_number": "SEL-5050",
+    "purity_percent": "99.80%",
+    "test_date_iso": "2026-06-05",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/SEL-5050.pdf"
   },
   {
     "product_name": "TB-500",
     "product_slug": "tb-500",
     "lot_number": "TB10-8810",
     "purity_percent": "99.16%",
-    "test_date": "Jun 5, 2026",
-    "issuing_lab": "Freedom Diagnostics"
+    "test_date_iso": "2026-06-05",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/TB10-8810.pdf"
+  },
+  {
+    "product_name": "Tesamorelin + Ipamorelin Blend",
+    "product_slug": "tesa-ipamorelin-blend",
+    "lot_number": "TSIP-3340",
+    "purity_percent": "99.93%",
+    "test_date_iso": "2026-06-05",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/TSIP-3340.pdf"
   },
   {
     "product_name": "Thymosin Alpha-1 5mg",
     "product_slug": "thymosin-alpha-1-5mg",
     "lot_number": "THY5-4970",
     "purity_percent": "99.55%",
-    "test_date": "Jun 5, 2026",
-    "issuing_lab": "Freedom Diagnostics"
+    "test_date_iso": "2026-06-05",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/THY5-4970.pdf"
   },
   {
-    "product_name": "GLP-3",
-    "product_slug": "glp-3",
-    "lot_number": "GLP60-6115",
-    "purity_percent": "99.87%",
-    "test_date": "May 17, 2026",
-    "issuing_lab": "Freedom Diagnostics"
-  },
-  {
-    "product_name": "GLP-3",
-    "product_slug": "glp-3",
-    "lot_number": "GLP5-7605",
-    "purity_percent": "99.91%",
-    "test_date": "May 17, 2026",
-    "issuing_lab": "Freedom Diagnostics"
-  },
-  {
-    "product_name": "GLP-3",
-    "product_slug": "glp-3",
-    "lot_number": "GLP60-6115",
-    "purity_percent": "99.87%",
-    "test_date": "May 17, 2026",
-    "issuing_lab": "Freedom Diagnostics"
+    "product_name": "KLOW Blend 80mg",
+    "product_slug": "klow-blend-80mg",
+    "lot_number": "KLW70-4280",
+    "purity_percent": "99.62%",
+    "test_date_iso": "2026-06-05",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/KLW70-4280.pdf"
   },
   {
     "product_name": "GLP-3",
     "product_slug": "glp-3",
     "lot_number": "GLP30-2280",
     "purity_percent": "99.92%",
-    "test_date": "May 17, 2026",
-    "issuing_lab": "Freedom Diagnostics"
+    "test_date_iso": "2026-05-17",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/GLP30-2280.pdf"
+  },
+  {
+    "product_name": "GLP-3",
+    "product_slug": "glp-3",
+    "lot_number": "GLP60-6115",
+    "purity_percent": "99.87%",
+    "test_date_iso": "2026-05-17",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/GLP60-6115.pdf"
+  },
+  {
+    "product_name": "GLP-3",
+    "product_slug": "glp-3",
+    "lot_number": "GLP60-6115",
+    "purity_percent": "99.87%",
+    "test_date_iso": "2026-05-17",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/GLP60-6115.pdf"
   },
   {
     "product_name": "IGF-1 LR3 1mg",
     "product_slug": "igf-1-lr3-1mg",
     "lot_number": "IGF-6450",
     "purity_percent": "99.85%",
-    "test_date": "May 17, 2026",
-    "issuing_lab": "Freedom Diagnostics"
+    "test_date_iso": "2026-05-17",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/IGF-6450.pdf"
+  },
+  {
+    "product_name": "GLP-3",
+    "product_slug": "glp-3",
+    "lot_number": "GLP5-7605",
+    "purity_percent": "99.91%",
+    "test_date_iso": "2026-05-17",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/GLP5-7605.pdf"
   },
   {
     "product_name": "NAD+",
     "product_slug": "nad",
     "lot_number": "NAD-515",
     "purity_percent": "99.67%",
-    "test_date": "May 9, 2026",
-    "issuing_lab": "Freedom Diagnostics"
+    "test_date_iso": "2026-05-09",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": null
   },
   {
     "product_name": "GLP-3",
     "product_slug": "glp-3",
     "lot_number": "GLP10-5955",
     "purity_percent": "99.80%",
-    "test_date": "May 4, 2026",
-    "issuing_lab": "Freedom Diagnostics"
+    "test_date_iso": "2026-05-04",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/GLP10-5955.pdf"
   },
   {
     "product_name": "GLP-3",
     "product_slug": "glp-3",
     "lot_number": "GLP20-6040",
     "purity_percent": "99.91%",
-    "test_date": "May 4, 2026",
-    "issuing_lab": "Freedom Diagnostics"
-  },
-  {
-    "product_name": "GLP-3",
-    "product_slug": "glp-3",
-    "lot_number": "GLP20-6040",
-    "purity_percent": "99.91%",
-    "test_date": "May 4, 2026",
-    "issuing_lab": "Freedom Diagnostics"
+    "test_date_iso": "2026-05-04",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/GLP20-6040.pdf"
   },
   {
     "product_name": "PT-141 10mg",
     "product_slug": "pt-141-10mg",
     "lot_number": "PTM10-1115",
     "purity_percent": "99.94%",
-    "test_date": "May 4, 2026",
-    "issuing_lab": "Freedom Diagnostics"
+    "test_date_iso": "2026-05-04",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/PTM10-1115.pdf"
   },
   {
-    "product_name": "Ipamorelin",
-    "product_slug": "ipamorelin",
-    "lot_number": "IPA1-2720",
-    "purity_percent": "99.95%",
-    "test_date": "Apr 27, 2026",
-    "issuing_lab": "Freedom Diagnostics"
+    "product_name": "GLP-3",
+    "product_slug": "glp-3",
+    "lot_number": "GLP20-6040",
+    "purity_percent": "99.91%",
+    "test_date_iso": "2026-05-04",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/GLP20-6040.pdf"
   },
   {
     "product_name": "Ipamorelin",
     "product_slug": "ipamorelin",
     "lot_number": "IPA10-1385",
     "purity_percent": "99.81%",
-    "test_date": "Apr 27, 2026",
-    "issuing_lab": "Freedom Diagnostics"
+    "test_date_iso": "2026-04-27",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": null
   },
   {
-    "product_name": "MT1 10mg",
-    "product_slug": null,
-    "lot_number": "MT1-4325",
-    "purity_percent": "99.61%",
-    "test_date": "Apr 27, 2026",
-    "issuing_lab": "Freedom Diagnostics"
+    "product_name": "Ipamorelin",
+    "product_slug": "ipamorelin",
+    "lot_number": "IPA1-2720",
+    "purity_percent": "99.95%",
+    "test_date_iso": "2026-04-27",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": null
+  },
+  {
+    "product_name": "Cardiogen 20mg",
+    "product_slug": "cardiogen-20mg",
+    "lot_number": "CRD-3890",
+    "purity_percent": "99.85%",
+    "test_date_iso": "2026-04-27",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": null
+  },
+  {
+    "product_name": "BPC-157 + TB-500 Blend",
+    "product_slug": "bpc-157-tb-500-blend",
+    "lot_number": "BPC2-5440",
+    "purity_percent": "99.09%",
+    "test_date_iso": "2026-04-27",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": null
   },
   {
     "product_name": "AOD-9604 5mg",
     "product_slug": "aod-9604-5mg",
     "lot_number": "AOD-1190",
     "purity_percent": "99.88%",
-    "test_date": "Apr 27, 2026",
-    "issuing_lab": "Freedom Diagnostics"
+    "test_date_iso": "2026-04-27",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": null
+  },
+  {
+    "product_name": "Bronchogen 20mg",
+    "product_slug": "bronchogen-20mg",
+    "lot_number": "BRON-6905",
+    "purity_percent": "99.16%",
+    "test_date_iso": "2026-04-27",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": null
   },
   {
     "product_name": "Pinealon 20mg",
     "product_slug": "pinealon-20mg",
     "lot_number": "PNL-6280",
     "purity_percent": "99.78%",
-    "test_date": "Apr 27, 2026",
-    "issuing_lab": "Freedom Diagnostics"
+    "test_date_iso": "2026-04-27",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": null
+  },
+  {
+    "product_name": "MT1 10mg",
+    "product_slug": "mt1-10mg",
+    "lot_number": "MT1-4325",
+    "purity_percent": "99.61%",
+    "test_date_iso": "2026-04-27",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": null
   },
   {
     "product_name": "Sermorelin 5mg",
     "product_slug": "sermorelin-5mg",
     "lot_number": "SER5-9905",
     "purity_percent": "99.53%",
-    "test_date": "Apr 27, 2026",
-    "issuing_lab": "Freedom Diagnostics"
+    "test_date_iso": "2026-04-27",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": null
+  },
+  {
+    "product_name": "DSIP 5mg",
+    "product_slug": "dsip-5mg",
+    "lot_number": "DSI-3065",
+    "purity_percent": "99.26%",
+    "test_date_iso": "2026-04-25",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": null
+  },
+  {
+    "product_name": "Kisspeptin-10 10mg",
+    "product_slug": "kisspeptin-10-10mg",
+    "lot_number": "KISS-5570",
+    "purity_percent": "98.49%",
+    "test_date_iso": "2026-04-25",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": null
+  },
+  {
+    "product_name": "Cortagen 20mg",
+    "product_slug": "cortagen-20mg",
+    "lot_number": "COR-1275",
+    "purity_percent": "99.10%",
+    "test_date_iso": "2026-04-23",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": null
+  },
+  {
+    "product_name": "GHK-Cu",
+    "product_slug": "ghk-cu",
+    "lot_number": "GHK50-5545",
+    "purity_percent": null,
+    "test_date_iso": "2026-04-23",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": null
+  },
+  {
+    "product_name": "Cortagen 20mg",
+    "product_slug": "cortagen-20mg",
+    "lot_number": "COR-1275",
+    "purity_percent": null,
+    "test_date_iso": "2026-04-23",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": null
+  },
+  {
+    "product_name": "GHK-Cu",
+    "product_slug": "ghk-cu",
+    "lot_number": "GHK50-5545",
+    "purity_percent": "99.60%",
+    "test_date_iso": "2026-04-23",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": null
+  },
+  {
+    "product_name": "GHK-Cu",
+    "product_slug": "ghk-cu",
+    "lot_number": "GHK50-5545",
+    "purity_percent": "99.72%",
+    "test_date_iso": "2026-04-23",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": null
+  },
+  {
+    "product_name": "Cortagen 20mg",
+    "product_slug": "cortagen-20mg",
+    "lot_number": "COR-1275",
+    "purity_percent": "98.90%",
+    "test_date_iso": "2026-04-23",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": null
+  },
+  {
+    "product_name": "GHK-Cu",
+    "product_slug": "ghk-cu",
+    "lot_number": "GHK100-4145",
+    "purity_percent": null,
+    "test_date_iso": "2026-04-16",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/GHK100-4145.pdf"
+  },
+  {
+    "product_name": "Vilon 20mg",
+    "product_slug": "vilon-20mg",
+    "lot_number": "VIL-1175",
+    "purity_percent": "99.84%",
+    "test_date_iso": "2026-04-16",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/VIL-1175.pdf"
+  },
+  {
+    "product_name": "GHK-Cu",
+    "product_slug": "ghk-cu",
+    "lot_number": "GHK100-4145",
+    "purity_percent": "99.62%",
+    "test_date_iso": "2026-04-16",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/GHK100-4145.pdf"
+  },
+  {
+    "product_name": "GHK-Cu",
+    "product_slug": "ghk-cu",
+    "lot_number": "GHK100-4145",
+    "purity_percent": "99.51%",
+    "test_date_iso": "2026-04-16",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/GHK100-4145.pdf"
+  },
+  {
+    "product_name": "Vesugen 20mg",
+    "product_slug": "vesugen-20mg",
+    "lot_number": "VSG-5095",
+    "purity_percent": "99.56%",
+    "test_date_iso": "2026-04-16",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/VSG-5095.pdf"
+  },
+  {
+    "product_name": "Vilon 20mg",
+    "product_slug": "vilon-20mg",
+    "lot_number": "VIL-1175",
+    "purity_percent": "99.78%",
+    "test_date_iso": "2026-04-16",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/VIL-1175.pdf"
+  },
+  {
+    "product_name": "Vesugen 20mg",
+    "product_slug": "vesugen-20mg",
+    "lot_number": "VSG-5095",
+    "purity_percent": "99.48%",
+    "test_date_iso": "2026-04-16",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/VSG-5095.pdf"
+  },
+  {
+    "product_name": "Prostamax 20mg",
+    "product_slug": "prostamax-20mg",
+    "lot_number": "PRO-6975",
+    "purity_percent": "99.24%",
+    "test_date_iso": "2026-04-16",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/PRO-6975.pdf"
+  },
+  {
+    "product_name": "KPV 10mg",
+    "product_slug": "kpv-10mg",
+    "lot_number": "KPV-9505",
+    "purity_percent": "99.41%",
+    "test_date_iso": "2026-04-16",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/KPV-9505.pdf"
+  },
+  {
+    "product_name": "Prostamax 20mg",
+    "product_slug": "prostamax-20mg",
+    "lot_number": "PRO-6975",
+    "purity_percent": "99.24%",
+    "test_date_iso": "2026-04-16",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/PRO-6975.pdf"
+  },
+  {
+    "product_name": "KPV 10mg",
+    "product_slug": "kpv-10mg",
+    "lot_number": "KPV-9505",
+    "purity_percent": "99.32%",
+    "test_date_iso": "2026-04-16",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/KPV-9505.pdf"
+  },
+  {
+    "product_name": "Prostamax 20mg",
+    "product_slug": "prostamax-20mg",
+    "lot_number": "PRO-6975",
+    "purity_percent": "99.19%",
+    "test_date_iso": "2026-04-16",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/PRO-6975.pdf"
+  },
+  {
+    "product_name": "Vilon 20mg",
+    "product_slug": "vilon-20mg",
+    "lot_number": "VIL-1175",
+    "purity_percent": "99.84%",
+    "test_date_iso": "2026-04-16",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/VIL-1175.pdf"
+  },
+  {
+    "product_name": "Vilon 20mg",
+    "product_slug": "vilon-20mg",
+    "lot_number": "VIL-1175",
+    "purity_percent": "99.78%",
+    "test_date_iso": "2026-04-16",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/VIL-1175.pdf"
+  },
+  {
+    "product_name": "Vesugen 20mg",
+    "product_slug": "vesugen-20mg",
+    "lot_number": "VSG-5095",
+    "purity_percent": "99.56%",
+    "test_date_iso": "2026-04-16",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/VSG-5095.pdf"
+  },
+  {
+    "product_name": "Vesugen 20mg",
+    "product_slug": "vesugen-20mg",
+    "lot_number": "VSG-5095",
+    "purity_percent": "99.48%",
+    "test_date_iso": "2026-04-16",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/VSG-5095.pdf"
+  },
+  {
+    "product_name": "Vilon 20mg",
+    "product_slug": "vilon-20mg",
+    "lot_number": "VIL-1175",
+    "purity_percent": null,
+    "test_date_iso": "2026-04-16",
+    "issuing_lab": "Freedom Labs",
+    "pdf_file": "coa_pdfs/VIL-1175.pdf"
+  },
+  {
+    "product_name": "KPV 10mg",
+    "product_slug": "kpv-10mg",
+    "lot_number": "KPV-9505",
+    "purity_percent": "99.41%",
+    "test_date_iso": "2026-04-16",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/KPV-9505.pdf"
+  },
+  {
+    "product_name": "GHK-Cu",
+    "product_slug": "ghk-cu",
+    "lot_number": "GHK100-4145",
+    "purity_percent": "99.62%",
+    "test_date_iso": "2026-04-16",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/GHK100-4145.pdf"
+  },
+  {
+    "product_name": "Vesugen 20mg",
+    "product_slug": "vesugen-20mg",
+    "lot_number": "VSG-5095",
+    "purity_percent": "99.56%",
+    "test_date_iso": "2026-04-16",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/VSG-5095.pdf"
+  },
+  {
+    "product_name": "Prostamax 20mg",
+    "product_slug": "prostamax-20mg",
+    "lot_number": "PRO-6975",
+    "purity_percent": null,
+    "test_date_iso": "2026-04-16",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/PRO-6975.pdf"
+  },
+  {
+    "product_name": "KPV 10mg",
+    "product_slug": "kpv-10mg",
+    "lot_number": "KPV-9505",
+    "purity_percent": null,
+    "test_date_iso": "2026-04-16",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/KPV-9505.pdf"
+  },
+  {
+    "product_name": "GHK-Cu",
+    "product_slug": "ghk-cu",
+    "lot_number": "GHK100-4145",
+    "purity_percent": "99.51%",
+    "test_date_iso": "2026-04-16",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/GHK100-4145.pdf"
+  },
+  {
+    "product_name": "Prostamax 20mg",
+    "product_slug": "prostamax-20mg",
+    "lot_number": "PRO-6975",
+    "purity_percent": "99.19%",
+    "test_date_iso": "2026-04-16",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/PRO-6975.pdf"
+  },
+  {
+    "product_name": "Vesugen 20mg",
+    "product_slug": "vesugen-20mg",
+    "lot_number": "VSG-5095",
+    "purity_percent": null,
+    "test_date_iso": "2026-04-16",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/VSG-5095.pdf"
+  },
+  {
+    "product_name": "Cartalax 20mg",
+    "product_slug": "cartalax-20mg",
+    "lot_number": "CRX-7535",
+    "purity_percent": "99.61%",
+    "test_date_iso": "2026-04-14",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/CRX-7535.pdf"
+  },
+  {
+    "product_name": "Cartalax 20mg",
+    "product_slug": "cartalax-20mg",
+    "lot_number": "CRX-7535",
+    "purity_percent": null,
+    "test_date_iso": "2026-04-14",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/CRX-7535.pdf"
+  },
+  {
+    "product_name": "TB-500",
+    "product_slug": "tb-500",
+    "lot_number": "TBM5-6585",
+    "purity_percent": null,
+    "test_date_iso": "2026-04-14",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/TBM5-6585.pdf"
+  },
+  {
+    "product_name": "TB-500",
+    "product_slug": "tb-500",
+    "lot_number": "TBM5-6585",
+    "purity_percent": "99.22%",
+    "test_date_iso": "2026-04-14",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/TBM5-6585.pdf"
+  },
+  {
+    "product_name": "TB-500",
+    "product_slug": "tb-500",
+    "lot_number": "TBM5-6585",
+    "purity_percent": "99.20%",
+    "test_date_iso": "2026-04-14",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/TBM5-6585.pdf"
+  },
+  {
+    "product_name": "Cartalax 20mg",
+    "product_slug": "cartalax-20mg",
+    "lot_number": "CRX-7535",
+    "purity_percent": "99.71%",
+    "test_date_iso": "2026-04-14",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/CRX-7535.pdf"
+  },
+  {
+    "product_name": "Testagen 20mg",
+    "product_slug": "testagen-20mg",
+    "lot_number": "TSG-8475",
+    "purity_percent": "99.80%",
+    "test_date_iso": "2026-04-14",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/TSG-8475.pdf"
+  },
+  {
+    "product_name": "Testagen 20mg",
+    "product_slug": "testagen-20mg",
+    "lot_number": "TSG-8475",
+    "purity_percent": "99.91%",
+    "test_date_iso": "2026-04-14",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/TSG-8475.pdf"
+  },
+  {
+    "product_name": "Testagen 20mg",
+    "product_slug": "testagen-20mg",
+    "lot_number": "TSG-8475",
+    "purity_percent": "99.91%",
+    "test_date_iso": "2026-04-14",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/TSG-8475.pdf"
+  },
+  {
+    "product_name": "Testagen 20mg",
+    "product_slug": "testagen-20mg",
+    "lot_number": "TSG-8475",
+    "purity_percent": null,
+    "test_date_iso": "2026-04-14",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/TSG-8475.pdf"
+  },
+  {
+    "product_name": "Cartalax 20mg",
+    "product_slug": "cartalax-20mg",
+    "lot_number": "CRX-7535",
+    "purity_percent": "99.61%",
+    "test_date_iso": "2026-04-14",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/CRX-7535.pdf"
+  },
+  {
+    "product_name": "TB-500",
+    "product_slug": "tb-500",
+    "lot_number": "TBM5-6585",
+    "purity_percent": "99.22%",
+    "test_date_iso": "2026-04-14",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/TBM5-6585.pdf"
+  },
+  {
+    "product_name": "Cartalax 20mg",
+    "product_slug": "cartalax-20mg",
+    "lot_number": "CRX-7535",
+    "purity_percent": "99.61%",
+    "test_date_iso": "2026-04-14",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/CRX-7535.pdf"
+  },
+  {
+    "product_name": "Testagen 20mg",
+    "product_slug": "testagen-20mg",
+    "lot_number": "TSG-8475",
+    "purity_percent": "99.80%",
+    "test_date_iso": "2026-04-14",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/TSG-8475.pdf"
+  },
+  {
+    "product_name": "TB-500",
+    "product_slug": "tb-500",
+    "lot_number": "TBM5-6585",
+    "purity_percent": "99.20%",
+    "test_date_iso": "2026-04-14",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/TBM5-6585.pdf"
+  },
+  {
+    "product_name": "CJC-1295 with DAC 5mg",
+    "product_slug": "cjc-1295-with-dac-5mg",
+    "lot_number": "CJC2-7120",
+    "purity_percent": "98.392%",
+    "test_date_iso": "2026-04-11",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/CJC2-7120.pdf"
+  },
+  {
+    "product_name": "BPC-157",
+    "product_slug": "bpc-157",
+    "lot_number": "BPC10-1175",
+    "purity_percent": "99.114%",
+    "test_date_iso": "2026-04-11",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/BPC10-1175.pdf"
+  },
+  {
+    "product_name": "BPC-157",
+    "product_slug": "bpc-157",
+    "lot_number": "BPC10-1175",
+    "purity_percent": "99.072%",
+    "test_date_iso": "2026-04-11",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/BPC10-1175.pdf"
+  },
+  {
+    "product_name": "CJC-1295 with DAC 5mg",
+    "product_slug": "cjc-1295-with-dac-5mg",
+    "lot_number": "CJC2-7120",
+    "purity_percent": "99.914%",
+    "test_date_iso": "2026-04-11",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/CJC2-7120.pdf"
+  },
+  {
+    "product_name": "Tesamorelin",
+    "product_slug": "tesamorelin",
+    "lot_number": "TES10-6230",
+    "purity_percent": "99.16%",
+    "test_date_iso": "2026-04-07",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/TES10-6230.pdf"
+  },
+  {
+    "product_name": "GLP-3",
+    "product_slug": "glp-3",
+    "lot_number": "GLP5-7600",
+    "purity_percent": "99.57%",
+    "test_date_iso": "2026-04-07",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": null
+  },
+  {
+    "product_name": "Tesamorelin",
+    "product_slug": "tesamorelin",
+    "lot_number": "TES10-6230",
+    "purity_percent": "99.16%",
+    "test_date_iso": "2026-04-07",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/TES10-6230.pdf"
+  },
+  {
+    "product_name": "GLP-3",
+    "product_slug": "glp-3",
+    "lot_number": "GLP20-6030",
+    "purity_percent": "99.87%",
+    "test_date_iso": "2026-04-07",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/GLP20-6030.pdf"
+  },
+  {
+    "product_name": "GLP-3",
+    "product_slug": "glp-3",
+    "lot_number": "GLP5-7600",
+    "purity_percent": "99.57%",
+    "test_date_iso": "2026-04-07",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": null
+  },
+  {
+    "product_name": "Cagri 10mg",
+    "product_slug": "cagri-10mg",
+    "lot_number": "CAG10-1070",
+    "purity_percent": "99.89%",
+    "test_date_iso": "2026-04-07",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/CAG10-1070.pdf"
+  },
+  {
+    "product_name": "MOTS-c 10mg",
+    "product_slug": "mots-c-10mg",
+    "lot_number": "MOT10-6565",
+    "purity_percent": "99.46%",
+    "test_date_iso": "2026-04-07",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/MOT10-6565.pdf"
+  },
+  {
+    "product_name": "KPV 10mg",
+    "product_slug": "kpv-10mg",
+    "lot_number": "KPV-9495",
+    "purity_percent": "99.27%",
+    "test_date_iso": "2026-04-07",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/KPV-9495.pdf"
+  },
+  {
+    "product_name": "GLP-2",
+    "product_slug": "glp-2",
+    "lot_number": "GLP2-110",
+    "purity_percent": "99.94%",
+    "test_date_iso": "2026-04-07",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/GLP2-110.pdf"
+  },
+  {
+    "product_name": "Cagri 10mg",
+    "product_slug": "cagri-10mg",
+    "lot_number": "CAG10-1070",
+    "purity_percent": "99.89%",
+    "test_date_iso": "2026-04-07",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/CAG10-1070.pdf"
+  },
+  {
+    "product_name": "MOTS-c 10mg",
+    "product_slug": "mots-c-10mg",
+    "lot_number": "MOT10-6565",
+    "purity_percent": "99.46%",
+    "test_date_iso": "2026-04-07",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/MOT10-6565.pdf"
+  },
+  {
+    "product_name": "MOTS-c 10mg",
+    "product_slug": "mots-c-10mg",
+    "lot_number": "MOT10-6565",
+    "purity_percent": "99.46%",
+    "test_date_iso": "2026-04-07",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/MOT10-6565.pdf"
+  },
+  {
+    "product_name": "Cagri 10mg",
+    "product_slug": "cagri-10mg",
+    "lot_number": "CAG10-1070",
+    "purity_percent": "99.89%",
+    "test_date_iso": "2026-04-07",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/CAG10-1070.pdf"
+  },
+  {
+    "product_name": "GLP-2",
+    "product_slug": "glp-2",
+    "lot_number": "GLP2-110",
+    "purity_percent": "99.94%",
+    "test_date_iso": "2026-04-07",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/GLP2-110.pdf"
+  },
+  {
+    "product_name": "Cagri 10mg",
+    "product_slug": "cagri-10mg",
+    "lot_number": "CAG10-1070",
+    "purity_percent": "99.89%",
+    "test_date_iso": "2026-04-07",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/CAG10-1070.pdf"
+  },
+  {
+    "product_name": "GLP-2",
+    "product_slug": "glp-2",
+    "lot_number": "GLP2-110",
+    "purity_percent": "99.94%",
+    "test_date_iso": "2026-04-07",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/GLP2-110.pdf"
+  },
+  {
+    "product_name": "GLP-3",
+    "product_slug": "glp-3",
+    "lot_number": "GLP5-7595",
+    "purity_percent": "99.93%",
+    "test_date_iso": "2026-04-01",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/GLP5-7595.pdf"
+  },
+  {
+    "product_name": "GLP-3",
+    "product_slug": "glp-3",
+    "lot_number": "GLP5-7595",
+    "purity_percent": "99.93%",
+    "test_date_iso": "2026-04-01",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/GLP5-7595.pdf"
+  },
+  {
+    "product_name": "GLP-3",
+    "product_slug": "glp-3",
+    "lot_number": "GLP20-6025",
+    "purity_percent": "99.43%",
+    "test_date_iso": "2026-03-27",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/GLP20-6025.pdf"
+  },
+  {
+    "product_name": "GLP-3",
+    "product_slug": "glp-3",
+    "lot_number": "GLP10-5930",
+    "purity_percent": "99.64%",
+    "test_date_iso": "2026-03-27",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/GLP10-5930.pdf"
+  },
+  {
+    "product_name": "KLOW Blend 80mg",
+    "product_slug": "klow-blend-80mg",
+    "lot_number": "KLW70-4275",
+    "purity_percent": ">99.50%",
+    "test_date_iso": "2026-03-16",
+    "issuing_lab": "Vanguard Laboratory",
+    "pdf_file": "coa_pdfs/KLW70-4275.pdf"
+  },
+  {
+    "product_name": "NAD+",
+    "product_slug": "nad",
+    "lot_number": "N0-5505",
+    "purity_percent": "98.68%",
+    "test_date_iso": "2026-03-16",
+    "issuing_lab": "Vanguard Laboratory",
+    "pdf_file": "coa_pdfs/N0-5505.pdf"
+  },
+  {
+    "product_name": "Testagen 20mg",
+    "product_slug": "testagen-20mg",
+    "lot_number": "TSG-8470",
+    "purity_percent": "99.58%",
+    "test_date_iso": "2026-03-15",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/TSG-8470.pdf"
+  },
+  {
+    "product_name": "BRO Blend",
+    "product_slug": "bro-blend-pt-141-3-5mg-oxytocin-3-5mg",
+    "lot_number": "BRO-6970",
+    "purity_percent": "99.79%",
+    "test_date_iso": "2026-03-15",
+    "issuing_lab": "FREEDOM DIAGNOSTICS",
+    "pdf_file": "coa_pdfs/BRO-6970.pdf"
+  },
+  {
+    "product_name": "GROW Blend",
+    "product_slug": "grow-blend-mgf-ipam-ghrp-tesa-2",
+    "lot_number": "GRW-3275",
+    "purity_percent": "98.92%",
+    "test_date_iso": "2026-03-15",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/GRW-3275.pdf"
+  },
+  {
+    "product_name": "NAD+",
+    "product_slug": "nad",
+    "lot_number": "NAD-505",
+    "purity_percent": ">99.80%",
+    "test_date_iso": "2026-03-13",
+    "issuing_lab": "Vanguard Laboratory",
+    "pdf_file": "coa_pdfs/NAD-505.pdf"
+  },
+  {
+    "product_name": "GLP-3",
+    "product_slug": "glp-3",
+    "lot_number": "GLP30-2265",
+    "purity_percent": ">99.80%",
+    "test_date_iso": "2026-03-13",
+    "issuing_lab": "Vanguard Laboratory",
+    "pdf_file": "coa_pdfs/GLP30-2265.pdf"
+  },
+  {
+    "product_name": "GHK-Cu",
+    "product_slug": "ghk-cu",
+    "lot_number": "GHK50-5535",
+    "purity_percent": ">99.80%",
+    "test_date_iso": "2026-03-13",
+    "issuing_lab": "Vanguard Laboratory",
+    "pdf_file": "coa_pdfs/GHK50-5535.pdf"
+  },
+  {
+    "product_name": "GHK-Cu",
+    "product_slug": "ghk-cu",
+    "lot_number": "GHK50-5535",
+    "purity_percent": ">99.80%",
+    "test_date_iso": "2026-03-13",
+    "issuing_lab": "Vanguard Laboratory",
+    "pdf_file": "coa_pdfs/GHK50-5535.pdf"
+  },
+  {
+    "product_name": "GLOW Blend",
+    "product_slug": "glow-blend-bpc-157-tb-500-ghk-cu-10mg-10mg-50mg",
+    "lot_number": "GLO500-5040",
+    "purity_percent": ">99.50%",
+    "test_date_iso": "2026-03-13",
+    "issuing_lab": "Vanguard Laboratory",
+    "pdf_file": "coa_pdfs/GLO500-5040.pdf"
+  },
+  {
+    "product_name": "Tesamorelin + Ipamorelin Blend",
+    "product_slug": "tesa-ipamorelin-blend",
+    "lot_number": "TSIP-3335",
+    "purity_percent": ">99.80%",
+    "test_date_iso": "2026-03-13",
+    "issuing_lab": "Vanguard Laboratory",
+    "pdf_file": "coa_pdfs/TSIP-3335.pdf"
+  },
+  {
+    "product_name": "Epitalon 10mg",
+    "product_slug": "epitalon-10mg",
+    "lot_number": "EPI10-8800",
+    "purity_percent": "99.12%",
+    "test_date_iso": "2026-03-13",
+    "issuing_lab": "Vanguard Laboratory",
+    "pdf_file": "coa_pdfs/EPI10-8800.pdf"
+  },
+  {
+    "product_name": "GLP-3",
+    "product_slug": "glp-3",
+    "lot_number": "GLP20-6015",
+    "purity_percent": ">99.80%",
+    "test_date_iso": "2026-03-13",
+    "issuing_lab": "Vanguard Laboratory",
+    "pdf_file": "coa_pdfs/GLP20-6015.pdf"
+  },
+  {
+    "product_name": "Epitalon 10mg",
+    "product_slug": "epitalon-10mg",
+    "lot_number": "EPI10-8800",
+    "purity_percent": "99.12%",
+    "test_date_iso": "2026-03-13",
+    "issuing_lab": "Vanguard Laboratory",
+    "pdf_file": "coa_pdfs/EPI10-8800.pdf"
+  },
+  {
+    "product_name": "GLP-3",
+    "product_slug": "glp-3",
+    "lot_number": "GLP60-6110",
+    "purity_percent": ">99.80%",
+    "test_date_iso": "2026-03-13",
+    "issuing_lab": "Vanguard Laboratory",
+    "pdf_file": "coa_pdfs/GLP60-6110.pdf"
+  },
+  {
+    "product_name": "GHK-Cu",
+    "product_slug": "ghk-cu",
+    "lot_number": "GHK100-4140",
+    "purity_percent": ">99.80%",
+    "test_date_iso": "2026-03-13",
+    "issuing_lab": "Vanguard Laboratory",
+    "pdf_file": "coa_pdfs/GHK100-4140.pdf"
+  },
+  {
+    "product_name": "GLP-3",
+    "product_slug": "glp-3",
+    "lot_number": "GLP-5920",
+    "purity_percent": null,
+    "test_date_iso": "2026-03-13",
+    "issuing_lab": "Vanguard Laboratory",
+    "pdf_file": "coa_pdfs/GLP-5920.pdf"
+  },
+  {
+    "product_name": "BPC-157",
+    "product_slug": "bpc-157",
+    "lot_number": "BPC5-4115",
+    "purity_percent": ">99.80%",
+    "test_date_iso": "2026-03-13",
+    "issuing_lab": "Vanguard Laboratory",
+    "pdf_file": "coa_pdfs/BPC5-4115.pdf"
+  },
+  {
+    "product_name": "MOTS-c 10mg",
+    "product_slug": "mots-c-10mg",
+    "lot_number": "MOT10-6560",
+    "purity_percent": "99.03%",
+    "test_date_iso": "2026-03-13",
+    "issuing_lab": "Vanguard Laboratory",
+    "pdf_file": "coa_pdfs/MOT10-6560.pdf"
+  },
+  {
+    "product_name": "GHK-Cu",
+    "product_slug": "ghk-cu",
+    "lot_number": "GHK100-4140",
+    "purity_percent": ">99.80%",
+    "test_date_iso": "2026-03-13",
+    "issuing_lab": "Vanguard Laboratory",
+    "pdf_file": "coa_pdfs/GHK100-4140.pdf"
+  },
+  {
+    "product_name": "GLOW Blend",
+    "product_slug": "glow-blend-bpc-157-tb-500-ghk-cu-10mg-10mg-50mg",
+    "lot_number": "GLO500-5040",
+    "purity_percent": ">99.50%",
+    "test_date_iso": "2026-03-13",
+    "issuing_lab": "Vanguard Laboratory",
+    "pdf_file": "coa_pdfs/GLO500-5040.pdf"
+  },
+  {
+    "product_name": "CJC-1295 No DAC 5mg",
+    "product_slug": "cjc-1295-no-dac-5mg",
+    "lot_number": "CJC-8160",
+    "purity_percent": "99.91%",
+    "test_date_iso": "2026-03-03",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/CJC-8160.pdf"
+  },
+  {
+    "product_name": "VIP 10mg",
+    "product_slug": "vip-10mg",
+    "lot_number": "VIP-7755",
+    "purity_percent": "99.57%",
+    "test_date_iso": "2026-03-03",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/VIP-7755.pdf"
+  },
+  {
+    "product_name": "CJC-1295 No DAC 5mg",
+    "product_slug": "cjc-1295-no-dac-5mg",
+    "lot_number": "CJC-8160",
+    "purity_percent": "99.91%",
+    "test_date_iso": "2026-03-03",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/CJC-8160.pdf"
+  },
+  {
+    "product_name": "VIP 10mg",
+    "product_slug": "vip-10mg",
+    "lot_number": "VIP-7755",
+    "purity_percent": "99.57%",
+    "test_date_iso": "2026-03-03",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/VIP-7755.pdf"
+  },
+  {
+    "product_name": "Oxytocin",
+    "product_slug": "oxytocin",
+    "lot_number": "050-9845",
+    "purity_percent": "99.18%",
+    "test_date_iso": "2026-03-03",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/050-9845.pdf"
+  },
+  {
+    "product_name": "GLP-3",
+    "product_slug": "glp-3",
+    "lot_number": "GLP5-7590",
+    "purity_percent": "99.90%",
+    "test_date_iso": "2026-03-03",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/GLP5-7590.pdf"
+  },
+  {
+    "product_name": "CJC-1295 No DAC 5mg",
+    "product_slug": "cjc-1295-no-dac-5mg",
+    "lot_number": "CJC-8160",
+    "purity_percent": "99.91%",
+    "test_date_iso": "2026-03-03",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/CJC-8160.pdf"
+  },
+  {
+    "product_name": "Oxytocin",
+    "product_slug": "oxytocin",
+    "lot_number": "050-9845",
+    "purity_percent": "99.18%",
+    "test_date_iso": "2026-03-03",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/050-9845.pdf"
+  },
+  {
+    "product_name": "Reconstitution Solution 30mL",
+    "product_slug": "reconstitution-solution-30ml",
+    "lot_number": "001",
+    "purity_percent": null,
+    "test_date_iso": "2026-02-25",
+    "issuing_lab": "Vanguard Laboratory",
+    "pdf_file": "coa_pdfs/001.pdf"
+  },
+  {
+    "product_name": "Tesofensine Capsules",
+    "product_slug": "tesofensine-research-capsules",
+    "lot_number": "TFC-5529",
+    "purity_percent": "99%",
+    "test_date_iso": "2026-02-25",
+    "issuing_lab": "Vanguard Laboratory",
+    "pdf_file": "coa_pdfs/TFC-5529.pdf"
+  },
+  {
+    "product_name": "SLU-PP-332 Research Capsules",
+    "product_slug": "slu-pp-332-research-capsules",
+    "lot_number": "SLU-6410",
+    "purity_percent": "99%",
+    "test_date_iso": "2026-02-25",
+    "issuing_lab": "Vanguard Laboratory",
+    "pdf_file": "coa_pdfs/SLU-6410.pdf"
+  },
+  {
+    "product_name": "DIHEXA Capsules",
+    "product_slug": "dihexa-research-capsules",
+    "lot_number": "DXC-2812",
+    "purity_percent": "99%",
+    "test_date_iso": "2026-02-25",
+    "issuing_lab": "Vanguard Laboratory",
+    "pdf_file": "coa_pdfs/DXC-2812.pdf"
+  },
+  {
+    "product_name": "Cerebrolysin 60mg",
+    "product_slug": "cerebrolysin-60mg",
+    "lot_number": "CBL-1165",
+    "purity_percent": null,
+    "test_date_iso": "2026-02-25",
+    "issuing_lab": "Vanguard Laboratory",
+    "pdf_file": null
+  },
+  {
+    "product_name": "Cerebrolysin 60mg",
+    "product_slug": "cerebrolysin-60mg",
+    "lot_number": "CBL-1165",
+    "purity_percent": null,
+    "test_date_iso": "2026-02-25",
+    "issuing_lab": "Vanguard Laboratory",
+    "pdf_file": null
+  },
+  {
+    "product_name": "DIHEXA Capsules",
+    "product_slug": "dihexa-research-capsules",
+    "lot_number": "DXC-2812",
+    "purity_percent": null,
+    "test_date_iso": "2026-02-25",
+    "issuing_lab": "Vanguard Laboratory",
+    "pdf_file": "coa_pdfs/DXC-2812.pdf"
+  },
+  {
+    "product_name": "Cerebrolysin 60mg",
+    "product_slug": "cerebrolysin-60mg",
+    "lot_number": "CBL-1165",
+    "purity_percent": null,
+    "test_date_iso": "2026-02-25",
+    "issuing_lab": "Vanguard Laboratory",
+    "pdf_file": null
+  },
+  {
+    "product_name": "GLP-2",
+    "product_slug": "glp-2",
+    "lot_number": "GLP2-1265",
+    "purity_percent": "99.74%",
+    "test_date_iso": "2026-02-12",
+    "issuing_lab": "FREEDOM DIAGNOSTICS",
+    "pdf_file": "coa_pdfs/GLP2-1265.pdf"
+  },
+  {
+    "product_name": "MT1 10mg",
+    "product_slug": "mt1-10mg",
+    "lot_number": "MT1-4320",
+    "purity_percent": "99.62%",
+    "test_date_iso": "2026-02-12",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/MT1-4320.pdf"
+  },
+  {
+    "product_name": "GLP-3",
+    "product_slug": "glp-3",
+    "lot_number": "GLP60-6115",
+    "purity_percent": "99.81%",
+    "test_date_iso": "2026-02-12",
+    "issuing_lab": "FREEDOM DIAGNOSTICS",
+    "pdf_file": "coa_pdfs/GLP60-6115.pdf"
+  },
+  {
+    "product_name": "GLP-2",
+    "product_slug": "glp-2",
+    "lot_number": "GLP2-1105",
+    "purity_percent": "99.38%",
+    "test_date_iso": "2026-02-12",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/GLP2-1105.pdf"
+  },
+  {
+    "product_name": "GLP-3",
+    "product_slug": "glp-3",
+    "lot_number": "GLP60-6110",
+    "purity_percent": "99.69%",
+    "test_date_iso": "2026-02-10",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/GLP60-6110.pdf"
+  },
+  {
+    "product_name": "GLP-3",
+    "product_slug": "glp-3",
+    "lot_number": "GLP20-6015",
+    "purity_percent": "99.92%",
+    "test_date_iso": "2026-02-10",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/GLP20-6015.pdf"
+  },
+  {
+    "product_name": "GLP-3",
+    "product_slug": "glp-3",
+    "lot_number": "GLP60-6110",
+    "purity_percent": "99.69%",
+    "test_date_iso": "2026-02-10",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/GLP60-6110.pdf"
+  },
+  {
+    "product_name": "GLP-3",
+    "product_slug": "glp-3",
+    "lot_number": "GLP30-2265",
+    "purity_percent": "99.47%",
+    "test_date_iso": "2026-02-10",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/GLP30-2265.pdf"
+  },
+  {
+    "product_name": "GLP-3",
+    "product_slug": "glp-3",
+    "lot_number": "GLP20-6015",
+    "purity_percent": "99.92%",
+    "test_date_iso": "2026-02-10",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/GLP20-6015.pdf"
+  },
+  {
+    "product_name": "Tesamorelin + Ipamorelin Blend",
+    "product_slug": "tesa-ipamorelin-blend",
+    "lot_number": "TSIP-3335",
+    "purity_percent": "99.45%",
+    "test_date_iso": "2026-02-10",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/TSIP-3335.pdf"
+  },
+  {
+    "product_name": "GLP-3",
+    "product_slug": "glp-3",
+    "lot_number": "GLP30-2265",
+    "purity_percent": "99.47%",
+    "test_date_iso": "2026-02-10",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/GLP30-2265.pdf"
+  },
+  {
+    "product_name": "GLP-3",
+    "product_slug": "glp-3",
+    "lot_number": "GLP10-5915",
+    "purity_percent": "99.83%",
+    "test_date_iso": "2026-02-01",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/GLP10-5915.pdf"
+  },
+  {
+    "product_name": "GLP-3",
+    "product_slug": "glp-3",
+    "lot_number": "GLP5-7590",
+    "purity_percent": "99.38%",
+    "test_date_iso": "2026-02-01",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/GLP5-7590.pdf"
+  },
+  {
+    "product_name": "Semax 5mg",
+    "product_slug": "semax-5mg",
+    "lot_number": "SEM5-2230",
+    "purity_percent": "99.15%",
+    "test_date_iso": "2026-01-22",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/SEM5-2230.pdf"
+  },
+  {
+    "product_name": "BPC-157",
+    "product_slug": "bpc-157",
+    "lot_number": "BPC10-1170",
+    "purity_percent": "99.153%",
+    "test_date_iso": "2026-01-22",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/BPC10-1170.pdf"
+  },
+  {
+    "product_name": "BPC-157",
+    "product_slug": "bpc-157",
+    "lot_number": "BPC10-1170",
+    "purity_percent": null,
+    "test_date_iso": "2026-01-22",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/BPC10-1170.pdf"
+  },
+  {
+    "product_name": "GLP-3",
+    "product_slug": "glp-3",
+    "lot_number": "GLP10-5910",
+    "purity_percent": "99.842%",
+    "test_date_iso": "2026-01-22",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/GLP10-5910.pdf"
+  },
+  {
+    "product_name": "Semax 5mg",
+    "product_slug": "semax-5mg",
+    "lot_number": "SEM5-2230",
+    "purity_percent": "99.15%",
+    "test_date_iso": "2026-01-22",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/SEM5-2230.pdf"
+  },
+  {
+    "product_name": "GLP-3",
+    "product_slug": "glp-3",
+    "lot_number": "GLP10-5910",
+    "purity_percent": "99.842%",
+    "test_date_iso": "2026-01-22",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/GLP10-5910.pdf"
+  },
+  {
+    "product_name": "Semax 5mg",
+    "product_slug": "semax-5mg",
+    "lot_number": "SEM5-2230",
+    "purity_percent": null,
+    "test_date_iso": "2026-01-22",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/SEM5-2230.pdf"
+  },
+  {
+    "product_name": "PE-22-28 10mg",
+    "product_slug": "pe-22-28-10mg",
+    "lot_number": "PE22-2415",
+    "purity_percent": null,
+    "test_date_iso": "2026-01-21",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/PE22-2415.pdf"
+  },
+  {
+    "product_name": "PE-22-28 10mg",
+    "product_slug": "pe-22-28-10mg",
+    "lot_number": "PE22-2415",
+    "purity_percent": "99.928%",
+    "test_date_iso": "2026-01-21",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/PE22-2415.pdf"
+  },
+  {
+    "product_name": "AICAR 50mg",
+    "product_slug": "aicar-50mg",
+    "lot_number": "AIC-2130",
+    "purity_percent": "99.881%",
+    "test_date_iso": "2026-01-16",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/AIC-2130.pdf"
+  },
+  {
+    "product_name": "AICAR 50mg",
+    "product_slug": "aicar-50mg",
+    "lot_number": "AIC-2130",
+    "purity_percent": "99.881%",
+    "test_date_iso": "2026-01-16",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/AIC-2130.pdf"
+  },
+  {
+    "product_name": "AICAR 50mg",
+    "product_slug": "aicar-50mg",
+    "lot_number": "AIC-2130",
+    "purity_percent": null,
+    "test_date_iso": "2026-01-16",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/AIC-2130.pdf"
+  },
+  {
+    "product_name": "AICAR 50mg",
+    "product_slug": "aicar-50mg",
+    "lot_number": "AIC-2130",
+    "purity_percent": "99.881%",
+    "test_date_iso": "2026-01-16",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/AIC-2130.pdf"
+  },
+  {
+    "product_name": "ARA-290 12mg",
+    "product_slug": "ara-290-12-mg",
+    "lot_number": "ARA-2955",
+    "purity_percent": "98.548%",
+    "test_date_iso": "2026-01-12",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/ARA-2955.pdf"
+  },
+  {
+    "product_name": "Cortagen 20mg",
+    "product_slug": "cortagen-20mg",
+    "lot_number": "COR-1270",
+    "purity_percent": "99.518%",
+    "test_date_iso": "2026-01-12",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/COR-1270.pdf"
+  },
+  {
+    "product_name": "FOX04-DRI 10mg",
+    "product_slug": "fox04-dri-10mg",
+    "lot_number": "F4D-5195",
+    "purity_percent": "99.884%",
+    "test_date_iso": "2026-01-05",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/F4D-5195.pdf"
+  },
+  {
+    "product_name": "FOX04-DRI 10mg",
+    "product_slug": "fox04-dri-10mg",
+    "lot_number": "F4D-5195",
+    "purity_percent": "99.884%",
+    "test_date_iso": "2026-01-05",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/F4D-5195.pdf"
+  },
+  {
+    "product_name": "PE-22-28 10mg",
+    "product_slug": "pe-22-28-10mg",
+    "lot_number": "PE22-2410",
+    "purity_percent": "99.88%",
+    "test_date_iso": "2026-01-03",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/PE22-2410.pdf"
+  },
+  {
+    "product_name": "CJC-1295 No DAC 5mg",
+    "product_slug": "cjc-1295-no-dac-5mg",
+    "lot_number": "CJC-8155",
+    "purity_percent": "99.796%",
+    "test_date_iso": "2026-01-03",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/CJC-8155.pdf"
+  },
+  {
+    "product_name": "GLP-3",
+    "product_slug": "glp-3",
+    "lot_number": "GLP20-6010",
+    "purity_percent": "99.96%",
+    "test_date_iso": "2026-01-03",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/GLP20-6010.pdf"
+  },
+  {
+    "product_name": "5-Amino-1MQ 50mg",
+    "product_slug": "5-amino-1mq-50mg",
+    "lot_number": "1MQ50-7230",
+    "purity_percent": "99.939%",
+    "test_date_iso": "2026-01-03",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/1MQ50-7230.pdf"
+  },
+  {
+    "product_name": "AHK-Cu 100mg",
+    "product_slug": "ahk-cu-100mg",
+    "lot_number": "AHK-1415",
+    "purity_percent": "98.935%",
+    "test_date_iso": "2026-01-03",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/AHK-1415.pdf"
+  },
+  {
+    "product_name": "CJC-1295 No DAC 5mg",
+    "product_slug": "cjc-1295-no-dac-5mg",
+    "lot_number": "CJC-8155",
+    "purity_percent": "99.796%",
+    "test_date_iso": "2026-01-03",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/CJC-8155.pdf"
+  },
+  {
+    "product_name": "MOTS-c 10mg",
+    "product_slug": "mots-c-10mg",
+    "lot_number": "MOT10-6560",
+    "purity_percent": "99.867%",
+    "test_date_iso": "2026-01-03",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/MOT10-6560.pdf"
+  },
+  {
+    "product_name": "Vesugen 20mg",
+    "product_slug": "vesugen-20mg",
+    "lot_number": "VSG-5090",
+    "purity_percent": "99.614%",
+    "test_date_iso": "2025-12-23",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/VSG-5090.pdf"
+  },
+  {
+    "product_name": "NAD+",
+    "product_slug": "nad",
+    "lot_number": "NAD-505",
+    "purity_percent": "99.932%",
+    "test_date_iso": "2025-12-23",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/NAD-505.pdf"
+  },
+  {
+    "product_name": "AHK-Cu 100mg",
+    "product_slug": "ahk-cu-100mg",
+    "lot_number": "AHK50-1235",
+    "purity_percent": "99.352%",
+    "test_date_iso": "2025-12-23",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/AHK50-1235.pdf"
+  },
+  {
+    "product_name": "GLP-2",
+    "product_slug": "glp-2",
+    "lot_number": "GLP5-7580",
+    "purity_percent": "99.942%",
+    "test_date_iso": "2025-12-20",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/GLP5-7580.pdf"
+  },
+  {
+    "product_name": "VIP 10mg",
+    "product_slug": "vip-10mg",
+    "lot_number": "VIP-7750",
+    "purity_percent": "99.076%",
+    "test_date_iso": "2025-12-15",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/VIP-7750.pdf"
+  },
+  {
+    "product_name": "VIP 10mg",
+    "product_slug": "vip-10mg",
+    "lot_number": "VIP-7745",
+    "purity_percent": "98.577%",
+    "test_date_iso": "2025-12-08",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/VIP-7745.pdf"
+  },
+  {
+    "product_name": "Gonadorelin 2mg",
+    "product_slug": "gonadorelin-gnrh-2mg",
+    "lot_number": "GON2-2905",
+    "purity_percent": "99.835%",
+    "test_date_iso": "2025-12-08",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/GON2-2905.pdf"
+  },
+  {
+    "product_name": "TB-500",
+    "product_slug": "tb-500",
+    "lot_number": "TB10-8800",
+    "purity_percent": "99.04%",
+    "test_date_iso": "2025-12-06",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/TB10-8800.pdf"
+  },
+  {
+    "product_name": "CJC-1295 No DAC 5mg",
+    "product_slug": "cjc-1295-no-dac-5mg",
+    "lot_number": "CJC10-3650",
+    "purity_percent": "99.845%",
+    "test_date_iso": "2025-12-06",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/CJC10-3650.pdf"
+  },
+  {
+    "product_name": "NAD+",
+    "product_slug": "nad",
+    "lot_number": "N1D-5505",
+    "purity_percent": "99.969%",
+    "test_date_iso": "2025-12-06",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/N1D-5505.pdf"
+  },
+  {
+    "product_name": "GROW Blend",
+    "product_slug": "grow-blend-mgf-ipam-ghrp-tesa-2",
+    "lot_number": "BPC-7040",
+    "purity_percent": "98.731%",
+    "test_date_iso": "2025-12-06",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/BPC-7040.pdf"
+  },
+  {
+    "product_name": "GLP-3",
+    "product_slug": "glp-3",
+    "lot_number": "GLP30-6105",
+    "purity_percent": "99.939%",
+    "test_date_iso": "2025-12-06",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/GLP30-6105.pdf"
+  },
+  {
+    "product_name": "GLP-2",
+    "product_slug": "glp-2",
+    "lot_number": "GLP2-105",
+    "purity_percent": "99.956%",
+    "test_date_iso": "2025-12-01",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/GLP2-105.pdf"
+  },
+  {
+    "product_name": "Tesamorelin",
+    "product_slug": "tesamorelin",
+    "lot_number": "TES5-6005",
+    "purity_percent": "98.985%",
+    "test_date_iso": "2025-11-30",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/TES5-6005.pdf"
+  },
+  {
+    "product_name": "Tesamorelin + Ipamorelin Blend",
+    "product_slug": "tesa-ipamorelin-blend",
+    "lot_number": "TSIP-3330",
+    "purity_percent": "99.37%",
+    "test_date_iso": "2025-11-25",
+    "issuing_lab": "FREEDOM DIAGNOSTICS",
+    "pdf_file": "coa_pdfs/TSIP-3330.pdf"
+  },
+  {
+    "product_name": "BPC-157",
+    "product_slug": "bpc-157",
+    "lot_number": "BPC10-1160",
+    "purity_percent": "98.685%",
+    "test_date_iso": "2025-11-25",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/BPC10-1160.pdf"
+  },
+  {
+    "product_name": "GLOW Blend",
+    "product_slug": "glow-blend-bpc-157-tb-500-ghk-cu-10mg-10mg-50mg",
+    "lot_number": "GLO500-5040",
+    "purity_percent": "99.73%",
+    "test_date_iso": "2025-11-25",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/GLO500-5040.pdf"
+  },
+  {
+    "product_name": "Cagri 10mg",
+    "product_slug": "cagri-10mg",
+    "lot_number": "CAG5-2050",
+    "purity_percent": "99.934%",
+    "test_date_iso": "2025-11-25",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/CAG5-2050.pdf"
+  },
+  {
+    "product_name": "BPC-157 + TB-500 Blend",
+    "product_slug": "bpc-157-tb-500-blend",
+    "lot_number": "BPCI-4180",
+    "purity_percent": "99.27%",
+    "test_date_iso": "2025-11-25",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/BPCI-4180.pdf"
+  },
+  {
+    "product_name": "BPC-157",
+    "product_slug": "bpc-157",
+    "lot_number": "BPC15-9680",
+    "purity_percent": "98.435%",
+    "test_date_iso": "2025-11-25",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/BPC15-9680.pdf"
+  },
+  {
+    "product_name": "GLP-2",
+    "product_slug": "glp-2",
+    "lot_number": "GLP2-115",
+    "purity_percent": "99.909%",
+    "test_date_iso": "2025-11-25",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/GLP2-115.pdf"
+  },
+  {
+    "product_name": "Pancragen 20mg",
+    "product_slug": "pancragen-20mg-2",
+    "lot_number": "PAN-9090",
+    "purity_percent": "98.294%",
+    "test_date_iso": "2025-11-25",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/PAN-9090.pdf"
+  },
+  {
+    "product_name": "Humanin 10mg",
+    "product_slug": "humanin-10mg",
+    "lot_number": "HUM-2820",
+    "purity_percent": "99.487%",
+    "test_date_iso": "2025-11-25",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/HUM-2820.pdf"
+  },
+  {
+    "product_name": "TB-500",
+    "product_slug": "tb-500",
+    "lot_number": "TB10-8795",
+    "purity_percent": "99.101%",
+    "test_date_iso": "2025-11-25",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/TB10-8795.pdf"
+  },
+  {
+    "product_name": "BPC-157",
+    "product_slug": "bpc-157",
+    "lot_number": "BPC10-1160",
+    "purity_percent": "98.685%",
+    "test_date_iso": "2025-11-25",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/BPC10-1160.pdf"
+  },
+  {
+    "product_name": "AHK-Cu 100mg",
+    "product_slug": "ahk-cu-100mg",
+    "lot_number": "AHK-1410",
+    "purity_percent": "99.602%",
+    "test_date_iso": "2025-11-25",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/AHK-1410.pdf"
+  },
+  {
+    "product_name": "GLOW Blend",
+    "product_slug": "glow-blend-bpc-157-tb-500-ghk-cu-10mg-10mg-50mg",
+    "lot_number": "GLO500-5040",
+    "purity_percent": "99.73%",
+    "test_date_iso": "2025-11-25",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/GLO500-5040.pdf"
+  },
+  {
+    "product_name": "AHK-Cu 100mg",
+    "product_slug": "ahk-cu-100mg",
+    "lot_number": "AHK-1410",
+    "purity_percent": "99.602%",
+    "test_date_iso": "2025-11-25",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/AHK-1410.pdf"
+  },
+  {
+    "product_name": "Ovagen 20mg",
+    "product_slug": "ovagen-20mg-2",
+    "lot_number": "OVA-2220",
+    "purity_percent": "98.044%",
+    "test_date_iso": "2025-11-25",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/OVA-2220.pdf"
+  },
+  {
+    "product_name": "5-Amino-1MQ 50mg",
+    "product_slug": "5-amino-1mq-50mg",
+    "lot_number": "1MQ-9675",
+    "purity_percent": "99.597%",
+    "test_date_iso": "2025-11-21",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/1MQ-9675.pdf"
+  },
+  {
+    "product_name": "MGF/IGF-1EC 5mg",
+    "product_slug": "mgf-igf-1ece-5mg",
+    "lot_number": "MGF-3700",
+    "purity_percent": "99.873%",
+    "test_date_iso": "2025-11-21",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/MGF-3700.pdf"
+  },
+  {
+    "product_name": "MT1 10mg",
+    "product_slug": "mt1-10mg",
+    "lot_number": "MT1-4316",
+    "purity_percent": "99.917%",
+    "test_date_iso": "2025-11-21",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/MT1-4316.pdf"
+  },
+  {
+    "product_name": "MOTS-c 10mg",
+    "product_slug": "mots-c-10mg",
+    "lot_number": "MOT10-6555",
+    "purity_percent": "99.538%",
+    "test_date_iso": "2025-11-21",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/MOT10-6555.pdf"
+  },
+  {
+    "product_name": "Testagen 20mg",
+    "product_slug": "testagen-20mg",
+    "lot_number": "TSG-8465",
+    "purity_percent": "99.221%",
+    "test_date_iso": "2025-11-21",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/TSG-8465.pdf"
+  },
+  {
+    "product_name": "SNAP-8 10mg",
+    "product_slug": "snap-8-10mg",
+    "lot_number": "SNP-4860",
+    "purity_percent": "99.871%",
+    "test_date_iso": "2025-11-21",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/SNP-4860.pdf"
+  },
+  {
+    "product_name": "GLP-3",
+    "product_slug": "glp-3",
+    "lot_number": "GLP20-6005",
+    "purity_percent": "99.959%",
+    "test_date_iso": "2025-11-16",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/GLP20-6005.pdf"
+  },
+  {
+    "product_name": "GLP-3",
+    "product_slug": "glp-3",
+    "lot_number": "GLP5-7575",
+    "purity_percent": "99.965%",
+    "test_date_iso": "2025-11-16",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/GLP5-7575.pdf"
+  },
+  {
+    "product_name": "GLP-3",
+    "product_slug": "glp-3",
+    "lot_number": "GLP60-6105",
+    "purity_percent": "99.945%",
+    "test_date_iso": "2025-11-16",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/GLP60-6105.pdf"
+  },
+  {
+    "product_name": "Epitalon 10mg",
+    "product_slug": "epitalon-10mg",
+    "lot_number": "EPI10-8799",
+    "purity_percent": "99.546%",
+    "test_date_iso": "2025-11-16",
+    "issuing_lab": "FREEDOM DIAGNOSTICS",
+    "pdf_file": "coa_pdfs/EPI10-8799.pdf"
+  },
+  {
+    "product_name": "KPV 10mg",
+    "product_slug": "kpv-10mg",
+    "lot_number": "KPV-9490",
+    "purity_percent": "99.291%",
+    "test_date_iso": "2025-11-16",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/KPV-9490.pdf"
+  },
+  {
+    "product_name": "GLP-2",
+    "product_slug": "glp-2",
+    "lot_number": "GLP2-1100",
+    "purity_percent": "99.925%",
+    "test_date_iso": "2025-11-16",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/GLP2-1100.pdf"
+  },
+  {
+    "product_name": "DSIP 5mg",
+    "product_slug": "dsip-5mg",
+    "lot_number": "DSI-3050",
+    "purity_percent": "99.698%",
+    "test_date_iso": "2025-11-16",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/DSI-3050.pdf"
+  },
+  {
+    "product_name": "BPC-157",
+    "product_slug": "bpc-157",
+    "lot_number": "BPC15-9675",
+    "purity_percent": "98.561%",
+    "test_date_iso": "2025-11-11",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/BPC15-9675.pdf"
   },
   {
     "product_name": "Bronchogen 20mg",
-    "product_slug": null,
-    "lot_number": "BRON-6905",
-    "purity_percent": "99.16%",
-    "test_date": "Apr 27, 2026",
-    "issuing_lab": "Freedom Diagnostics"
+    "product_slug": "bronchogen-20mg",
+    "lot_number": "BRON-6900",
+    "purity_percent": "99.226%",
+    "test_date_iso": "2025-11-11",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/BRON-6900.pdf"
+  },
+  {
+    "product_name": "Kisspeptin-10 10mg",
+    "product_slug": "kisspeptin-10-10mg",
+    "lot_number": "KISS-5563",
+    "purity_percent": "99.787%",
+    "test_date_iso": "2025-11-11",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/KISS-5563.pdf"
+  },
+  {
+    "product_name": "Bronchogen 20mg",
+    "product_slug": "bronchogen-20mg",
+    "lot_number": "BRON-6900",
+    "purity_percent": "99.226%",
+    "test_date_iso": "2025-11-11",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/BRON-6900.pdf"
+  },
+  {
+    "product_name": "5-Amino-1MQ 50mg",
+    "product_slug": "5-amino-1mq-50mg",
+    "lot_number": "1MQ50-7226",
+    "purity_percent": "99.795%",
+    "test_date_iso": "2025-11-02",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/1MQ50-7226.pdf"
+  },
+  {
+    "product_name": "Glutathione 1500mg",
+    "product_slug": "glutathione-1500mg",
+    "lot_number": "GLU15-7891",
+    "purity_percent": "99.534%",
+    "test_date_iso": "2025-11-02",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/GLU15-7891.pdf"
+  },
+  {
+    "product_name": "5-Amino-1MQ 50mg",
+    "product_slug": "5-amino-1mq-50mg",
+    "lot_number": "1MQ50-7226",
+    "purity_percent": "99.795%",
+    "test_date_iso": "2025-11-02",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/1MQ50-7226.pdf"
+  },
+  {
+    "product_name": "BPC-157",
+    "product_slug": "bpc-157",
+    "lot_number": "BPC10-1153",
+    "purity_percent": "99.633%",
+    "test_date_iso": "2025-11-02",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": null
+  },
+  {
+    "product_name": "Glutathione 1500mg",
+    "product_slug": "glutathione-1500mg",
+    "lot_number": "GLU15-7891",
+    "purity_percent": "99.534%",
+    "test_date_iso": "2025-11-02",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/GLU15-7891.pdf"
+  },
+  {
+    "product_name": "Glutathione 1500mg",
+    "product_slug": "glutathione-1500mg",
+    "lot_number": "GLU15-7891",
+    "purity_percent": null,
+    "test_date_iso": "2025-11-02",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/GLU15-7891.pdf"
+  },
+  {
+    "product_name": "Glutathione 1500mg",
+    "product_slug": "glutathione-1500mg",
+    "lot_number": "GLU15-7891",
+    "purity_percent": "99.534%",
+    "test_date_iso": "2025-11-02",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/GLU15-7891.pdf"
+  },
+  {
+    "product_name": "5-Amino-1MQ 50mg",
+    "product_slug": "5-amino-1mq-50mg",
+    "lot_number": "1MQ50-7226",
+    "purity_percent": null,
+    "test_date_iso": "2025-11-02",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/1MQ50-7226.pdf"
+  },
+  {
+    "product_name": "BPC-157",
+    "product_slug": "bpc-157",
+    "lot_number": "BPC10-1154",
+    "purity_percent": null,
+    "test_date_iso": "2025-11-02",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": null
+  },
+  {
+    "product_name": "GLP-2",
+    "product_slug": "glp-2",
+    "lot_number": "GLP30-6100",
+    "purity_percent": "99.948%",
+    "test_date_iso": "2025-11-02",
+    "issuing_lab": "FREEDOM DIAGNOSTICS",
+    "pdf_file": "coa_pdfs/GLP30-6100.pdf"
+  },
+  {
+    "product_name": "5-Amino-1MQ 50mg",
+    "product_slug": "5-amino-1mq-50mg",
+    "lot_number": "1MQ50-7226",
+    "purity_percent": "99.795%",
+    "test_date_iso": "2025-11-02",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/1MQ50-7226.pdf"
+  },
+  {
+    "product_name": "Bronchogen 20mg",
+    "product_slug": "bronchogen-20mg",
+    "lot_number": "BRON-6900",
+    "purity_percent": "99.866%",
+    "test_date_iso": "2025-10-28",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/BRON-6900.pdf"
+  },
+  {
+    "product_name": "Glutathione 1500mg",
+    "product_slug": "glutathione-1500mg",
+    "lot_number": "GLUT-2519",
+    "purity_percent": "99.701%",
+    "test_date_iso": "2025-10-28",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/GLUT-2519.pdf"
+  },
+  {
+    "product_name": "MT2 10mg",
+    "product_slug": "mtii-10mg",
+    "lot_number": "MTI10-4940",
+    "purity_percent": "99.931%",
+    "test_date_iso": "2025-10-28",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/MTI10-4940.pdf"
+  },
+  {
+    "product_name": "GLP-2",
+    "product_slug": "glp-2",
+    "lot_number": "GLP2-110",
+    "purity_percent": "99.83%",
+    "test_date_iso": "2025-10-23",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/GLP2-110.pdf"
+  },
+  {
+    "product_name": "Semax 5mg",
+    "product_slug": "semax-5mg",
+    "lot_number": "SEM5-2225",
+    "purity_percent": "99.535%",
+    "test_date_iso": "2025-10-23",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": null
+  },
+  {
+    "product_name": "Epitalon 10mg",
+    "product_slug": "epitalon-10mg",
+    "lot_number": "EPI10-8790",
+    "purity_percent": "99.329%",
+    "test_date_iso": "2025-09-26",
+    "issuing_lab": "Chromate",
+    "pdf_file": null
+  },
+  {
+    "product_name": "Cardiogen 20mg",
+    "product_slug": "cardiogen-20mg",
+    "lot_number": "CRD-3886",
+    "purity_percent": "99.834%",
+    "test_date_iso": "2025-09-26",
+    "issuing_lab": "Chromate",
+    "pdf_file": null
+  },
+  {
+    "product_name": "Thymalin 20mg",
+    "product_slug": "thymalin-20mg",
+    "lot_number": "THL-8322",
+    "purity_percent": "98.427%",
+    "test_date_iso": "2025-09-26",
+    "issuing_lab": "Chromate",
+    "pdf_file": null
+  },
+  {
+    "product_name": "Selank 5mg",
+    "product_slug": "selank-5mg",
+    "lot_number": "SEL-5045",
+    "purity_percent": "99.834%",
+    "test_date_iso": "2025-09-25",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": null
+  },
+  {
+    "product_name": "AOD-9604 5mg",
+    "product_slug": "aod-9604-5mg",
+    "lot_number": "AOD-1160",
+    "purity_percent": "99.487%",
+    "test_date_iso": "2025-09-25",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": null
+  },
+  {
+    "product_name": "Cartalax 20mg",
+    "product_slug": "cartalax-20mg",
+    "lot_number": "CRX-7528",
+    "purity_percent": "99.47%",
+    "test_date_iso": "2025-09-21",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": null
+  },
+  {
+    "product_name": "PNC-27 10mg",
+    "product_slug": "pnc-27-10mg",
+    "lot_number": "PNC-3816",
+    "purity_percent": "99.39%",
+    "test_date_iso": "2025-09-21",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": null
+  },
+  {
+    "product_name": "GHK-Cu",
+    "product_slug": "ghk-cu",
+    "lot_number": "GHK100-4140",
+    "purity_percent": "99.942%",
+    "test_date_iso": "2025-09-21",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/GHK100-4140.pdf"
+  },
+  {
+    "product_name": "Chonluten 20mg",
+    "product_slug": "chonluten-20mg",
+    "lot_number": "CHL-2935",
+    "purity_percent": "99.736%",
+    "test_date_iso": "2025-09-21",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": null
+  },
+  {
+    "product_name": "BPC-157",
+    "product_slug": "bpc-157",
+    "lot_number": "bpc-157-capsules-98-pure-coa-chromate",
+    "purity_percent": "98.339%",
+    "test_date_iso": "2025-09-16",
+    "issuing_lab": "Chromate",
+    "pdf_file": null
+  },
+  {
+    "product_name": "FOX04-DRI 10mg",
+    "product_slug": "fox04-dri-10mg",
+    "lot_number": "F4D-5191",
+    "purity_percent": "99.056%",
+    "test_date_iso": "2025-09-15",
+    "issuing_lab": "Chromate",
+    "pdf_file": null
+  },
+  {
+    "product_name": "LL-37 10mg",
+    "product_slug": "ll-37-10mg",
+    "lot_number": "LL37-0068",
+    "purity_percent": "99.853%",
+    "test_date_iso": "2025-09-10",
+    "issuing_lab": "Chromate",
+    "pdf_file": null
+  },
+  {
+    "product_name": "GHK-Cu",
+    "product_slug": "ghk-cu",
+    "lot_number": "GHK50-5535",
+    "purity_percent": "99.904%",
+    "test_date_iso": "2025-09-05",
+    "issuing_lab": "Chromate",
+    "pdf_file": "coa_pdfs/GHK50-5535.pdf"
+  },
+  {
+    "product_name": "Semax 5mg",
+    "product_slug": "semax-5mg",
+    "lot_number": "SEM5-2220",
+    "purity_percent": "99.489%",
+    "test_date_iso": "2025-09-05",
+    "issuing_lab": "Chromate",
+    "pdf_file": null
+  },
+  {
+    "product_name": "BPC-157 + TB-500 Blend",
+    "product_slug": "bpc-157-tb-500-blend",
+    "lot_number": "BPC2-5430",
+    "purity_percent": "99.656%",
+    "test_date_iso": "2025-09-05",
+    "issuing_lab": "Chromate",
+    "pdf_file": null
+  },
+  {
+    "product_name": "CJC-1295 No DAC 5mg",
+    "product_slug": "cjc-1295-no-dac-5mg",
+    "lot_number": "394895",
+    "purity_percent": "98.68%",
+    "test_date_iso": "2025-02-08",
+    "issuing_lab": "SafeCert LABS",
+    "pdf_file": null
+  },
+  {
+    "product_name": "AOD-9604 5mg",
+    "product_slug": "aod-9604-5mg",
+    "lot_number": "AOD-1185",
+    "purity_percent": "99.114%",
+    "test_date_iso": "2025-01-05",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/AOD-1185.pdf"
+  },
+  {
+    "product_name": "AOD-9604 5mg",
+    "product_slug": "aod-9604-5mg",
+    "lot_number": "AOD-1185",
+    "purity_percent": null,
+    "test_date_iso": "2025-01-05",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/AOD-1185.pdf"
+  },
+  {
+    "product_name": "FOX04-DRI 10mg",
+    "product_slug": "fox04-dri-10mg",
+    "lot_number": "F4D-5195",
+    "purity_percent": null,
+    "test_date_iso": "2025-01-05",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/F4D-5195.pdf"
+  },
+  {
+    "product_name": "AOD-9604 5mg",
+    "product_slug": "aod-9604-5mg",
+    "lot_number": "AOD-1185",
+    "purity_percent": "99.114%",
+    "test_date_iso": "2025-01-05",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/AOD-1185.pdf"
+  },
+  {
+    "product_name": "AOD-9604 5mg",
+    "product_slug": "aod-9604-5mg",
+    "lot_number": "AOD-1185",
+    "purity_percent": null,
+    "test_date_iso": "2025-01-05",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/AOD-1185.pdf"
+  },
+  {
+    "product_name": "FOX04-DRI 10mg",
+    "product_slug": "fox04-dri-10mg",
+    "lot_number": "F4D-5195",
+    "purity_percent": null,
+    "test_date_iso": "2025-01-05",
+    "issuing_lab": "Freedom Diagnostics",
+    "pdf_file": "coa_pdfs/F4D-5195.pdf"
+  },
+  {
+    "product_name": "PEG-MGF 2mg",
+    "product_slug": "peg-mgf-2mg",
+    "lot_number": "07-PEG-MGF-2mg-COA",
+    "purity_percent": "99.534%",
+    "test_date_iso": "2024-11-29",
+    "issuing_lab": "Janoshik",
+    "pdf_file": "coa_pdfs/07-PEG-MGF-2mg-COA.pdf"
+  },
+  {
+    "product_name": "CJC-1295 No DAC 5mg",
+    "product_slug": "cjc-1295-no-dac-5mg",
+    "lot_number": "CC10-001",
+    "purity_percent": "99.441%",
+    "test_date_iso": "2024-11-14",
+    "issuing_lab": "Janoshik",
+    "pdf_file": null
+  },
+  {
+    "product_name": "ARA-290 12mg",
+    "product_slug": "ara-290-12-mg",
+    "lot_number": "Unknown",
+    "purity_percent": "99.185%",
+    "test_date_iso": "2024-10-09",
+    "issuing_lab": "Janoshik",
+    "pdf_file": null
+  },
+  {
+    "product_name": "Hexarelin 2mg",
+    "product_slug": "hexarelin-2mg",
+    "lot_number": "102-HN",
+    "purity_percent": "99.265%",
+    "test_date_iso": "2024-08-01",
+    "issuing_lab": "Janoshik",
+    "pdf_file": "coa_pdfs/102-HN.pdf"
+  },
+  {
+    "product_name": "GHRP-2",
+    "product_slug": "ghrp-2",
+    "lot_number": "G2-001",
+    "purity_percent": "99.371%",
+    "test_date_iso": "2024-07-26",
+    "issuing_lab": "Janoshik",
+    "pdf_file": "coa_pdfs/G2-001.pdf"
+  },
+  {
+    "product_name": "GHRP-6",
+    "product_slug": "ghrp-6",
+    "lot_number": "G6-001",
+    "purity_percent": "99.940%",
+    "test_date_iso": "2024-07-26",
+    "issuing_lab": "Janoshik",
+    "pdf_file": "coa_pdfs/G6-001.pdf"
+  },
+  {
+    "product_name": "Epitalon 10mg",
+    "product_slug": "epitalon-10mg",
+    "lot_number": "EN-001",
+    "purity_percent": "99.809%",
+    "test_date_iso": "2024-07-20",
+    "issuing_lab": "Janoshik",
+    "pdf_file": null
+  },
+  {
+    "product_name": "Selank 5mg",
+    "product_slug": "selank-5mg",
+    "lot_number": "SK-001",
+    "purity_percent": "99.911%",
+    "test_date_iso": "2024-07-20",
+    "issuing_lab": "Janoshik",
+    "pdf_file": null
   }
 ]

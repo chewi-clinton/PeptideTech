@@ -170,20 +170,29 @@ class Command(BaseCommand):
                 product = Product.objects.get(slug=row["product_slug"])
             except Product.DoesNotExist:
                 continue
+
             test_date = None
-            if row.get("test_date"):
+            if row.get("test_date_iso"):
+                try:
+                    test_date = datetime.strptime(row["test_date_iso"], "%Y-%m-%d").date()
+                except ValueError:
+                    test_date = None
+            elif row.get("test_date"):
                 try:
                     test_date = datetime.strptime(row["test_date"], "%b %d, %Y").date()
                 except ValueError:
                     test_date = None
-            COA.objects.update_or_create(
+
+            coa, _ = COA.objects.update_or_create(
                 product=product,
                 lot_number=row["lot_number"],
                 defaults={
-                    "purity_percent": row.get("purity_percent", ""),
+                    "purity_percent": row.get("purity_percent") or "",
                     "test_date": test_date,
-                    "issuing_lab": row.get("issuing_lab", ""),
+                    "issuing_lab": row.get("issuing_lab") or "",
                 },
             )
+            if row.get("pdf_file"):
+                self._attach_image(coa.file, row["pdf_file"], data_dir)
             created += 1
         self.stdout.write(f"coa_records: {created}")
