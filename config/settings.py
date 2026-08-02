@@ -173,6 +173,6 @@ if EMAIL_HOST:
 else:
     EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 
-DEFAULT_FROM_EMAIL = config("DEFAULT_FROM_EMAIL", default="orders@peptidetech.is")
-ADMIN_ALERT_EMAIL = config("ADMIN_ALERT_EMAIL", default="orders@peptidetech.is")
+DEFAULT_FROM_EMAIL = config("DEFAULT_FROM_EMAIL", default="support@peptidetech.cc")
+ADMIN_ALERT_EMAIL = config("ADMIN_ALERT_EMAIL", default="support@peptidetech.cc")
 SITE_URL = config("SITE_URL", default="http://localhost:3000")
