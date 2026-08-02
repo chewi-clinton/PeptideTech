@@ -7,7 +7,7 @@ import { api } from "@/lib/api";
 import AdminShell from "@/components/admin/AdminShell";
 import { IconPlus, IconSearchLarge } from "@/components/icons";
 
-function ProductsView(token) {
+function ProductsView({ token }) {
   const [products, setProducts] = useState([]);
   const [query, setQuery] = useState("");
   const [error, setError] = useState("");
