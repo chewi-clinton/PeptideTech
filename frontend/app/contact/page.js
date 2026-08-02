@@ -21,8 +21,8 @@ export const metadata = {
     "Self-service support for Peptech — order tracking, free reships for stuck packages, photo refund claims, COA lookup, account, and legal contact.",
 };
 
-const SUPPORT_EMAIL = "cs@peptidetech.is";
-const LEGAL_EMAIL = "legal@peptidetech.is";
+const SUPPORT_EMAIL = "support@peptidetech.cc";
+const LEGAL_EMAIL = "support@peptidetech.cc";
 
 // Real topic tiles + copy from the live /contact page's support hub. The
 // live site hands each topic to an AI chat agent for instant resolution —
