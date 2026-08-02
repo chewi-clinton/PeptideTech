@@ -25,24 +25,71 @@ const HOMEPAGE_CATEGORY_BLURBS = {
   "glp-peptides": "GLP-1 / GIP metabolic peptides — semaglutide, tirzepatide, retatrutide.",
 };
 
+// The homepage "Shop by category" grid features 6 of the 7 categories
+// (Capsules is omitted there — it's still reachable from the header/shop),
+// in this exact order, matching the live site.
+const HOMEPAGE_CATEGORY_ORDER = [
+  "peptides",
+  "bioregulators",
+  "cases-accessories",
+  "peptide-blends",
+  "liquids-aminos-solvents",
+  "glp-peptides",
+];
+
+// Exact slugs/order of the live site's "Featured peptides" (12 items) and
+// "Research peptides, ready to ship" (8 items) homepage grids.
+const FEATURED_SLUGS = [
+  "bpc-157",
+  "igf-1-lr3-1mg",
+  "glutathione-1500mg",
+  "mots-c-10mg",
+  "nad",
+  "semax-5mg",
+  "tesamorelin",
+  "tb-500",
+  "mtii-10mg",
+  "ghk-cu",
+  "glow-blend-bpc-157-tb-500-ghk-cu-10mg-10mg-50mg",
+  "pt-141-10mg",
+];
+
+const READY_TO_SHIP_SLUGS = [
+  "ru58841-5-liquid-dropper",
+  "pp405-0-05-liquid-dropper",
+  "5-amino-1mq-capsules",
+  "rad-140-capsules",
+  "tesofensine-research-capsules",
+  "deluxe-peptide-case-black-holographic-with-blue-latches",
+  "tesamorelin",
+  "methylene-blue-500mg-research-liquid",
+];
+
+function pickBySlug(products, slugs) {
+  const bySlug = new Map(products.map((p) => [p.slug, p]));
+  return slugs.map((s) => bySlug.get(s)).filter(Boolean);
+}
+
 export default async function Home() {
   const [categories, products] = await Promise.all([
     api.categories.list().catch(() => []),
     api.products.list().catch(() => []),
   ]);
 
-  const categoriesWithMeta = categories.map((c) => {
-    const inCategory = products.filter((p) => p.category?.slug === c.slug);
-    return {
-      ...c,
-      count: inCategory.length,
-      image: inCategory[0]?.primary_image || null,
-      description: HOMEPAGE_CATEGORY_BLURBS[c.slug] || c.description,
-    };
-  });
+  const categoriesWithMeta = HOMEPAGE_CATEGORY_ORDER.map((slug) => categories.find((c) => c.slug === slug))
+    .filter(Boolean)
+    .map((c) => {
+      const inCategory = products.filter((p) => p.category?.slug === c.slug);
+      return {
+        ...c,
+        count: inCategory.length,
+        image: inCategory[0]?.primary_image || null,
+        description: HOMEPAGE_CATEGORY_BLURBS[c.slug] || c.description,
+      };
+    });
 
-  const featured = products.slice(0, 8);
-  const readyToShip = products.slice(8, 16);
+  const featured = pickBySlug(products, FEATURED_SLUGS);
+  const readyToShip = pickBySlug(products, READY_TO_SHIP_SLUGS);
 
   return (
     <div>

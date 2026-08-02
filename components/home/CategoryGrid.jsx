@@ -17,10 +17,11 @@ export default function CategoryGrid({ categories }) {
         </div>
 
         <div
+          className="pep-category-grid"
           style={{
             marginTop: 32,
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
+            gridTemplateColumns: "repeat(6, 1fr)",
             gap: 16,
           }}
         >
