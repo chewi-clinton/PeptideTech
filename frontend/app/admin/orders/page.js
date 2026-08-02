@@ -13,7 +13,7 @@ const STATUS_COLOR = {
   cancelled: { bg: "#fee2e2", color: "#991b1b" },
 };
 
-function OrdersView(token) {
+function OrdersView({ token }) {
   const [orders, setOrders] = useState([]);
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(true);

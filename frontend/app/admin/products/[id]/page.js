@@ -6,7 +6,7 @@ import { api } from "@/lib/api";
 import AdminShell from "@/components/admin/AdminShell";
 import ProductForm from "@/components/admin/ProductForm";
 
-function EditProductView(token) {
+function EditProductView({ token }) {
   const params = useParams();
   const [product, setProduct] = useState(null);
   const [error, setError] = useState("");
