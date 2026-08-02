@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { api } from "@/lib/api";
 import ProductBuyBox from "@/components/ProductBuyBox";
+import Eyebrow from "@/components/Eyebrow";
 
 export async function generateMetadata({ params }) {
   const { slug } = await params;
@@ -58,6 +59,9 @@ export default async function ProductPage({ params }) {
               />
             )}
           </div>
+          <div style={{ marginTop: 10, display: "flex", alignItems: "center", justifyContent: "center", gap: 6, fontSize: 12, color: "var(--ink-4)" }}>
+            <span>Scan vial QR → live COA</span>
+          </div>
           {product.images?.length > 1 && (
             <div style={{ display: "flex", gap: 8, marginTop: 10 }}>
               {product.images.map((img) => (
@@ -74,11 +78,7 @@ export default async function ProductPage({ params }) {
         </div>
 
         <div>
-          {product.category && (
-            <div style={{ fontSize: 11, fontWeight: 700, color: "var(--brand-2)", letterSpacing: "0.06em" }}>
-              RESEARCH PEPTIDE · {product.category.name.toUpperCase()}
-            </div>
-          )}
+          {product.category && <Eyebrow>Research peptide · {product.category.name}</Eyebrow>}
           <h1 style={{ fontSize: 34, marginTop: 6 }}>{product.title}</h1>
           {product.short_description && (
             <p style={{ marginTop: 12, color: "var(--ink-3)", fontSize: 14, lineHeight: 1.6 }}>

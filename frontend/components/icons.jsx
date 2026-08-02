@@ -369,6 +369,19 @@ export const IconWarningTriangle = (p) => (
   </Svg>
 );
 
+export const IconSparkle = (p) => (
+  <Svg {...p}>
+    <path
+      d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      fill="none"
+    />
+  </Svg>
+);
+
 export const IconTikTok = (p) => (
   <Svg {...p} fill="currentColor">
     <path d="M16.6 5.82a4.28 4.28 0 0 1-1.06-2.82h-3.2v12.95a2.6 2.6 0 0 1-2.6 2.6 2.6 2.6 0 0 1-2.6-2.6 2.6 2.6 0 0 1 2.6-2.6c.27 0 .53.04.78.12V9.2a5.86 5.86 0 0 0-.78-.05A5.79 5.79 0 0 0 3.15 15a5.79 5.79 0 0 0 5.79 5.79 5.79 5.79 0 0 0 5.79-5.79V9.01a7.5 7.5 0 0 0 4.38 1.4V7.21a4.28 4.28 0 0 1-2.5-1.39z" />
