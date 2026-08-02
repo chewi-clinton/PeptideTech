@@ -7,6 +7,7 @@ import {
   IconPhone,
   IconTikTok,
   IconWarningTriangle,
+  IconWhatsApp,
   IconX,
 } from "@/components/icons";
 import PaymentBadges from "@/components/PaymentBadges";
@@ -107,10 +108,20 @@ export default async function SiteFooter() {
             </div>
 
             <div style={{ marginTop: 16, display: "flex", flexDirection: "column", gap: 8 }}>
-              <a href="tel:+13073033166" style={{ display: "inline-flex", alignItems: "center", gap: 8, fontSize: 13, color: "var(--ink-2)", textDecoration: "none" }}>
+              <a href="tel:+12816828987" style={{ display: "inline-flex", alignItems: "center", gap: 8, fontSize: 13, color: "var(--ink-2)", textDecoration: "none" }}>
                 <IconPhone size={14} style={{ color: "var(--ink-4)" }} />
-                +1 (307) 303-3166
+                +1 (281) 682-8987
                 <span style={{ fontSize: 11, color: "var(--ink-4)" }}>24/7 AI support line</span>
+              </a>
+              <a
+                href="https://wa.me/19162926748"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ display: "inline-flex", alignItems: "center", gap: 8, fontSize: 13, color: "var(--ink-2)", textDecoration: "none" }}
+              >
+                <IconWhatsApp size={14} style={{ color: "var(--ink-4)" }} />
+                +1 (916) 292-6748
+                <span style={{ fontSize: 11, color: "var(--ink-4)" }}>WhatsApp</span>
               </a>
               <Link href="/contact" style={{ display: "inline-flex", alignItems: "center", gap: 8, fontSize: 13, color: "var(--ink-2)", textDecoration: "none" }}>
                 <IconMail size={14} style={{ color: "var(--ink-4)" }} />
@@ -122,8 +133,16 @@ export default async function SiteFooter() {
               <a href="https://x.com/peptide_tech" target="_blank" rel="noopener noreferrer" style={socialIcon}>
                 <IconX size={16} />
               </a>
-              <a href="https://www.tiktok.com/@pep_technologies" target="_blank" rel="noopener noreferrer" style={socialIcon}>
+              <a
+                href="https://www.tiktok.com/@peptidetech3?_r=1&_t=ZS-98YNghLN0S8"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={socialIcon}
+              >
                 <IconTikTok size={16} />
+              </a>
+              <a href="https://wa.me/19162926748" target="_blank" rel="noopener noreferrer" style={socialIcon}>
+                <IconWhatsApp size={16} />
               </a>
             </div>
 

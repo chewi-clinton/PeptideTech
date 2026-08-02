@@ -6,7 +6,7 @@ PAYMENT_METHOD_CHOICES = [
     ("apple_pay", "Apple Pay"),
     ("cash_app", "Cash App"),
     ("e_transfer", "E-Transfer"),
-    ("venmo", "Venmo"),
+    ("bank_transfer", "Bank Transfer"),
     ("payid", "PayID"),
     ("crypto", "Crypto"),
 ]

@@ -154,8 +154,8 @@ export default function ProductBuyBox({ product }) {
         )}
 
         <p style={{ marginTop: 14, fontSize: 11.5, color: "var(--ink-4)" }}>
-          No card required at checkout — pay via Zelle, Chime, Apple Pay, Cash App, E-Transfer, Venmo,
-          PayID, or Crypto after your order is placed.
+          No card required at checkout — pay via Zelle, Chime, Apple Pay, Cash App, E-Transfer, Bank
+          Transfer, PayID, or Crypto after your order is placed.
         </p>
       </div>
 
