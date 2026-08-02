@@ -51,8 +51,8 @@ const COLUMNS = [
     title: "Earn",
     links: [
       { href: "/affiliates", label: "Affiliate program" },
-      { href: "/account/affiliate", label: "Affiliate dashboard" },
-      { href: "/affiliates/access", label: "Affiliate dashboard help" },
+      { href: "/affiliates", label: "Affiliate dashboard" },
+      { href: "/contact", label: "Affiliate dashboard help" },
       { href: "/heroes", label: "Heroes discount" },
       { href: "/membership", label: "Loyalty rewards" },
     ],
@@ -80,7 +80,7 @@ export default async function SiteFooter() {
   const intro = disclaimers.find((d) => d.key === "footer-intro");
 
   return (
-    <footer style={{ background: "var(--bg-tint)", borderTop: "1px solid var(--line)", marginTop: 64 }}>
+    <footer style={{ background: "var(--bg)", borderTop: "1px solid var(--line)", marginTop: 64 }}>
       <div className="container" style={{ padding: "48px 24px" }}>
         <div className="pep-footer-grid" style={{ display: "grid", gridTemplateColumns: "1.5fr repeat(5, 1fr)", gap: 32 }}>
           <div>
@@ -144,7 +144,7 @@ export default async function SiteFooter() {
                 <input
                   type="email"
                   placeholder="you@email.com"
-                  style={{ minWidth: 0, flex: 1, padding: "8px 10px", border: "1px solid var(--line)", borderRadius: "var(--radius-sm)", fontSize: 13 }}
+                  style={{ minWidth: 0, flex: 1, padding: "8px 10px", border: "1px solid var(--line)", borderRadius: "var(--radius-sm)", fontSize: 13, background: "var(--bg)", color: "var(--ink)" }}
                 />
                 <button type="submit" className="btn-primary" style={{ padding: "8px 14px", fontSize: 13, border: "none", cursor: "pointer" }}>
                   Subscribe
@@ -171,8 +171,23 @@ export default async function SiteFooter() {
           ))}
         </div>
 
-        <div style={{ marginTop: 48, borderTop: "1px solid var(--line)", paddingTop: 24, display: "flex", gap: 12 }}>
-          <span style={{ flexShrink: 0, color: "#d97706" }}>
+        <div
+          className="card"
+          style={{ marginTop: 48, padding: 24, display: "flex", gap: 14 }}
+        >
+          <span
+            style={{
+              flexShrink: 0,
+              width: 36,
+              height: 36,
+              display: "inline-flex",
+              alignItems: "center",
+              justifyContent: "center",
+              background: "#fef3c7",
+              color: "#d97706",
+              borderRadius: "var(--radius-md)",
+            }}
+          >
             <IconWarningTriangle size={18} />
           </span>
           <div>
@@ -250,6 +265,6 @@ const socialIcon = {
   alignItems: "center",
   justifyContent: "center",
   border: "1px solid var(--line)",
-  borderRadius: "50%",
+  borderRadius: "var(--radius-md)",
   color: "var(--ink-2)",
 };
