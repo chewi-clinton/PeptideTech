@@ -20,6 +20,8 @@ export default function SiteHeader() {
   return (
     <header
       style={{
+        position: "relative",
+        zIndex: 40,
         background: "rgba(255,255,255,0.92)",
         backdropFilter: "blur(14px)",
         WebkitBackdropFilter: "blur(14px)",
