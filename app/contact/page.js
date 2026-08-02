@@ -164,10 +164,20 @@ export default function ContactPage() {
             </span>
             <div>
               <div style={{ fontWeight: 700, fontSize: 15, color: "var(--ink)" }}>
-                <a href="tel:+13073033166" style={{ color: "inherit", textDecoration: "none" }}>
-                  +1 (307) 303-3166
+                <a href="tel:+12816828987" style={{ color: "inherit", textDecoration: "none" }}>
+                  +1 (281) 682-8987
                 </a>{" "}
                 — 24/7 AI phone support
+              </div>
+              <div style={{ marginTop: 4, fontSize: 13, color: "var(--ink-2)" }}>
+                <a
+                  href="https://wa.me/19162926748"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ color: "inherit", textDecoration: "none" }}
+                >
+                  WhatsApp: +1 (916) 292-6748
+                </a>
               </div>
               <div style={{ marginTop: 4, display: "flex", alignItems: "center", gap: 6, fontSize: 12.5, color: "var(--ink-3)" }}>
                 <IconClock size={13} />

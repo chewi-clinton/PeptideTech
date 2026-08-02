@@ -11,7 +11,7 @@ const PAYMENT_METHODS = [
   { value: "apple_pay", label: "Apple Pay" },
   { value: "cash_app", label: "Cash App" },
   { value: "e_transfer", label: "E-Transfer" },
-  { value: "venmo", label: "Venmo" },
+  { value: "bank_transfer", label: "Bank Transfer" },
   { value: "payid", label: "PayID" },
   { value: "crypto", label: "Crypto" },
 ];
