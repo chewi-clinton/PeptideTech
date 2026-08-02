@@ -52,8 +52,8 @@ const COLUMNS = [
     title: "Earn",
     links: [
       { href: "/affiliates", label: "Affiliate program" },
-      { href: "/affiliates", label: "Affiliate dashboard" },
-      { href: "/contact", label: "Affiliate dashboard help" },
+      { href: "/account/affiliate", label: "Affiliate dashboard" },
+      { href: "/affiliates/access", label: "Affiliate dashboard help" },
       { href: "/heroes", label: "Heroes discount" },
       { href: "/membership", label: "Loyalty rewards" },
     ],
