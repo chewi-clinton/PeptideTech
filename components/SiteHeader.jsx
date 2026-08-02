@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { api } from "@/lib/api";
 import CartIndicator from "@/components/CartIndicator";
+import MobileNavToggle from "@/components/MobileNavToggle";
 
 const NAV_LINKS = [
   { href: "/shop", label: "Shop" },
@@ -33,6 +34,8 @@ export default async function SiteHeader() {
       }}
     >
       <div className="container" style={{ height: 64, display: "flex", alignItems: "center", gap: 24 }}>
+        <MobileNavToggle links={NAV_LINKS} />
+
         <Link
           href="/"
           aria-label="PeptideTech home"
@@ -41,7 +44,7 @@ export default async function SiteHeader() {
           <span style={{ color: "var(--brand)" }}>PEPTIDE</span>TECH
         </Link>
 
-        <nav style={{ display: "flex", gap: 22, flex: 1 }} className="hidden md:flex">
+        <nav className="hidden md:flex" style={{ gap: 22, flex: 1 }}>
           {NAV_LINKS.map((link) => (
             <Link
               key={link.href}
@@ -53,7 +56,9 @@ export default async function SiteHeader() {
           ))}
         </nav>
 
-        <CartIndicator />
+        <div style={{ marginLeft: "auto" }}>
+          <CartIndicator />
+        </div>
       </div>
 
       {categories.length > 0 && (
