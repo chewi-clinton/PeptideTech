@@ -1,7 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Eyebrow from "@/components/Eyebrow";
+import WaveBackground from "@/components/WaveBackground";
 import {
   IconCheck,
   IconEye,
@@ -69,9 +70,18 @@ const REASONS = [
   },
 ];
 
+const ROTATE_MS = 4500;
+
 export default function SixReasonsSection() {
   const [active, setActive] = useState(0);
   const reason = REASONS[active];
+
+  useEffect(() => {
+    const id = setInterval(() => {
+      setActive((i) => (i + 1) % REASONS.length);
+    }, ROTATE_MS);
+    return () => clearInterval(id);
+  }, [active]);
 
   return (
     <section style={{ padding: "72px 0" }}>
@@ -88,7 +98,11 @@ export default function SixReasonsSection() {
         </div>
 
         <div className="pep-2col" style={{ marginTop: 32, display: "grid", gridTemplateColumns: "1.2fr 1fr", gap: 24, alignItems: "stretch" }}>
-          <div className="card" style={{ padding: 32 }}>
+          <div className="card" style={{ padding: 32, position: "relative", overflow: "hidden" }}>
+            <WaveBackground opacity={0.08} color="var(--brand)" />
+            <div
+              style={{ position: "relative" }}
+            >
             <div
               style={{
                 width: 44,
@@ -141,6 +155,7 @@ export default function SixReasonsSection() {
                 </span>
               ))}
             </div>
+            </div>
           </div>
 
           <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
@@ -149,10 +164,12 @@ export default function SixReasonsSection() {
                 key={r.title}
                 onClick={() => setActive(i)}
                 style={{
+                  position: "relative",
                   display: "flex",
                   alignItems: "center",
                   gap: 14,
                   padding: 16,
+                  overflow: "hidden",
                   background: i === active ? "var(--bg)" : "transparent",
                   border: `1px solid ${i === active ? "var(--brand)" : "var(--line)"}`,
                   borderRadius: "var(--radius-md)",
@@ -180,6 +197,15 @@ export default function SixReasonsSection() {
                   <div style={{ fontSize: 12.5, color: "var(--ink-3)" }}>{r.subtitle}</div>
                 </div>
                 <span style={{ fontSize: 13, fontWeight: 700, color: "var(--ink-3)" }}>{r.stat}</span>
+                {i === active && (
+                  <span style={{ position: "absolute", left: 0, right: 0, bottom: 0, height: 2, background: "var(--line)" }}>
+                    <span
+                      key={active}
+                      className="pep-progress-bar"
+                      style={{ display: "block", height: "100%", background: "var(--brand)" }}
+                    />
+                  </span>
+                )}
               </button>
             ))}
           </div>
