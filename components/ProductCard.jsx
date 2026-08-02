@@ -6,6 +6,7 @@ export default function ProductCard({ product }) {
   const defaultVariant = product.variants?.find((v) => v.is_default) || product.variants?.[0];
   const hasCoa = product.purity;
   const backordered = defaultVariant && !defaultVariant.in_stock;
+  const onSale = defaultVariant?.compare_at_price;
 
   return (
     <div className="card" style={{ overflow: "hidden" }}>
@@ -25,6 +26,8 @@ export default function ProductCard({ product }) {
               <IconClockSimple size={11} />
               Backorder
             </span>
+          ) : onSale ? (
+            <span style={badgeStyle("var(--brand)", "#fff")}>Sale</span>
           ) : (
             <span />
           )}
