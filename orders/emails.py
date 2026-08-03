@@ -1,17 +1,27 @@
 import logging
 
 from django.conf import settings
-from django.core.mail import send_mail
+from django.core.mail import EmailMultiAlternatives
 from django.template.loader import render_to_string
 
 logger = logging.getLogger(__name__)
 
 
+def _send_multipart(subject, template_base, to, context):
+    context = {**context, "site_url": settings.SITE_URL}
+    text_body = render_to_string(f"{template_base}.txt", context)
+    html_body = render_to_string(f"{template_base}.html", context)
+    message = EmailMultiAlternatives(subject, text_body, settings.DEFAULT_FROM_EMAIL, to)
+    message.attach_alternative(html_body, "text/html")
+    message.send(fail_silently=False)
+
+
 def send_order_confirmation(order):
     subject = f"Order {order.order_number} received"
-    body = render_to_string("orders/customer_confirmation.txt", {"order": order})
     try:
-        send_mail(subject, body, settings.DEFAULT_FROM_EMAIL, [order.email], fail_silently=False)
+        _send_multipart(
+            subject, "orders/customer_confirmation", [order.email], {"order": order}
+        )
     except Exception:
         # The order is already saved by this point — a broken SMTP relay
         # must never turn into a 500 for the customer or lose the order.
@@ -20,16 +30,12 @@ def send_order_confirmation(order):
 
 def send_admin_order_alert(order):
     subject = f"New order {order.order_number}"
-    body = render_to_string(
-        "orders/admin_alert.txt", {"order": order, "site_url": settings.SITE_URL}
-    )
     try:
-        send_mail(
+        _send_multipart(
             subject,
-            body,
-            settings.DEFAULT_FROM_EMAIL,
+            "orders/admin_alert",
             [settings.ADMIN_ALERT_EMAIL],
-            fail_silently=False,
+            {"order": order},
         )
     except Exception:
         logger.exception("Failed to send admin order alert email for %s", order.order_number)
