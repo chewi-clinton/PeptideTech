@@ -352,6 +352,14 @@ export const IconFileText = (p) => (
   </Svg>
 );
 
+export const IconDownload = (p) => (
+  <Svg {...p}>
+    <g fill="none" {...stroke}>
+      <path d="M12 3v12m0 0-4-4m4 4 4-4M5 17v2a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-2" />
+    </g>
+  </Svg>
+);
+
 export const IconSearchLarge = (p) => (
   <Svg viewBox="0 0 20 20" {...p}>
     <path
