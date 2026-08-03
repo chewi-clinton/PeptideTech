@@ -129,6 +129,7 @@ export default async function Home() {
             </Link>
           </div>
           <div
+            className="pep-product-grid"
             style={{
               marginTop: 24,
               display: "grid",
@@ -173,6 +174,7 @@ export default async function Home() {
             </Link>
           </div>
           <div
+            className="pep-product-grid"
             style={{
               marginTop: 24,
               display: "grid",

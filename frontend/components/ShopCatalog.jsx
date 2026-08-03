@@ -168,6 +168,7 @@ export default function ShopCatalog({ products, categories }) {
         </p>
 
         <div
+          className="pep-product-grid"
           style={{
             marginTop: 16,
             display: "grid",

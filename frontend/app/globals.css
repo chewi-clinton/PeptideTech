@@ -207,6 +207,13 @@ button {
   }
 }
 
+@media (max-width: 640px) {
+  .pep-product-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 10px !important;
+  }
+}
+
 /* Plain legal/marketing pages (terms, privacy, shipping, ...) render their
    scraped content directly with no outer container so richer pages (about,
    affiliates) can keep their own full-bleed sections. Give top-level text
