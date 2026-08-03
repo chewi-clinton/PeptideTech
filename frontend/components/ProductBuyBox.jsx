@@ -20,13 +20,14 @@ export default function ProductBuyBox({ product }) {
   if (!variant) return null;
 
   function handleAddToCart() {
+    const primaryImage = product.images?.find((img) => img.is_primary) || product.images?.[0];
     addItem({
       variantId: variant.id,
       productTitle: product.title,
       variantLabel: variant.label,
       price: variant.price,
       quantity,
-      image: product.primary_image,
+      image: primaryImage?.image,
       openDrawer: true,
     });
     setAdded(true);
