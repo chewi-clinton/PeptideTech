@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import dynamic from "next/dynamic";
 import { useRouter } from "next/navigation";
 import { useCart } from "@/context/CartProvider";
@@ -55,15 +55,19 @@ const PERSONALIZE_METHODS = [
 
 const BASE_PRICE = 39.99;
 
-function leaveLabDate() {
-  const d = new Date();
-  d.setDate(d.getDate() + 4);
-  return d.toLocaleDateString("en-US", { month: "long", day: "numeric" });
-}
-
 export default function BuildAKitPage() {
   const router = useRouter();
   const { addItem } = useCart();
+
+  // Computed client-side only (after mount) — new Date() during SSR can
+  // disagree with the client's clock across a cached render, which throws
+  // a hydration mismatch.
+  const [shipDate, setShipDate] = useState(null);
+  useEffect(() => {
+    const d = new Date();
+    d.setDate(d.getDate() + 4);
+    setShipDate(d.toLocaleDateString("en-US", { month: "long", day: "numeric" }));
+  }, []);
 
   const [lidColor, setLidColor] = useState(FILAMENT_COLORS[2]);
   const [bodyColor, setBodyColor] = useState(FILAMENT_COLORS[0]);
@@ -192,7 +196,11 @@ export default function BuildAKitPage() {
               <span style={{ fontSize: 26, fontWeight: 800, color: "var(--ink)" }}>${price.toFixed(2)}</span>
             </div>
             <p style={{ margin: "8px 0 0", fontSize: 12.5, color: "var(--ink-3)", lineHeight: 1.5 }}>
-              <strong style={{ color: "var(--ink-2)" }}>Estimated to leave the lab by {leaveLabDate()}.</strong>{" "}
+              {shipDate && (
+                <>
+                  <strong style={{ color: "var(--ink-2)" }}>Estimated to leave the lab by {shipDate}.</strong>{" "}
+                </>
+              )}
               Made to order: printing adds +48 business hours on top of standard fulfillment.
             </p>
           </div>
