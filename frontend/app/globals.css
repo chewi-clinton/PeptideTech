@@ -248,6 +248,18 @@ button {
   margin-top: 40px;
 }
 
+/* Some scraped static pages (wholesale, heroes, ...) embed a raw
+   `grid-template-columns: repeat(3, 1fr)` inline style with no
+   responsive fallback baked in from the source capture. Without
+   minmax(0, ...), a column can grow past its 1fr share to fit an
+   unbreakable child and overflow the page horizontally — collapse
+   every such grid to a single column at phone widths. */
+@media (max-width: 640px) {
+  .pep-pdp-prose [style*="grid-template-columns"] {
+    grid-template-columns: 1fr !important;
+  }
+}
+
 /* The live site's own typography wrapper class for plain legal/info pages
    (terms, privacy, shipping, returns, purity-guarantee-terms). These pages'
    scraped body_html nests real content one level inside a `.prose-store`
