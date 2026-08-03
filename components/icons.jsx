@@ -118,6 +118,14 @@ export const IconMinus = (p) => (
   </Svg>
 );
 
+export const IconSms = (p) => (
+  <Svg {...p}>
+    <g fill="none" {...stroke}>
+      <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+    </g>
+  </Svg>
+);
+
 export const IconShield = (p) => (
   <Svg viewBox="0 0 20 20" {...p}>
     <path
@@ -293,6 +301,17 @@ export const IconCube = (p) => (
       <path d="m12 3 8 4.5v9L12 21l-8-4.5v-9z" />
       <path d="m4 7.5 8 4.5 8-4.5M12 12v9" />
     </g>
+  </Svg>
+);
+
+export const IconTruck = (p) => (
+  <Svg viewBox="0 0 20 20" {...p}>
+    <path
+      fillRule="evenodd"
+      clipRule="evenodd"
+      d="M3.5 4.5A1 1 0 014.5 3.5h9a1 1 0 011 1V6h2.3a1 1 0 01.8.4l2 2.7a1 1 0 01.2.6V13a2 2 0 01-2 2h-.8a2 2 0 01-3.8 0H7.8a2 2 0 01-3.8 0h-.5A1.5 1.5 0 012 13.5V7a1 1 0 011-1h.5V4.5zM7 5.5v5H4v3a.5.5 0 00.5.5h.1a2 2 0 014.8 0h.6a1 1 0 011-1h1.3V5.5H7zm6.3 0V12h1.2v-3h-.2l-1-1zm3.2 3.5V12a1 1 0 00.5.9V9z"
+      fill="currentColor"
+    />
   </Svg>
 );
 
