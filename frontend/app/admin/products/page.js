@@ -86,55 +86,59 @@ function ProductsView({ token }) {
           return (
             <div
               key={p.id}
-              className="card"
-              style={{ padding: 12, display: "flex", alignItems: "center", gap: 14, opacity: deletingId === p.id ? 0.5 : 1 }}
+              className="card pep-admin-prod-row"
+              style={{ padding: 12, opacity: deletingId === p.id ? 0.5 : 1 }}
             >
-              <div style={{ position: "relative", width: 48, height: 48, flexShrink: 0, borderRadius: "var(--radius-sm)", overflow: "hidden", background: "var(--bg-tint)" }}>
-                {image && <Image src={image} alt="" fill style={{ objectFit: "contain", padding: 4 }} />}
-              </div>
-              <div style={{ flex: 1, minWidth: 0 }}>
-                <div style={{ fontSize: 14.5, fontWeight: 700, color: "var(--ink)", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>
-                  {p.title}
+              <div className="pep-admin-prod-top">
+                <div style={{ position: "relative", width: 48, height: 48, flexShrink: 0, borderRadius: "var(--radius-sm)", overflow: "hidden", background: "var(--bg-tint)" }}>
+                  {image && <Image src={image} alt="" fill style={{ objectFit: "contain", padding: 4 }} />}
                 </div>
-                <div style={{ fontSize: 12.5, color: "var(--ink-4)" }}>
-                  {p.category?.name || "Uncategorized"} · {p.slug}
-                  {!p.is_active && <span style={{ color: "var(--red)", fontWeight: 600 }}> · inactive</span>}
+                <div style={{ flex: 1, minWidth: 0 }}>
+                  <div style={{ fontSize: 14.5, fontWeight: 700, color: "var(--ink)", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>
+                    {p.title}
+                  </div>
+                  <div style={{ fontSize: 12.5, color: "var(--ink-4)", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>
+                    {p.category?.name || "Uncategorized"} · {p.slug}
+                    {!p.is_active && <span style={{ color: "var(--red)", fontWeight: 600 }}> · inactive</span>}
+                  </div>
                 </div>
               </div>
-              {defaultVariant && (
-                <div style={{ fontSize: 14, fontWeight: 700, color: "var(--ink)", flexShrink: 0 }}>${defaultVariant.price}</div>
-              )}
-              <div style={{ display: "flex", gap: 8, flexShrink: 0 }}>
-                <Link
-                  href={`/admin/products/${p.id}`}
-                  style={{
-                    padding: "7px 12px",
-                    borderRadius: "var(--radius-sm)",
-                    border: "1px solid var(--line)",
-                    fontSize: 12.5,
-                    fontWeight: 600,
-                    color: "var(--ink-2)",
-                    textDecoration: "none",
-                  }}
-                >
-                  Edit
-                </Link>
-                <button
-                  onClick={() => handleDelete(p)}
-                  disabled={deletingId === p.id}
-                  style={{
-                    padding: "7px 12px",
-                    borderRadius: "var(--radius-sm)",
-                    border: "1px solid var(--line)",
-                    background: "var(--bg)",
-                    fontSize: 12.5,
-                    fontWeight: 600,
-                    color: "var(--red)",
-                    cursor: "pointer",
-                  }}
-                >
-                  Delete
-                </button>
+              <div className="pep-admin-prod-actions">
+                {defaultVariant && (
+                  <div style={{ fontSize: 14, fontWeight: 700, color: "var(--ink)", flexShrink: 0 }}>${defaultVariant.price}</div>
+                )}
+                <div style={{ display: "flex", gap: 8, flexShrink: 0 }}>
+                  <Link
+                    href={`/admin/products/${p.id}`}
+                    style={{
+                      padding: "7px 12px",
+                      borderRadius: "var(--radius-sm)",
+                      border: "1px solid var(--line)",
+                      fontSize: 12.5,
+                      fontWeight: 600,
+                      color: "var(--ink-2)",
+                      textDecoration: "none",
+                    }}
+                  >
+                    Edit
+                  </Link>
+                  <button
+                    onClick={() => handleDelete(p)}
+                    disabled={deletingId === p.id}
+                    style={{
+                      padding: "7px 12px",
+                      borderRadius: "var(--radius-sm)",
+                      border: "1px solid var(--line)",
+                      background: "var(--bg)",
+                      fontSize: 12.5,
+                      fontWeight: 600,
+                      color: "var(--red)",
+                      cursor: "pointer",
+                    }}
+                  >
+                    Delete
+                  </button>
+                </div>
               </div>
             </div>
           );
@@ -143,6 +147,16 @@ function ProductsView({ token }) {
           <p style={{ color: "var(--ink-4)" }}>No products match your search.</p>
         )}
       </div>
+
+      <style>{`
+        .pep-admin-prod-row { display: flex; align-items: center; gap: 14px; }
+        .pep-admin-prod-top { display: flex; align-items: center; gap: 14px; flex: 1; min-width: 0; }
+        .pep-admin-prod-actions { display: flex; align-items: center; gap: 16px; flex-shrink: 0; }
+        @media (max-width: 480px) {
+          .pep-admin-prod-row { flex-wrap: wrap; }
+          .pep-admin-prod-actions { flex-basis: 100%; justify-content: space-between; margin-top: 8px; }
+        }
+      `}</style>
     </div>
   );
 }
