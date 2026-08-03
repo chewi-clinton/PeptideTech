@@ -19,8 +19,8 @@ export default async function COALibraryPage() {
 
   return (
     <div>
-      <section style={{ position: "relative", overflow: "hidden", background: "var(--bg-tint)", padding: "56px 0 40px", textAlign: "center" }}>
-        <WaveBackground opacity={0.07} />
+      <section style={{ position: "relative", overflow: "hidden", background: "var(--bg)", borderBottom: "1px solid var(--line)", padding: "56px 0 40px", textAlign: "center" }}>
+        <WaveBackground />
         <div className="container" style={{ position: "relative", maxWidth: 720 }}>
           <Eyebrow>Lot traceability</Eyebrow>
           <h1 style={{ fontSize: 34, marginTop: 10 }}>
