@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useCart } from "@/context/CartProvider";
 import { IconCheck, IconX } from "@/components/icons";
+import FreeShippingProgress from "@/components/FreeShippingProgress";
 
 export default function CartDrawer() {
   const { items, isDrawerOpen, closeDrawer, updateQuantity, removeItem, total } = useCart();
@@ -67,6 +68,8 @@ export default function CartDrawer() {
             <IconX size={16} />
           </button>
         </div>
+
+        {items.length > 0 && <FreeShippingProgress subtotal={total} variant="drawer" />}
 
         <div style={{ flex: 1, overflowY: "auto", padding: "12px 20px" }}>
           {items.length === 0 ? (
