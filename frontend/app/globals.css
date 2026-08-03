@@ -26,6 +26,7 @@
   --brand: #14b8a6;
   --brand-2: #0d9488;
   --brand-tint: #d6f5f0;
+  --teal: #14b8a6;
 
   --bg: #ffffff;
   --bg-tint: #f3fbfa;
@@ -70,6 +71,19 @@ body {
   font-family: var(--font-sans-stack);
   font-size: 15px;
   line-height: 1.45;
+}
+
+/* iOS Safari (and some Android Chrome builds) auto-zoom the viewport when a
+   focused form field's computed font-size is under 16px. Force every
+   input/select/textarea to 16px on phone-width viewports regardless of
+   whatever smaller size a component sets inline, so tapping a field never
+   triggers an unwanted zoom. */
+@media (max-width: 640px) {
+  input,
+  select,
+  textarea {
+    font-size: 16px !important;
+  }
 }
 
 h1,
