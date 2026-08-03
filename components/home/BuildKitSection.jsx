@@ -2,15 +2,18 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import dynamic from "next/dynamic";
 import Eyebrow from "@/components/Eyebrow";
 import { IconArrowRight, IconCube, IconGift, IconPlus, IconStar, IconTag } from "@/components/icons";
+
+const KitCase3D = dynamic(() => import("@/components/KitCase3D"), { ssr: false });
 
 const COLORS = ["#0d9488", "#0f172a", "#e5e7eb", "#2563eb", "#dc2626", "#7f1d1d", "#c2410c", "#64748b"];
 
 export default function BuildKitSection() {
   const [lid, setLid] = useState(0);
   const [body, setBody] = useState(1);
-  const [text, setText] = useState("YOUR LAB");
+  const [open, setOpen] = useState(false);
 
   return (
     <section style={{ background: "var(--bg-tint)", padding: "72px 0" }}>
@@ -28,109 +31,35 @@ export default function BuildKitSection() {
 
         <div className="pep-2col" style={{ marginTop: 32, display: "grid", gridTemplateColumns: "1fr 1fr", gap: 24, alignItems: "center" }}>
           <div className="card" style={{ padding: 24, position: "relative" }}>
-            <Link
-              href="/build-a-kit"
+            <button
+              onClick={() => setOpen((v) => !v)}
               style={{
                 position: "absolute",
                 top: 20,
                 right: 20,
+                zIndex: 2,
                 display: "inline-flex",
                 alignItems: "center",
                 gap: 6,
                 padding: "8px 14px",
                 border: "1px solid var(--line)",
                 borderRadius: "var(--radius-md)",
+                background: "var(--bg)",
                 fontSize: 13,
                 fontWeight: 700,
                 color: "var(--ink)",
-                textDecoration: "none",
+                cursor: "pointer",
               }}
             >
               <IconPlus size={12} style={{ color: "var(--brand-2)" }} />
-              Open case
-            </Link>
+              {open ? "Close case" : "Open case"}
+            </button>
 
-            <div style={{ display: "flex", flexDirection: "column", alignItems: "center", padding: "40px 0 24px" }}>
-              <div
-                style={{
-                  position: "relative",
-                  zIndex: 1,
-                  width: 260,
-                  height: 64,
-                  background: `linear-gradient(180deg, ${COLORS[lid]}e6, ${COLORS[lid]})`,
-                  borderRadius: 32,
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  color: "rgba(255,255,255,0.92)",
-                  fontWeight: 700,
-                  letterSpacing: "0.08em",
-                  fontFamily: "var(--font-mono-stack)",
-                  boxShadow: "0 6px 14px -6px rgba(10,24,40,0.35)",
-                }}
-              >
-                {(text || "YOUR LAB").toUpperCase()}
-              </div>
-              <div
-                style={{
-                  position: "relative",
-                  width: 230,
-                  height: 82,
-                  background: COLORS[body],
-                  borderRadius: 18,
-                  marginTop: -14,
-                }}
-              >
-                <span
-                  aria-hidden="true"
-                  style={{
-                    position: "absolute",
-                    top: -3,
-                    right: 10,
-                    width: 8,
-                    height: 8,
-                    borderRadius: "50%",
-                    background: "var(--ink)",
-                  }}
-                />
-                {[0.32, 0.68].map((pos) => (
-                  <span
-                    key={pos}
-                    aria-hidden="true"
-                    style={{
-                      position: "absolute",
-                      top: -4,
-                      left: `${pos * 100}%`,
-                      transform: "translateX(-50%)",
-                      width: 16,
-                      height: 8,
-                      borderRadius: 3,
-                      background: "rgba(10,24,40,0.25)",
-                    }}
-                  />
-                ))}
-              </div>
-              <div style={{ width: 190, height: 12, background: "var(--ink)", opacity: 0.08, borderRadius: "50%", marginTop: 10, filter: "blur(2px)" }} />
-            </div>
+            <KitCase3D lidColor={COLORS[lid]} bodyColor={COLORS[body]} open={open} height={260} autoRotate interactive={false} />
 
-            <div style={{ display: "grid", gap: 10 }}>
+            <div style={{ display: "grid", gap: 10, marginTop: 16 }}>
               <ColorRow label="Lid" colors={COLORS} value={lid} onChange={setLid} />
               <ColorRow label="Body" colors={COLORS} value={body} onChange={setBody} />
-              <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-                <span style={{ width: 40, fontSize: 11, fontFamily: "var(--font-mono-stack)", color: "var(--ink-4)" }}>Text</span>
-                <input
-                  value={text}
-                  onChange={(e) => setText(e.target.value.slice(0, 20))}
-                  placeholder="Engrave text"
-                  style={{
-                    flex: 1,
-                    padding: "9px 12px",
-                    border: "1px solid var(--line)",
-                    borderRadius: "var(--radius-md)",
-                    fontSize: 13,
-                  }}
-                />
-              </div>
             </div>
           </div>
 
