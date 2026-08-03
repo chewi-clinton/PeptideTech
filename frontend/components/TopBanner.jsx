@@ -18,7 +18,7 @@ export default function TopBanner() {
         >
           <IconLock size={12} style={{ flexShrink: 0, opacity: 0.9 }} />
           <span style={{ fontSize: 12, fontWeight: 600, lineHeight: 1.4 }}>
-            You are viewing the official PeptideTech site at <strong>peptidetech.is</strong>.
+            You are viewing the official PeptideTech site at <strong>peptidetech.cc</strong>.
           </span>
         </div>
       </div>

@@ -60,7 +60,7 @@ function OrderStatusForm() {
         <form onSubmit={lookup} className="card" style={{ padding: 22, display: "grid", gap: 12 }}>
           <input
             required
-            placeholder="Order number (e.g. ZC-MRGOGG921HW3)"
+            placeholder="Order number (e.g. PT-MRGOGG921HW3)"
             value={orderNumber}
             onChange={(e) => setOrderNumber(e.target.value)}
             style={inputStyle}
