@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
 import { api } from "@/lib/api";
 import AdminShell from "@/components/admin/AdminShell";
 
@@ -54,9 +55,12 @@ function OrdersView({ token }) {
               <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", flexWrap: "wrap", gap: 10 }}>
                 <div style={{ minWidth: 0 }}>
                   <div style={{ display: "flex", alignItems: "center", gap: 10, flexWrap: "wrap" }}>
-                    <strong style={{ fontFamily: "var(--font-mono-stack)", fontSize: 13.5, color: "var(--ink)" }}>
+                    <Link
+                      href={`/admin/orders/${order.id}`}
+                      style={{ fontFamily: "var(--font-mono-stack)", fontSize: 13.5, fontWeight: 700, color: "var(--brand-2)", textDecoration: "none" }}
+                    >
                       {order.order_number}
-                    </strong>
+                    </Link>
                     <span
                       style={{
                         fontSize: 11,

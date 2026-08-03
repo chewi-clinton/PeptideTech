@@ -56,6 +56,7 @@ export const api = {
         `/orders/lookup/?order_number=${encodeURIComponent(orderNumber)}&email=${encodeURIComponent(email)}`
       ),
     list: (token) => request(`/orders/`, { headers: authHeader(token) }),
+    get: (id, token) => request(`/orders/${id}/`, { headers: authHeader(token) }),
     updateStatus: (id, status, token) =>
       request(`/orders/${id}/`, {
         method: "PATCH",
