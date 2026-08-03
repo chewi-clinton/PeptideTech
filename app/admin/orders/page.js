@@ -47,7 +47,7 @@ function OrdersView({ token }) {
       </div>
       {error && <p style={{ color: "var(--red)", marginTop: 12, fontSize: 13.5 }}>{error}</p>}
 
-      <div style={{ marginTop: 20, display: "grid", gap: 10 }}>
+      <div style={{ marginTop: 20, display: "grid", gridTemplateColumns: "minmax(0, 1fr)", gap: 10 }}>
         {orders.map((order) => {
           const colors = STATUS_COLOR[order.status] || STATUS_COLOR.pending;
           return (
@@ -76,7 +76,7 @@ function OrdersView({ token }) {
                       {order.status}
                     </span>
                   </div>
-                  <div style={{ marginTop: 4, fontSize: 13, color: "var(--ink-3)" }}>
+                  <div style={{ marginTop: 4, fontSize: 13, color: "var(--ink-3)", overflowWrap: "anywhere" }}>
                     {order.customer_name} · {order.email}
                   </div>
                 </div>

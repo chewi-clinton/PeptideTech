@@ -101,7 +101,7 @@ function OrderDetailView({ token }) {
       <div style={{ marginTop: 24, display: "grid", gridTemplateColumns: "1.4fr 1fr", gap: 20 }} className="pep-order-detail-grid">
         <div className="card" style={{ padding: 20 }}>
           <h2 style={{ fontSize: 15, color: "var(--ink)", margin: "0 0 14px" }}>Items</h2>
-          <div style={{ display: "grid", gap: 10 }}>
+          <div style={{ display: "grid", gridTemplateColumns: "minmax(0, 1fr)", gap: 10 }}>
             {order.items.map((item, i) => (
               <div key={i} style={{ display: "flex", justifyContent: "space-between", fontSize: 14, paddingBottom: 10, borderBottom: i < order.items.length - 1 ? "1px solid var(--line)" : "none" }}>
                 <span style={{ color: "var(--ink-2)" }}>
@@ -120,11 +120,11 @@ function OrderDetailView({ token }) {
           </div>
         </div>
 
-        <div style={{ display: "grid", gap: 16 }}>
+        <div style={{ display: "grid", gridTemplateColumns: "minmax(0, 1fr)", gap: 16 }}>
           <div className="card" style={{ padding: 20 }}>
             <h2 style={{ fontSize: 15, color: "var(--ink)", margin: "0 0 10px" }}>Contact</h2>
             <div style={{ fontSize: 14, color: "var(--ink-2)" }}>{order.customer_name}</div>
-            <div style={{ fontSize: 13, color: "var(--ink-3)" }}>{order.email}</div>
+            <div style={{ fontSize: 13, color: "var(--ink-3)", overflowWrap: "anywhere" }}>{order.email}</div>
             {order.phone && <div style={{ fontSize: 13, color: "var(--ink-3)" }}>{order.phone}</div>}
           </div>
 

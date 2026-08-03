@@ -79,7 +79,7 @@ function ProductsView({ token }) {
 
       {error && <p style={{ color: "var(--red)", marginTop: 16, fontSize: 13.5 }}>{error}</p>}
 
-      <div style={{ marginTop: 20, display: "grid", gap: 8 }}>
+      <div style={{ marginTop: 20, display: "grid", gridTemplateColumns: "minmax(0, 1fr)", gap: 8 }}>
         {filtered.map((p) => {
           const defaultVariant = p.variants?.find((v) => v.is_default) || p.variants?.[0];
           const image = p.images?.[0]?.image;
