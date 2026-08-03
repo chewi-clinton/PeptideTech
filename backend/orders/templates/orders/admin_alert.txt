@@ -8,4 +8,4 @@ Total: ${{ order.total }}
 Items:
 {% for item in order.items.all %}- {{ item.quantity }} x {{ item.product_title }} — ${{ item.price }}
 {% endfor %}
-Manage this order: {{ site_url }}/admin/orders
+Manage this order: {{ site_url }}/admin/orders/{{ order.id }}

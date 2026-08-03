@@ -42,6 +42,11 @@
         <tr>
           <td style="padding:12px 18px;border-top:1px solid #e3e9f0;font-size:14px;color:#2a3a4c;">
             <table role="presentation" width="100%"><tr>
+              <td width="44" style="padding-right:12px;">
+                {% if item.image_url %}
+                <img src="{{ item.image_url }}" width="40" height="40" alt="" style="display:block;border-radius:6px;object-fit:cover;border:1px solid #e3e9f0;" />
+                {% endif %}
+              </td>
               <td>{{ item.quantity }} × {{ item.product_title }}</td>
               <td align="right" style="font-weight:600;color:#0a1828;white-space:nowrap;">${{ item.price }}</td>
             </tr></table>
