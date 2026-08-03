@@ -94,6 +94,7 @@ export default function CheckoutPage() {
           product_title: `${i.productTitle} (${i.variantLabel})`,
           quantity: i.quantity,
           price: i.price,
+          image_url: i.image || "",
         })),
       };
       const order = await api.orders.create(payload);
