@@ -2,6 +2,7 @@ from rest_framework import permissions, viewsets
 from rest_framework.decorators import action
 from rest_framework.response import Response
 
+from .emails import send_order_status_update
 from .models import Order
 from .serializers import OrderLookupSerializer, OrderSerializer, OrderStatusUpdateSerializer
 
@@ -21,6 +22,12 @@ class OrderViewSet(viewsets.ModelViewSet):
         if self.action == "lookup":
             return OrderLookupSerializer
         return OrderSerializer
+
+    def perform_update(self, serializer):
+        old_status = serializer.instance.status
+        order = serializer.save()
+        if order.status != old_status:
+            send_order_status_update(order)
 
     @action(detail=False, methods=["get"])
     def lookup(self, request):
