@@ -1,0 +1,13 @@
+Hi {{ order.customer_name }},
+
+Your order {{ order.order_number }} is now: {{ order.get_status_display }}
+
+{{ status_message }}
+
+Order summary:
+{% for item in order.items.all %}- {{ item.quantity }} x {{ item.product_title }} — ${{ item.price }}
+{% endfor %}
+Total: ${{ order.total }}
+
+Track your order any time using your order number and email:
+{{ site_url }}/order-status?order_number={{ order.order_number }}&email={{ order.email }}

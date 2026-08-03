@@ -39,3 +39,24 @@ def send_admin_order_alert(order):
         )
     except Exception:
         logger.exception("Failed to send admin order alert email for %s", order.order_number)
+
+
+STATUS_MESSAGES = {
+    "pending": "Your order is pending — we'll follow up with payment instructions if we haven't already.",
+    "paid": "We've confirmed your payment. Your order is now being prepared for fulfillment.",
+    "fulfilled": "Your order has been fulfilled and is on its way to you.",
+    "cancelled": "Your order has been cancelled. Reach out if this doesn't look right.",
+}
+
+
+def send_order_status_update(order):
+    subject = f"Order {order.order_number} is now {order.get_status_display()}"
+    try:
+        _send_multipart(
+            subject,
+            "orders/status_update",
+            [order.email],
+            {"order": order, "status_message": STATUS_MESSAGES.get(order.status, "")},
+        )
+    except Exception:
+        logger.exception("Failed to send order status update email for %s", order.order_number)
