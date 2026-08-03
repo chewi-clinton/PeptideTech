@@ -5,7 +5,7 @@ import dynamic from "next/dynamic";
 import { useRouter } from "next/navigation";
 import { useCart } from "@/context/CartProvider";
 import Eyebrow from "@/components/Eyebrow";
-import { IconArrowRight, IconGift, IconPlus } from "@/components/icons";
+import { IconArrowRight, IconGift, IconMinus, IconPlus } from "@/components/icons";
 
 const KitCase3D = dynamic(() => import("@/components/KitCase3D"), { ssr: false });
 
@@ -57,7 +57,7 @@ const BASE_PRICE = 39.99;
 
 function leaveLabDate() {
   const d = new Date();
-  d.setDate(d.getDate() + 8); // ~48 business hours print + standard fulfillment
+  d.setDate(d.getDate() + 4);
   return d.toLocaleDateString("en-US", { month: "long", day: "numeric" });
 }
 
@@ -138,49 +138,63 @@ export default function BuildAKitPage() {
 
       <div className="pep-kit-grid" style={{ marginTop: 24, display: "grid", gridTemplateColumns: "1.4fr 1fr", gap: 24, alignItems: "start" }}>
         {/* Left: 3D preview + price */}
-        <div>
-          <div className="card" style={{ padding: 20, position: "relative" }}>
-            <button
-              onClick={() => setOpen((v) => !v)}
+        <div className="pep-kit-sticky" style={{ position: "sticky", top: 84 }}>
+          <div className="card" style={{ padding: 0, overflow: "hidden" }}>
+            <div
               style={{
-                position: "absolute",
-                top: 20,
-                right: 20,
-                zIndex: 2,
-                display: "inline-flex",
-                alignItems: "center",
-                gap: 6,
-                padding: "8px 14px",
-                border: "1px solid var(--line)",
-                borderRadius: "var(--radius-md)",
-                background: "var(--bg)",
-                fontSize: 13,
-                fontWeight: 700,
-                color: "var(--ink)",
-                cursor: "pointer",
+                position: "relative",
+                height: 420,
+                background: "linear-gradient(180deg, #f8fafc 0%, #eef2f7 100%)",
               }}
             >
-              <IconPlus size={12} style={{ color: "var(--brand-2)" }} />
-              {open ? "Close case" : "Open case"}
-            </button>
-
-            <KitCase3D lidColor={lidColor} bodyColor={bodyColor} open={open} height={420} />
-
-            <p style={{ marginTop: 10, fontSize: 12, color: "var(--ink-4)", textAlign: "center" }}>
-              On-screen colors and finish are approximate — the final part is 3D-printed and
-              filament batches vary.
-            </p>
+              <div aria-label="3D preview of your custom case" role="img" style={{ width: "100%", height: "100%", minHeight: 320 }}>
+                <KitCase3D lidColor={lidColor} bodyColor={bodyColor} open={open} height="100%" />
+              </div>
+              <button
+                onClick={() => setOpen((v) => !v)}
+                aria-pressed={open}
+                aria-label={open ? "Close the case" : "Open the case"}
+                style={{
+                  position: "absolute",
+                  right: 12,
+                  top: 12,
+                  zIndex: 2,
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: 7,
+                  padding: "9px 14px",
+                  borderRadius: 999,
+                  cursor: "pointer",
+                  border: "1px solid var(--line-2)",
+                  background: "rgba(255,255,255,0.92)",
+                  backdropFilter: "blur(4px)",
+                  boxShadow: "0 2px 10px rgba(15,23,42,0.12)",
+                  fontSize: 12.5,
+                  fontWeight: 700,
+                  color: "var(--ink)",
+                }}
+              >
+                {open ? <IconMinus size={13} style={{ color: "var(--brand-2)" }} /> : <IconPlus size={13} style={{ color: "var(--brand-2)" }} />}
+                {open ? "Close case" : "Open case"}
+              </button>
+            </div>
+            <div style={{ padding: "10px 16px", borderTop: "1px solid var(--line)", display: "flex", alignItems: "center", gap: 8 }}>
+              <span style={{ fontSize: 11.5, color: "var(--ink-4)", lineHeight: 1.4 }}>
+                On-screen colors and finish are approximate — the final part is 3D-printed and
+                filament batches vary.
+              </span>
+            </div>
           </div>
 
-          <div className="card" style={{ marginTop: 16, padding: 20, display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 10 }}>
-            <div>
-              <div style={{ fontSize: 13, color: "var(--ink-3)" }}>Server-confirmed price</div>
-              <p style={{ margin: "6px 0 0", fontSize: 13, color: "var(--ink-2)" }}>
-                <strong style={{ color: "var(--ink)" }}>Estimated to leave the lab by {leaveLabDate()}.</strong>{" "}
-                Made to order: printing adds +48 business hours on top of standard fulfillment.
-              </p>
+          <div className="card" style={{ padding: 18, marginTop: 14 }}>
+            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline" }}>
+              <span style={{ fontSize: 13.5, color: "var(--ink-3)" }}>Server-confirmed price</span>
+              <span style={{ fontSize: 26, fontWeight: 800, color: "var(--ink)" }}>${price.toFixed(2)}</span>
             </div>
-            <div style={{ fontSize: 26, fontWeight: 800, color: "var(--ink)", flexShrink: 0 }}>${price.toFixed(2)}</div>
+            <p style={{ margin: "8px 0 0", fontSize: 12.5, color: "var(--ink-3)", lineHeight: 1.5 }}>
+              <strong style={{ color: "var(--ink-2)" }}>Estimated to leave the lab by {leaveLabDate()}.</strong>{" "}
+              Made to order: printing adds +48 business hours on top of standard fulfillment.
+            </p>
           </div>
         </div>
 
@@ -292,6 +306,7 @@ export default function BuildAKitPage() {
       <style>{`
         @media (max-width: 900px) {
           .pep-kit-grid { grid-template-columns: 1fr !important; }
+          .pep-kit-sticky { position: static !important; }
         }
         @media (max-width: 480px) {
           .pep-kit-personalize-grid { grid-template-columns: 1fr 1fr !important; }
