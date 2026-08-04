@@ -53,6 +53,9 @@ export const metadata = {
     index: true,
     follow: true,
   },
+  verification: {
+    google: "X0-xHgbev6PI6aXqLAOERfLhsAEdpmQUZjolwBfloc8",
+  },
 };
 
 // The whole site is database-backed (prices, stock, orders, COA lots all
