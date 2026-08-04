@@ -37,9 +37,11 @@ export const api = {
     get: (slug) => request(`/blog/${slug}/`),
   },
   learn: {
+    list: () => request(`/learn/`),
     get: (slug) => request(`/learn/${slug}/`),
   },
   pages: {
+    list: () => request(`/pages/`),
     get: (slug) => request(`/pages/${slug}/`),
   },
   disclaimers: {

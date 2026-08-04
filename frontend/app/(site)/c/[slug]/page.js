@@ -3,12 +3,25 @@ import { notFound } from "next/navigation";
 import { api } from "@/lib/api";
 import ProductCard from "@/components/ProductCard";
 import ProductFaqAccordion from "@/components/ProductFaqAccordion";
+import JsonLd from "@/components/JsonLd";
+import { buildMetadata, breadcrumbJsonLd, truncate } from "@/lib/seo";
 
 export async function generateMetadata({ params }) {
   const { slug } = await params;
   try {
     const category = await api.categories.get(slug);
-    return { title: `${category.name} — Peptide Technologies` };
+    return buildMetadata({
+      title: `${category.name} — Research Peptides for Sale`,
+      description: truncate(category.description, 160),
+      keywords: [
+        category.name,
+        `${category.name} for sale`,
+        `buy ${category.name}`,
+        "research peptides",
+        "Certificate of Analysis peptides",
+      ],
+      path: `/c/${slug}`,
+    });
   } catch {
     return {};
   }
@@ -26,6 +39,13 @@ export default async function CategoryPage({ params }) {
 
   return (
     <div className="container" style={{ padding: "40px 24px" }}>
+      <JsonLd
+        data={breadcrumbJsonLd([
+          { name: "Home", path: "/" },
+          { name: "Shop", path: "/shop" },
+          { name: category.name, path: `/c/${slug}` },
+        ])}
+      />
       <nav style={{ fontSize: 12, color: "var(--ink-4)", marginBottom: 16 }}>
         <Link href="/" style={{ textDecoration: "none", color: "inherit" }}>
           Home

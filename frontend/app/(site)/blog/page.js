@@ -2,8 +2,15 @@ import Image from "next/image";
 import Link from "next/link";
 import { api } from "@/lib/api";
 import { BLOG_CATEGORIES, BLOG_CATEGORY_TABS } from "@/lib/blogCategories";
+import { buildMetadata } from "@/lib/seo";
 
-export const metadata = { title: "Research Insights — Peptide Technologies" };
+export const metadata = buildMetadata({
+  title: "Research Insights — Peptide Science Blog",
+  description:
+    "Peptide science, analytical methods, and lab techniques from the Peptech team — comparisons, bioregulator overviews, and Certificate of Analysis explainers for researchers.",
+  keywords: ["peptide research blog", "peptide science articles", "research peptide comparisons", "Peptech"],
+  path: "/blog",
+});
 
 function formatDate(dateStr) {
   if (!dateStr) return "";

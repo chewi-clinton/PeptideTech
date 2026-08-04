@@ -2,8 +2,16 @@ import Link from "next/link";
 import { api } from "@/lib/api";
 import Eyebrow from "@/components/Eyebrow";
 import FaqAccordion from "@/components/FaqAccordion";
+import JsonLd from "@/components/JsonLd";
+import { buildMetadata } from "@/lib/seo";
 
-export const metadata = { title: "Questions, answered — Peptide Technologies" };
+export const metadata = buildMetadata({
+  title: "FAQ — Compliance, COAs, Shipping & Guarantees",
+  description:
+    "Answers on compliance, Certificate of Analysis lookups, shipping, and the Peptide Technologies purity guarantee.",
+  keywords: ["research peptide FAQ", "peptide shipping policy", "COA questions", "Peptech"],
+  path: "/faq",
+});
 
 // The real FAQ content is embedded as a schema.org FAQPage JSON-LD block
 // inside the scraped body_html (the rest of that markup is a static,
@@ -36,6 +44,19 @@ export default async function FaqPage() {
 
   return (
     <div>
+      {items.length > 0 && (
+        <JsonLd
+          data={{
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: items.map((item) => ({
+              "@type": "Question",
+              name: item.question,
+              acceptedAnswer: { "@type": "Answer", text: item.answer },
+            })),
+          }}
+        />
+      )}
       <section style={{ position: "relative", overflow: "hidden", background: "var(--bg-tint)", borderBottom: "1px solid var(--line)" }}>
         <div className="container" style={{ position: "relative", padding: "68px 24px", maxWidth: 820 }}>
           <nav style={{ fontSize: 12, color: "var(--ink-4)" }}>

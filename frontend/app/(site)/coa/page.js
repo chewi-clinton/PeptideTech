@@ -3,10 +3,15 @@ import { generateQrSvg } from "@/lib/qr";
 import COALibraryList from "@/components/COALibraryList";
 import Eyebrow from "@/components/Eyebrow";
 import WaveBackground from "@/components/WaveBackground";
+import { buildMetadata, SITE_URL } from "@/lib/seo";
 
-export const metadata = { title: "COA Library — Peptide Technologies" };
-
-const SITE_URL = "https://peptidetech.cc";
+export const metadata = buildMetadata({
+  title: "Certificate of Analysis (COA) Library",
+  description:
+    "Look up the third-party Certificate of Analysis for any Peptide Technologies lot — HPLC purity, mass-spectrometry identity, and lot traceability by QR code.",
+  keywords: ["Certificate of Analysis", "COA lookup", "peptide purity testing", "lot traceability", "Peptech"],
+  path: "/coa",
+});
 
 export default async function COALibraryPage() {
   const rawRecords = await api.coaLibrary.list().catch(() => []);
