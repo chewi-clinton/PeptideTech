@@ -30,6 +30,10 @@ export default async function BlogPostPage({ params }) {
   const allPosts = await api.blog.list().catch(() => []);
   const related = allPosts.filter((p) => p.slug !== slug).slice(0, 3);
 
+  // The scraped body already carries its own bare, unstyled <h1> with the
+  // same title — drop it so it doesn't duplicate the styled hero above.
+  const bodyHtml = post.body_html?.replace(/<h1[^>]*>.*?<\/h1>/i, "") ?? "";
+
   return (
     <div>
       <section style={{ background: "var(--bg-tint)", padding: "40px 24px" }}>
@@ -66,7 +70,7 @@ export default async function BlogPostPage({ params }) {
         <div
           className="pep-pdp-prose"
           style={{ marginTop: 28, fontSize: 15, lineHeight: 1.75, color: "var(--ink-2)" }}
-          dangerouslySetInnerHTML={{ __html: post.body_html }}
+          dangerouslySetInnerHTML={{ __html: bodyHtml }}
         />
 
         <div style={{ marginTop: 32 }}>
