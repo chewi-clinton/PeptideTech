@@ -10,7 +10,7 @@ function formatDate(dateStr) {
 }
 
 export default async function BlogIndexPage() {
-  const posts = await api.blog.list().catch(() => []);
+  const posts = await api.blog.list().then((all) => all.slice(0, 12)).catch(() => []);
   return (
     <div>
       <section style={{ background: "var(--bg-tint)", padding: "40px 24px" }}>
