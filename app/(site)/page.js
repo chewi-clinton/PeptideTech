@@ -3,6 +3,7 @@ import { api } from "@/lib/api";
 import ProductCard from "@/components/ProductCard";
 import Eyebrow from "@/components/Eyebrow";
 import { IconArrowRight } from "@/components/icons";
+import { buildMetadata } from "@/lib/seo";
 import HeroSection from "@/components/home/HeroSection";
 import PriceMatchSection from "@/components/home/PriceMatchSection";
 import CategoryGrid from "@/components/home/CategoryGrid";
@@ -69,6 +70,27 @@ function pickBySlug(products, slugs) {
   const bySlug = new Map(products.map((p) => [p.slug, p]));
   return slugs.map((s) => bySlug.get(s)).filter(Boolean);
 }
+
+export const metadata = buildMetadata({
+  title: "Peptide Technologies — Research Peptides, Made in the USA",
+  absoluteTitle: true,
+  description:
+    "Shop research peptides, peptide blends, bioregulators, GLP-1 compounds, and lab supplies — every batch verified by a third-party Certificate of Analysis with full lot traceability. US-made, for laboratory research use only.",
+  keywords: [
+    "research peptides for sale",
+    "buy research peptides USA",
+    "BPC-157",
+    "TB-500",
+    "GHK-Cu",
+    "GLP-1 research peptides",
+    "peptide bioregulators",
+    "peptide blends",
+    "Certificate of Analysis peptides",
+    "Peptide Technologies",
+    "Peptech",
+  ],
+  path: "/",
+});
 
 export default async function Home() {
   const [categories, products] = await Promise.all([

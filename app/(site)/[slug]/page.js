@@ -1,12 +1,18 @@
 import { notFound } from "next/navigation";
 import { api } from "@/lib/api";
 import StaticInteractivity from "@/components/StaticInteractivity";
+import { buildMetadata } from "@/lib/seo";
 
 export async function generateMetadata({ params }) {
   const { slug } = await params;
   try {
     const page = await api.pages.get(slug);
-    return { title: `${page.title} — Peptide Technologies`, description: page.meta_description };
+    return buildMetadata({
+      title: page.title,
+      description: page.meta_description,
+      keywords: [page.title, "Peptide Technologies", "Peptech", "research peptides"],
+      path: `/${slug}`,
+    });
   } catch {
     return {};
   }

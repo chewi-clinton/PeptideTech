@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Eyebrow from "@/components/Eyebrow";
+import { buildMetadata } from "@/lib/seo";
 import {
   IconClock,
   IconFileText,
@@ -16,11 +17,13 @@ import {
   IconWarningTriangle,
 } from "@/components/icons";
 
-export const metadata = {
-  title: "Contact & Support — Peptide Technologies",
+export const metadata = buildMetadata({
+  title: "Contact & Support",
   description:
     "Self-service support for Peptech — order tracking, free reships for stuck packages, photo refund claims, COA lookup, account, and legal contact.",
-};
+  keywords: ["contact Peptide Technologies", "Peptech support", "order tracking", "COA lookup"],
+  path: "/contact",
+});
 
 const SUPPORT_EMAIL = "support@peptidetech.cc";
 const LEGAL_EMAIL = "support@peptidetech.cc";

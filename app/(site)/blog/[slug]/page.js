@@ -2,12 +2,23 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { api } from "@/lib/api";
+import JsonLd from "@/components/JsonLd";
+import { buildMetadata, breadcrumbJsonLd, articleJsonLd, truncate } from "@/lib/seo";
+import { BLOG_CATEGORIES } from "@/lib/blogCategories";
 
 export async function generateMetadata({ params }) {
   const { slug } = await params;
   try {
     const post = await api.blog.get(slug);
-    return { title: `${post.title} — Peptide Technologies`, description: post.excerpt };
+    const category = BLOG_CATEGORIES[slug];
+    return buildMetadata({
+      title: post.title,
+      description: truncate(post.excerpt, 160),
+      keywords: [post.title, category, "research peptides", "peptide research blog", "Peptech"].filter(Boolean),
+      path: `/blog/${slug}`,
+      image: post.cover_image,
+      type: "article",
+    });
   } catch {
     return {};
   }
@@ -36,6 +47,22 @@ export default async function BlogPostPage({ params }) {
 
   return (
     <div>
+      <JsonLd
+        data={articleJsonLd({
+          title: post.title,
+          description: post.excerpt,
+          image: post.cover_image,
+          datePublished: post.published_at,
+          path: `/blog/${slug}`,
+        })}
+      />
+      <JsonLd
+        data={breadcrumbJsonLd([
+          { name: "Home", path: "/" },
+          { name: "Blog", path: "/blog" },
+          { name: post.title, path: `/blog/${slug}` },
+        ])}
+      />
       <section style={{ background: "var(--bg-tint)", padding: "40px 24px" }}>
         <div className="container" style={{ maxWidth: 780 }}>
           <nav style={{ fontSize: 12, color: "var(--ink-4)" }}>

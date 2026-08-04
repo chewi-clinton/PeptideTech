@@ -1,11 +1,17 @@
 import { notFound } from "next/navigation";
 import { api } from "@/lib/api";
 import PriceMatchInteractivity from "@/components/PriceMatchInteractivity";
+import { buildMetadata } from "@/lib/seo";
 
 export async function generateMetadata() {
   try {
     const page = await api.pages.get("price-match");
-    return { title: `${page.title} — Peptide Technologies`, description: page.meta_description };
+    return buildMetadata({
+      title: page.title,
+      description: page.meta_description,
+      keywords: ["peptide price match", "cheapest research peptides", "Peptech pricing"],
+      path: "/price-match",
+    });
   } catch {
     return {};
   }

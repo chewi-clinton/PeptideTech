@@ -8,12 +8,30 @@ import ProductTabs from "@/components/ProductTabs";
 import ProductFaqAccordion from "@/components/ProductFaqAccordion";
 import Eyebrow from "@/components/Eyebrow";
 import { IconArrowRight } from "@/components/icons";
+import JsonLd from "@/components/JsonLd";
+import { buildMetadata, breadcrumbJsonLd, productJsonLd, stripHtml, truncate } from "@/lib/seo";
 
 export async function generateMetadata({ params }) {
   const { slug } = await params;
   try {
     const product = await api.products.get(slug);
-    return { title: `${product.title} — Peptide Technologies` };
+    const image = product.images?.find((img) => img.is_primary)?.image || product.images?.[0]?.image;
+    return buildMetadata({
+      title: product.title,
+      description: truncate(stripHtml(product.short_description), 160),
+      keywords: [
+        product.title,
+        product.category?.name,
+        "research peptide",
+        `${product.title} for sale`,
+        `buy ${product.title}`,
+        product.purity ? `${product.title} ${product.purity} purity` : undefined,
+        "Certificate of Analysis",
+      ].filter(Boolean),
+      path: `/p/${slug}`,
+      image,
+      type: "website",
+    });
   } catch {
     return {};
   }
@@ -39,6 +57,15 @@ export default async function ProductPage({ params }) {
 
   return (
     <div className="container" style={{ padding: "24px" }}>
+      <JsonLd data={productJsonLd(product, `/p/${slug}`)} />
+      <JsonLd
+        data={breadcrumbJsonLd([
+          { name: "Home", path: "/" },
+          { name: "Shop", path: "/shop" },
+          ...(product.category ? [{ name: product.category.name, path: `/c/${product.category.slug}` }] : []),
+          { name: product.title, path: `/p/${slug}` },
+        ])}
+      />
       <nav style={{ fontSize: 12, color: "var(--ink-4)", marginBottom: 16 }}>
         <Link href="/shop" style={{ textDecoration: "none", color: "inherit" }}>
           Shop
