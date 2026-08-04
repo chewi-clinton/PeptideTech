@@ -167,12 +167,15 @@ export default function ContactPage() {
               <IconPhone size={18} />
             </span>
             <div>
-              <div style={{ fontWeight: 700, fontSize: 15, color: "var(--ink)", display: "flex", alignItems: "center", gap: 8 }}>
+              <div style={{ fontWeight: 700, fontSize: 15, color: "var(--ink)" }}>
                 <a href="tel:+12816828987" style={{ color: "inherit", textDecoration: "none" }}>
                   +1 (281) 682-8987
                 </a>
-                <a href="sms:+12816828987" aria-label="Text +1 (281) 682-8987" style={{ display: "inline-flex", color: "var(--ink-3)" }}>
-                  <IconSms size={15} />
+              </div>
+              <div style={{ marginTop: 4, fontSize: 13, color: "var(--ink-2)", display: "flex", alignItems: "center", gap: 6 }}>
+                <IconSms size={13} style={{ color: "var(--ink-3)" }} />
+                <a href="sms:+12816828987" style={{ color: "inherit", textDecoration: "none" }}>
+                  +1 (281) 682-8987
                 </a>
               </div>
               <div style={{ marginTop: 4, fontSize: 13, color: "var(--ink-2)" }}>
