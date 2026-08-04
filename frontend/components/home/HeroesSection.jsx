@@ -29,7 +29,7 @@ export default function HeroesSection() {
   return (
     <section style={{ position: "relative", overflow: "hidden", padding: "72px 0" }}>
       <WaveBackground opacity={0.05} />
-      <div className="container" style={{ position: "relative", display: "grid", gridTemplateColumns: "1.1fr 1fr", gap: 48, alignItems: "center" }}>
+      <div className="container pep-2col" style={{ position: "relative", display: "grid", gridTemplateColumns: "1.1fr 1fr", gap: 48, alignItems: "center" }}>
         <div>
           <span
             style={{

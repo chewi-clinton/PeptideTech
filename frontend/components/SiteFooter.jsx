@@ -109,15 +109,14 @@ export default async function SiteFooter() {
             </div>
 
             <div style={{ marginTop: 16, display: "flex", flexDirection: "column", gap: 8 }}>
-              <div style={{ display: "inline-flex", alignItems: "center", gap: 10 }}>
-                <a href="tel:+12816828987" style={{ display: "inline-flex", alignItems: "center", gap: 8, fontSize: 13, color: "var(--ink-2)", textDecoration: "none" }}>
-                  <IconPhone size={14} style={{ color: "var(--ink-4)" }} />
-                  +1 (281) 682-8987
-                </a>
-                <a href="sms:+12816828987" aria-label="Text +1 (281) 682-8987" style={{ display: "inline-flex", color: "var(--ink-4)" }}>
-                  <IconSms size={14} />
-                </a>
-              </div>
+              <a href="tel:+12816828987" style={{ display: "inline-flex", alignItems: "center", gap: 8, fontSize: 13, color: "var(--ink-2)", textDecoration: "none" }}>
+                <IconPhone size={14} style={{ color: "var(--ink-4)" }} />
+                +1 (281) 682-8987
+              </a>
+              <a href="sms:+12816828987" style={{ display: "inline-flex", alignItems: "center", gap: 8, fontSize: 13, color: "var(--ink-2)", textDecoration: "none" }}>
+                <IconSms size={14} style={{ color: "var(--ink-4)" }} />
+                +1 (281) 682-8987
+              </a>
               <a
                 href="https://wa.me/19162926748"
                 target="_blank"
