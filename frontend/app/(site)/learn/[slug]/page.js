@@ -23,7 +23,9 @@ export default async function LearnArticlePage({ params }) {
 
   return (
     <article className="container" style={{ padding: "40px 24px", maxWidth: 780 }}>
-      <h1 style={{ fontSize: 36 }}>{article.title}</h1>
+      {/* article.body_html already ships its own full h1/byline/disclaimer
+          hero section (scraped verbatim from the live page) — don't
+          duplicate the title here. */}
       {article.cover_image && (
         <div
           className="card"
