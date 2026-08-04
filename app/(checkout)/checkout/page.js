@@ -1,9 +1,11 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useCart } from "@/context/CartProvider";
 import { api, generateOrderNumber } from "@/lib/api";
+import { IconArrowRight, IconCart } from "@/components/icons";
 
 const PAYMENT_METHODS = [
   { value: "zelle", label: "Zelle" },
@@ -65,8 +67,18 @@ export default function CheckoutPage() {
 
   if (items.length === 0) {
     return (
-      <div className="container" style={{ padding: "60px 24px", textAlign: "center" }}>
-        <h1 style={{ fontSize: 28 }}>Your cart is empty</h1>
+      <div className="container" style={{ padding: "90px 24px", textAlign: "center" }}>
+        <IconCart size={32} style={{ color: "var(--brand-2)" }} />
+        <h1 style={{ fontSize: 26, marginTop: 16 }}>Your cart is empty</h1>
+        <p style={{ marginTop: 8, color: "var(--ink-3)", fontSize: 14.5 }}>Add a research peptide to begin checkout.</p>
+        <Link
+          href="/shop"
+          className="btn-primary"
+          style={{ display: "inline-flex", alignItems: "center", gap: 8, marginTop: 20, textDecoration: "none" }}
+        >
+          Shop catalog
+          <IconArrowRight size={14} style={{ color: "#fff" }} />
+        </Link>
       </div>
     );
   }
