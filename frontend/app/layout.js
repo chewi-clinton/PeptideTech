@@ -1,5 +1,6 @@
 import { Geist, Instrument_Serif, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
+import { CartProvider } from "@/context/CartProvider";
 
 const fontSans = Geist({
   variable: "--font-sans",
@@ -34,7 +35,9 @@ export const dynamic = "force-dynamic";
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${fontSans.variable} ${fontMono.variable} ${fontSerif.variable}`}>
-      <body className="min-h-screen flex flex-col">{children}</body>
+      <body className="min-h-screen flex flex-col">
+        <CartProvider>{children}</CartProvider>
+      </body>
     </html>
   );
 }
