@@ -112,6 +112,7 @@ export default async function ProductPage({ params }) {
           <Eyebrow>Keep exploring</Eyebrow>
           <h2 style={{ fontSize: 24, marginTop: 8 }}>Related research peptides</h2>
           <div
+            className="pep-product-grid"
             style={{
               marginTop: 16,
               display: "grid",
