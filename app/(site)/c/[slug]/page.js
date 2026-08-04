@@ -42,6 +42,7 @@ export default async function CategoryPage({ params }) {
         <p style={{ color: "var(--ink-3)", marginTop: 10, maxWidth: 720 }}>{category.description}</p>
       )}
       <div
+        className="pep-product-grid"
         style={{
           marginTop: 28,
           display: "grid",
