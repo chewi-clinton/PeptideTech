@@ -30,16 +30,22 @@ const initialForm = {
   country: "US",
 };
 
+const CRYPTO_DISCOUNT_RATE = 0.1;
+
 export default function CheckoutPage() {
   const { items, total, clearCart, hydrated } = useCart();
   const [form, setForm] = useState(initialForm);
   const [paymentMethod, setPaymentMethod] = useState("");
+  const [ageConfirmed, setAgeConfirmed] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState("");
   const [confirmedOrder, setConfirmedOrder] = useState(null);
   const router = useRouter();
 
   if (!hydrated) return null;
+
+  const isCrypto = paymentMethod === "crypto";
+  const payableTotal = isCrypto ? total * (1 - CRYPTO_DISCOUNT_RATE) : total;
 
   if (confirmedOrder) {
     return (
@@ -93,6 +99,10 @@ export default function CheckoutPage() {
       setError("Select a payment method.");
       return;
     }
+    if (!ageConfirmed) {
+      setError("You must confirm you are at least 21 years old to place an order.");
+      return;
+    }
     setSubmitting(true);
     setError("");
     try {
@@ -101,7 +111,7 @@ export default function CheckoutPage() {
         ...form,
         payment_method: paymentMethod,
         status: "pending",
-        total: total.toFixed(2),
+        total: payableTotal.toFixed(2),
         items: items.map((i) => ({
           product_title: `${i.productTitle} (${i.variantLabel})`,
           quantity: i.quantity,
@@ -221,6 +231,11 @@ export default function CheckoutPage() {
                 }}
               >
                 {m.label}
+                {m.value === "crypto" && (
+                  <span style={{ display: "block", fontSize: 10, fontWeight: 700, color: "var(--brand-2)", marginTop: 2 }}>
+                    10% off
+                  </span>
+                )}
               </button>
             ))}
           </div>
@@ -230,10 +245,36 @@ export default function CheckoutPage() {
           </p>
         </fieldset>
 
-        <div style={{ display: "flex", justifyContent: "space-between", fontSize: 18, fontWeight: 700 }}>
-          <span>Total</span>
-          <span>${total.toFixed(2)}</span>
+        <div>
+          {isCrypto && (
+            <div style={{ display: "flex", justifyContent: "space-between", fontSize: 13, color: "var(--ink-3)" }}>
+              <span>Subtotal</span>
+              <span style={{ textDecoration: "line-through" }}>${total.toFixed(2)}</span>
+            </div>
+          )}
+          {isCrypto && (
+            <div style={{ display: "flex", justifyContent: "space-between", fontSize: 13, color: "var(--brand-2)", marginTop: 4 }}>
+              <span>Crypto discount (10%)</span>
+              <span>-${(total - payableTotal).toFixed(2)}</span>
+            </div>
+          )}
+          <div style={{ display: "flex", justifyContent: "space-between", fontSize: 18, fontWeight: 700, marginTop: isCrypto ? 8 : 0 }}>
+            <span>Total</span>
+            <span>${payableTotal.toFixed(2)}</span>
+          </div>
         </div>
+
+        <label style={{ display: "flex", alignItems: "flex-start", gap: 8, fontSize: 12.5, color: "var(--ink-3)", cursor: "pointer" }}>
+          <input
+            type="checkbox"
+            required
+            checked={ageConfirmed}
+            onChange={(e) => setAgeConfirmed(e.target.checked)}
+            style={{ marginTop: 2 }}
+          />
+          I confirm I am at least 21 years old and am purchasing these research materials for
+          qualified laboratory research use only.
+        </label>
 
         {error && <p style={{ color: "var(--red)", fontSize: 13 }}>{error}</p>}
 
