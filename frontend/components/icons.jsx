@@ -181,6 +181,16 @@ export const IconEye = (p) => (
   </Svg>
 );
 
+export const IconEyeOff = (p) => (
+  <Svg {...p}>
+    <g fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M9.9 5.2A10.4 10.4 0 0 1 12 5c6.5 0 10 7 10 7a17.9 17.9 0 0 1-3.2 4.2M6.6 6.6C3.4 8.5 2 12 2 12s3.5 7 10 7a10.6 10.6 0 0 0 4.2-.9" />
+      <path d="M9.9 9.9a3 3 0 0 0 4.2 4.2" />
+      <path d="M2 2l20 20" />
+    </g>
+  </Svg>
+);
+
 export const IconHeadphones = (p) => (
   <Svg {...p}>
     <g fill="none" {...stroke}>
