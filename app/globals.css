@@ -228,6 +228,16 @@ button {
   }
 }
 
+.pep-payment-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+@media (max-width: 480px) {
+  .pep-payment-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
 .pep-no-scrollbar {
   scrollbar-width: none;
   -ms-overflow-style: none;

@@ -178,7 +178,7 @@ export default function CheckoutPage() {
             onChange={(e) => updateField("address_line2", e.target.value)}
             style={inputStyle}
           />
-          <div style={{ display: "grid", gridTemplateColumns: "2fr 1fr 1fr", gap: 12 }}>
+          <div style={{ display: "grid", gridTemplateColumns: "minmax(0, 2fr) minmax(0, 1fr) minmax(0, 1fr)", gap: 12 }}>
             <input
               required
               placeholder="City"
@@ -213,7 +213,7 @@ export default function CheckoutPage() {
           <legend style={{ fontSize: 13, fontWeight: 700, color: "var(--ink-4)", marginBottom: 8 }}>
             PAYMENT METHOD
           </legend>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 8 }}>
+          <div className="pep-payment-grid" style={{ display: "grid", gap: 8 }}>
             {PAYMENT_METHODS.map((m) => (
               <button
                 type="button"
