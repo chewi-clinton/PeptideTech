@@ -3,6 +3,7 @@ import SiteFooter from "@/components/SiteFooter";
 import TopBanner from "@/components/TopBanner";
 import CartDrawer from "@/components/CartDrawer";
 import TawkChat from "@/components/TawkChat";
+import MobileTabBar from "@/components/MobileTabBar";
 
 export default function SiteLayout({ children }) {
   return (
@@ -15,6 +16,7 @@ export default function SiteLayout({ children }) {
       <SiteFooter />
       <CartDrawer />
       <TawkChat />
+      <MobileTabBar />
     </>
   );
 }

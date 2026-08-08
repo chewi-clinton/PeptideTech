@@ -238,6 +238,20 @@ button {
   }
 }
 
+.pep-tabbar {
+  display: none;
+}
+
+@media (max-width: 879px) {
+  .pep-tabbar {
+    display: flex !important;
+  }
+
+  body {
+    padding-bottom: 58px;
+  }
+}
+
 .pep-no-scrollbar {
   scrollbar-width: none;
   -ms-overflow-style: none;
