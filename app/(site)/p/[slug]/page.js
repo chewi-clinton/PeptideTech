@@ -82,7 +82,7 @@ export default async function ProductPage({ params }) {
         {product.title}
       </nav>
 
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 40 }} className="md:grid-cols-2">
+      <div className="pep-2col" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 40 }}>
         <div>
           <ProductGallery images={product.images} title={product.title} />
         </div>

@@ -36,6 +36,37 @@ export const IconAccount = (p) => (
   </Svg>
 );
 
+export const IconAtom = (p) => (
+  <Svg {...p}>
+    <g fill="none" {...stroke}>
+      <circle cx="12" cy="12" r="1.6" fill="currentColor" stroke="none" />
+      <ellipse cx="12" cy="12" rx="10" ry="4.5" />
+      <ellipse cx="12" cy="12" rx="10" ry="4.5" transform="rotate(60 12 12)" />
+      <ellipse cx="12" cy="12" rx="10" ry="4.5" transform="rotate(120 12 12)" />
+    </g>
+  </Svg>
+);
+
+export const IconShopBag = (p) => (
+  <Svg {...p} viewBox="0 0 20 20" fill="currentColor">
+    <path
+      fillRule="evenodd"
+      clipRule="evenodd"
+      d="M7 2a1 1 0 011-1h4a1 1 0 011 1v5.4l3.1 5.2A2.5 2.5 0 0114 16H6a2.5 2.5 0 01-2.1-3.8L7 7.4V2zM8 2v5.6a1 1 0 01-.2.6L4.7 13.4A.5.5 0 005.1 14h9.8a.5.5 0 00.4-.8L12.2 8.2a1 1 0 01-.2-.6V2H8z"
+    />
+  </Svg>
+);
+
+export const IconVerifyGrid = (p) => (
+  <Svg {...p} viewBox="0 0 20 20">
+    <rect x="3" y="3" width="6" height="6" rx="1" fill="currentColor" />
+    <rect x="11" y="3" width="6" height="6" rx="1" fill="currentColor" />
+    <rect x="3" y="11" width="6" height="6" rx="1" fill="currentColor" />
+    <rect x="11" y="11" width="3" height="3" rx="0.5" fill="currentColor" />
+    <rect x="15" y="15" width="3" height="3" rx="0.5" fill="currentColor" />
+  </Svg>
+);
+
 export const IconCart = (p) => (
   <Svg {...p}>
     <g fill="none" {...stroke}>
