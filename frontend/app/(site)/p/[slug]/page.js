@@ -10,6 +10,7 @@ import Eyebrow from "@/components/Eyebrow";
 import { IconArrowRight } from "@/components/icons";
 import JsonLd from "@/components/JsonLd";
 import { buildMetadata, breadcrumbJsonLd, productJsonLd, stripHtml, truncate } from "@/lib/seo";
+import { getMolecularStructureImage } from "@/lib/molecularStructures";
 
 export async function generateMetadata({ params }) {
   const { slug } = await params;
@@ -54,6 +55,10 @@ export default async function ProductPage({ params }) {
   ]);
   const related = relatedAll.filter((p) => p.slug !== product.slug).slice(0, 4);
   const relatedGuides = guides.slice(0, 2);
+  const molecularStructureImage = getMolecularStructureImage(slug);
+  const galleryImages = molecularStructureImage
+    ? [...(product.images || []), molecularStructureImage]
+    : product.images;
 
   return (
     <div className="container" style={{ padding: "24px" }}>
@@ -84,7 +89,7 @@ export default async function ProductPage({ params }) {
 
       <div className="pep-2col" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 40 }}>
         <div>
-          <ProductGallery images={product.images} title={product.title} />
+          <ProductGallery images={galleryImages} title={product.title} />
         </div>
 
         <div>
