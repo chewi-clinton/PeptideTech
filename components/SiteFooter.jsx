@@ -151,17 +151,6 @@ export default async function SiteFooter() {
             </div>
 
             <div style={{ marginTop: 18 }}>
-              <div style={{ fontSize: 11, fontFamily: "var(--font-mono-stack)", letterSpacing: "0.06em", textTransform: "uppercase", color: "var(--ink-4)" }}>
-                Mailing / legal
-              </div>
-              <p style={{ margin: "4px 0 0", fontSize: 12.5, color: "var(--ink-3)" }}>
-                1309 Coffeen Ave, Ste 14346
-                <br />
-                Sheridan, WY 82801
-              </p>
-            </div>
-
-            <div style={{ marginTop: 18 }}>
               <div style={{ fontSize: 12, fontWeight: 700, color: "var(--ink)" }}>Stay in the loop</div>
               <form style={{ display: "flex", gap: 8, marginTop: 8, maxWidth: 320 }}>
                 <input
