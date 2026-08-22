@@ -32,7 +32,7 @@ const COLUMNS = [
     links: [
       { href: "/coa", label: "COA Library" },
       { href: "/verified-peptides", label: "Verified peptides" },
-      { href: "/price-match", label: "Price match" },
+      { href: "/pricelist", label: "Price list" },
       { href: "/coa", label: "Verify a batch" },
       { href: "/about", label: "About / Lab" },
       { href: "/about", label: "Quality standards" },

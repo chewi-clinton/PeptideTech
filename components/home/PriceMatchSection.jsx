@@ -108,7 +108,7 @@ export default function PriceMatchSection() {
             </div>
 
             <div style={{ marginTop: 22, display: "flex", alignItems: "center", gap: 16, flexWrap: "wrap" }}>
-              <Link href="/price-match" className="btn-primary" style={{ display: "inline-flex", alignItems: "center", gap: 8, textDecoration: "none" }}>
+              <Link href="/pricelist" className="btn-primary" style={{ display: "inline-flex", alignItems: "center", gap: 8, textDecoration: "none" }}>
                 See every price
                 <IconArrowRight size={16} style={{ color: "#fff" }} />
               </Link>
@@ -213,7 +213,7 @@ export default function PriceMatchSection() {
             </div>
 
             <Link
-              href="/price-match"
+              href="/pricelist"
               style={{
                 display: "flex",
                 alignItems: "center",
