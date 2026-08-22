@@ -10,8 +10,8 @@ export async function generateMetadata() {
     return buildMetadata({
       title: page.title,
       description: page.meta_description,
-      keywords: ["peptide price match", "cheapest research peptides", "Peptech pricing"],
-      path: "/price-match",
+      keywords: ["peptide price list", "wholesale peptide pricing", "cheapest research peptides", "Peptech pricing"],
+      path: "/pricelist",
     });
   } catch {
     return {};
