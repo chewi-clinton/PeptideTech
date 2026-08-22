@@ -10,6 +10,11 @@ const nextConfig = {
     // unoptimized sidesteps both issues without needing remotePatterns.
     unoptimized: true,
   },
+  async redirects() {
+    return [
+      { source: "/price-match", destination: "/pricelist", permanent: true },
+    ];
+  },
 };
 
 export default nextConfig;
