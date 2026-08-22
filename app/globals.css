@@ -252,6 +252,24 @@ button {
   }
 }
 
+.pep-pricelist-table {
+  display: block;
+}
+
+.pep-pricelist-cards {
+  display: none;
+}
+
+@media (max-width: 640px) {
+  .pep-pricelist-table {
+    display: none;
+  }
+
+  .pep-pricelist-cards {
+    display: flex;
+  }
+}
+
 .pep-no-scrollbar {
   scrollbar-width: none;
   -ms-overflow-style: none;

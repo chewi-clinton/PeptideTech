@@ -1,7 +1,6 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import Link from "next/link";
 import { WHOLESALE_PRICE_SHEET } from "@/lib/wholesalePriceSheet";
 import { IconSearch } from "@/components/icons";
 
@@ -52,7 +51,9 @@ export default function WholesalePriceList() {
         </div>
       </div>
 
+      {/* Desktop/tablet: full table. Hidden below 640px via .pep-pricelist-table in globals.css. */}
       <div
+        className="pep-pricelist-table"
         style={{
           marginTop: 18,
           border: "1px solid var(--line)",
@@ -141,6 +142,55 @@ export default function WholesalePriceList() {
             )}
           </tbody>
         </table>
+      </div>
+
+      {/* Mobile: stacked cards, no horizontal scroll needed. Shown only below 640px. */}
+      <div className="pep-pricelist-cards" style={{ marginTop: 18, flexDirection: "column", gap: 10 }}>
+        {rows.map((r, i) => {
+          const price = r.price == null ? "—" : `$${r.price.toFixed(2).replace(/\.00$/, "")}`;
+          return (
+            <div
+              key={`${r.catNo}-${i}-card`}
+              onClick={r.slug ? () => window.location.assign(`/p/${r.slug}`) : undefined}
+              style={{
+                border: "1px solid var(--line)",
+                borderRadius: "var(--radius-md)",
+                padding: "12px 14px",
+                background: "var(--surface, var(--bg))",
+                cursor: r.slug ? "pointer" : "default",
+              }}
+            >
+              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: 10 }}>
+                <div style={{ minWidth: 0 }}>
+                  <div style={{ fontSize: 14, fontWeight: 700, color: "var(--ink)" }}>{r.name}</div>
+                  <div style={{ marginTop: 2, fontSize: 12.5, color: "var(--ink-3)" }}>{r.spec}</div>
+                </div>
+                <div
+                  style={{
+                    flexShrink: 0,
+                    fontSize: 16,
+                    fontWeight: 700,
+                    color: "var(--ink)",
+                    fontVariantNumeric: "tabular-nums",
+                  }}
+                >
+                  {price}
+                </div>
+              </div>
+              <div style={{ marginTop: 8, display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                <span style={{ fontSize: 11, fontFamily: "var(--font-mono)", color: "var(--ink-4)" }}>{r.catNo}</span>
+                {r.slug && (
+                  <span style={{ fontSize: 11.5, fontWeight: 600, color: "var(--brand-2)" }}>View in shop →</span>
+                )}
+              </div>
+            </div>
+          );
+        })}
+        {rows.length === 0 && (
+          <div style={{ padding: "24px 14px", textAlign: "center", fontSize: 13, color: "var(--ink-4)" }}>
+            No products match “{query}”.
+          </div>
+        )}
       </div>
     </section>
   );
