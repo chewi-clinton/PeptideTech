@@ -36,6 +36,12 @@ export const MOLECULAR_STRUCTURES = {
   "snap-8-10mg": { cid: 71587832, alt: "2D molecular structure of SNAP-8, CAS 868844-74-0, C42H72N16O15S." },
   "tb-500": { cid: 45382195, alt: "2D molecular structure of TB-500, C212H350N56O78S." },
   "tesofensine-research-capsules": { cid: 11370864, alt: "2D molecular structure of Tesofensine, CAS 195875-84-4, C17H23Cl2NO." },
+  "hgh-somatropin-10iu": { cid: 168009821, alt: "2D molecular structure of HGH (Somatropin), CAS 12629-01-5, C990H1528N262O300S7." },
+  "retatrutide-30mg": { cid: 171934787, alt: "2D molecular structure of Retatrutide, CAS 2381089-83-2, C221H342N46O68." },
+  "ss-31-elamipretide-10mg": { cid: 11764719, alt: "2D molecular structure of SS-31 (Elamipretide), CAS 736992-21-5, C32H49N9O5." },
+  "cagrilintide-5mg": { cid: 171397054, alt: "2D molecular structure of Cagrilintide, CAS 1415456-99-3, C194H312N54O59S2." },
+  "mt-2-melanotan-ii-10mg": { cid: 92432, alt: "2D molecular structure of MT-2 (Melanotan II), CAS 121062-08-6, C50H69N15O9." },
+  "tb-500-10mg-vial": { cid: 62707662, alt: "2D molecular structure of TB-500, CAS 885340-08-9, C38H68N10O14." },
 };
 
 export function getMolecularStructureImage(slug) {
