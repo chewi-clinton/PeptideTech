@@ -42,6 +42,8 @@ export const MOLECULAR_STRUCTURES = {
   "cagrilintide-5mg": { cid: 171397054, alt: "2D molecular structure of Cagrilintide, CAS 1415456-99-3, C194H312N54O59S2." },
   "tb-500-vial-10mg": { cid: 62707662, alt: "2D molecular structure of TB-500, CAS 885340-08-9, C38H68N10O14." },
   "mt-2-melanotan-ii-10mg": { cid: 92432, alt: "2D molecular structure of MT-2 (Melanotan II), CAS 121062-08-6, C50H69N15O9." },
+  "tirzepatide": { cid: 156588324, alt: "2D molecular structure of Tirzepatide, CAS 2023788-19-2, C225H348N48O68." },
+  "semaglutide": { cid: 56843331, alt: "2D molecular structure of Semaglutide, CAS 910463-68-2, C187H291N45O59." },
 };
 
 export function getMolecularStructureImage(slug) {
