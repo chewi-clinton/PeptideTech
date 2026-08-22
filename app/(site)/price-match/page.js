@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import { api } from "@/lib/api";
 import PriceMatchInteractivity from "@/components/PriceMatchInteractivity";
+import WholesalePriceList from "@/components/WholesalePriceList";
 import { buildMetadata } from "@/lib/seo";
 
 export async function generateMetadata() {
@@ -27,6 +28,9 @@ export default async function PriceMatchPage() {
 
   return (
     <PriceMatchInteractivity>
+      <div className="container" style={{ padding: "40px 24px 0", maxWidth: 1040 }}>
+        <WholesalePriceList />
+      </div>
       <article
         className="pep-pdp-prose"
         style={{ fontSize: 14.5, lineHeight: 1.75, color: "var(--ink-2)" }}
