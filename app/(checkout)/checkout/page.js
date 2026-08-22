@@ -154,7 +154,9 @@ export default function CheckoutPage() {
             style={inputStyle}
           />
           <input
-            placeholder="Phone (optional)"
+            required
+            type="tel"
+            placeholder="Phone"
             value={form.phone}
             onChange={(e) => updateField("phone", e.target.value)}
             style={inputStyle}
@@ -187,6 +189,7 @@ export default function CheckoutPage() {
               style={inputStyle}
             />
             <input
+              required
               placeholder="State"
               value={form.state}
               onChange={(e) => updateField("state", e.target.value)}
