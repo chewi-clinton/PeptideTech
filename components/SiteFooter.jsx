@@ -65,6 +65,7 @@ const COLUMNS = [
       { href: "/contact", label: "Contact" },
       { href: "/faq", label: "FAQ" },
       { href: "/wholesale", label: "Wholesale & bulk" },
+      { href: "/pricelist", label: "Price list" },
       { href: "/shipping", label: "Shipping & returns" },
       { href: "/order-status", label: "Order status" },
     ],
