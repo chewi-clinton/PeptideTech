@@ -85,7 +85,7 @@ export default function SiteHeader() {
             <IconSearch size={18} stroke="currentColor" strokeWidth="1.8" />
           </button>
           <Link
-            href="/account"
+            href="/account/affiliate"
             className="hidden md:inline-flex"
             aria-label="Account"
             style={{
