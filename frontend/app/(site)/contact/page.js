@@ -178,16 +178,6 @@ export default function ContactPage() {
                   +1 (281) 682-8987
                 </a>
               </div>
-              <div style={{ marginTop: 4, fontSize: 13, color: "var(--ink-2)" }}>
-                <a
-                  href="https://wa.me/19162926748"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{ color: "inherit", textDecoration: "none" }}
-                >
-                  WhatsApp: +1 (916) 292-6748
-                </a>
-              </div>
               <div style={{ marginTop: 4, display: "flex", alignItems: "center", gap: 6, fontSize: 12.5, color: "var(--ink-3)" }}>
                 <IconClock size={13} />
                 Team follow-up Mon–Fri 9 AM–6 PM ET · Sat 10 AM–2 PM ET (Sun & holidays next business day)
