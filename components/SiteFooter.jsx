@@ -8,7 +8,6 @@ import {
   IconSms,
   IconTikTok,
   IconWarningTriangle,
-  IconWhatsApp,
   IconX,
 } from "@/components/icons";
 import PaymentBadges from "@/components/PaymentBadges";
@@ -117,16 +116,6 @@ export default async function SiteFooter() {
                 <IconSms size={14} style={{ color: "var(--ink-4)" }} />
                 +1 (281) 682-8987
               </a>
-              <a
-                href="https://wa.me/19162926748"
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{ display: "inline-flex", alignItems: "center", gap: 8, fontSize: 13, color: "var(--ink-2)", textDecoration: "none" }}
-              >
-                <IconWhatsApp size={14} style={{ color: "var(--ink-4)" }} />
-                +1 (916) 292-6748
-                <span style={{ fontSize: 11, color: "var(--ink-4)" }}>WhatsApp</span>
-              </a>
               <Link href="/contact" style={{ display: "inline-flex", alignItems: "center", gap: 8, fontSize: 13, color: "var(--ink-2)", textDecoration: "none" }}>
                 <IconMail size={14} style={{ color: "var(--ink-4)" }} />
                 Contact support
@@ -144,9 +133,6 @@ export default async function SiteFooter() {
                 style={socialIcon}
               >
                 <IconTikTok size={16} />
-              </a>
-              <a href="https://wa.me/19162926748" target="_blank" rel="noopener noreferrer" style={socialIcon}>
-                <IconWhatsApp size={16} />
               </a>
             </div>
 
