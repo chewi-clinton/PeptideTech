@@ -90,7 +90,11 @@ class ProductListSerializer(serializers.ModelSerializer):
         ]
 
     def get_primary_image(self, obj):
-        image = obj.images.filter(is_primary=True).first() or obj.images.first()
+        # obj.images is prefetch_related'd by the viewset — .all() reuses that
+        # cache, while .filter()/.first() on the manager would each issue a
+        # fresh query per product (N+1) and silently bypass the prefetch.
+        images = list(obj.images.all())
+        image = next((i for i in images if i.is_primary), images[0] if images else None)
         if not image:
             return None
         request = self.context.get("request")

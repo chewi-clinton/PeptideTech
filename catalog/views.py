@@ -22,9 +22,6 @@ class CategoryViewSet(viewsets.ReadOnlyModelViewSet):
 
 
 class ProductViewSet(viewsets.ReadOnlyModelViewSet):
-    queryset = Product.objects.filter(is_active=True).select_related("category").prefetch_related(
-        "images", "variants", "coas"
-    )
     permission_classes = [permissions.AllowAny]
     lookup_field = "slug"
     filterset_fields = ["category__slug"]
@@ -33,6 +30,15 @@ class ProductViewSet(viewsets.ReadOnlyModelViewSet):
         if self.action == "list":
             return ProductListSerializer
         return ProductDetailSerializer
+
+    def get_queryset(self):
+        qs = Product.objects.filter(is_active=True).select_related("category")
+        # The list serializer never touches `coas` — skip prefetching it
+        # there so every list request doesn't also pull (and discard) every
+        # COA row for every product.
+        if self.action == "list":
+            return qs.prefetch_related("images", "variants")
+        return qs.prefetch_related("images", "variants", "coas")
 
 
 class COALibraryViewSet(viewsets.ReadOnlyModelViewSet):
